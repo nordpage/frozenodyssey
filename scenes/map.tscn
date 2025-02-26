@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://nt0jq052yahi"]
+
+[ext_resource type="Script" path="res://scripts/map.gd" id="1_38jes"]
+[ext_resource type="PackedScene" uid="uid://qpt7hwwh4vfu" path="res://scenes/LocationPoint.tscn" id="2_u33cd"]
+[ext_resource type="PackedScene" uid="uid://l6q7n1yicap" path="res://scenes/EventCardUI.tscn" id="3_bq1yc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6dpdo"]
+
+[node name="Map" type="Node2D" node_paths=PackedStringArray("title_label", "description_label", "event_panel")]
+script = ExtResource("1_38jes")
+location_scene = ExtResource("2_u33cd")
+title_label = NodePath("CanvasLayer/Control/VFlowContainer/TitleLabel")
+description_label = NodePath("CanvasLayer/Control/VFlowContainer/DescritionLabel")
+event_panel = NodePath("CanvasLayer/Control/PanelContainer")
+event_card_scene = ExtResource("3_bq1yc")
+
+[node name="Connections" type="Node2D" parent="."]
+
+[node name="PathLines" type="Line2D" parent="Connections"]
+width = 4.0
+default_color = Color(0.572988, 0.572988, 0.572988, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.42
+offset_top = -250.0
+offset_right = -0.420044
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control"]
+layout_mode = 2
+offset_right = 500.0
+offset_bottom = 250.0
+
+[node name="VFlowContainer" type="VFlowContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 539.0
+offset_top = -50.0
+offset_right = -22.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer/Control/VFlowContainer"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_6dpdo")
+
+[node name="DescritionLabel" type="Label" parent="CanvasLayer/Control/VFlowContainer"]
+layout_mode = 2

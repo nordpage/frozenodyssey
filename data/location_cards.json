@@ -1,0 +1,536 @@
+{
+	"locationCards": [
+	  {
+		"locationId": "start",
+		"cards": [
+		  {
+			"id": "start_1",
+			"title": "Закупка снаряжения",
+			"title_en": "Equipment Purchase",
+			"description": "Седов тщательно подбирает снаряжение для экспедиции в Архангельске.",
+			"description_en": "Sedov carefully selects equipment for the expedition in Arkhangelsk.",
+			"effect": "restore_resources",
+			"value": 15
+		  },
+		  {
+			"id": "start_2",
+			"title": "Набор команды",
+			"title_en": "Crew Recruitment", 
+			"description": "Отбор лучших матросов и ученых для экспедиции.",
+			"description_en": "Selecting the best sailors and scientists for the expedition.",
+			"effect": "morale_boost",
+			"value": 10
+		  },
+		  {
+			"id": "start_3",
+			"title": "Сбор пожертвований",
+			"title_en": "Fundraising",
+			"description": "Седов собирает средства на экспедицию, не получив должной поддержки от правительства.",
+			"description_en": "Sedov raises funds for the expedition, having received insufficient government support.",
+			"effect": "food_gain",
+			"value": 10
+		  }
+		]
+	  },
+	  {
+		"locationId": "novaya_zemlya",
+		"cards": [
+		  {
+			"id": "nz_1",
+			"title": "Штормовой ветер",
+			"title_en": "Storm Winds",
+			"description": "Сильный шторм вынуждает экспедицию задержаться у берегов Новой Земли.",
+			"description_en": "A severe storm forces the expedition to delay near Novaya Zemlya's shores.",
+			"effect": "speed_loss",
+			"value": -1
+		  },
+		  {
+			"id": "nz_2",
+			"title": "Пополнение угля",
+			"title_en": "Coal Replenishment",
+			"description": "Экспедиция пополняет запасы угля у рудников Новой Земли.",
+			"description_en": "The expedition replenishes coal supplies at Novaya Zemlya's mines.",
+			"effect": "energy_gain",
+			"value": 15
+		  },
+		  {
+			"id": "nz_3",
+			"title": "Охота на моржей",
+			"title_en": "Walrus Hunting",
+			"description": "Команда добывает мясо моржей для пополнения продовольственных запасов.",
+			"description_en": "The crew hunts walruses to replenish food supplies.",
+			"effect": "food_gain",
+			"value": 10
+		  }
+		]
+	  },
+	  {
+		"locationId": "first_wintering",
+		"cards": [
+		  {
+			"id": "fw_1",
+			"title": "Строительство зимовья",
+			"title_en": "Winter Shelter Construction",
+			"description": "Команда строит надежное укрытие для первой зимовки.",
+			"description_en": "The crew builds a reliable shelter for the first wintering.",
+			"effect": "temperature_gain",
+			"value": 20
+		  },
+		  {
+			"id": "fw_2",
+			"title": "Научные наблюдения",
+			"title_en": "Scientific Observations",
+			"description": "Седов организует регулярные метеорологические и магнитные наблюдения.",
+			"description_en": "Sedov organizes regular meteorological and magnetic observations.",
+			"effect": "exploration_boost",
+			"value": 15
+		  },
+		  {
+			"id": "fw_3",
+			"title": "Полярная ночь",
+			"title_en": "Polar Night",
+			"description": "Долгая полярная ночь подрывает моральный дух экспедиции.",
+			"description_en": "The long polar night undermines the expedition's morale.",
+			"effect": "morale_boost",
+			"value": -10
+		  }
+		]
+	  },
+	  {
+		"locationId": "foka_ship",
+		"cards": [
+		  {
+			"id": "fs_1",
+			"title": "Корабль во льдах",
+			"title_en": "Ship in Ice",
+			"description": "«Святой Фока» вмерзает в лед у берегов Земли Франца-Иосифа.",
+			"description_en": "The 'St. Foka' freezes in ice near the shores of Franz Josef Land.",
+			"effect": "move_block",
+			"value": 2
+		  },
+		  {
+			"id": "fs_2",
+			"title": "Ремонт судна",
+			"title_en": "Ship Repairs",
+			"description": "Экипаж проводит необходимый ремонт потрепанного судна.",
+			"description_en": "The crew performs necessary repairs on the battered ship.",
+			"effect": "speed_boost",
+			"value": 1
+		  },
+		  {
+			"id": "fs_3",
+			"title": "Цинга",
+			"title_en": "Scurvy",
+			"description": "Члены экипажа начинают страдать от цинги из-за недостатка свежей пищи.",
+			"description_en": "Crew members begin to suffer from scurvy due to lack of fresh food.",
+			"effect": "temperature_loss",
+			"value": -10
+		  }
+		]
+	  },
+	  {
+		"locationId": "hooker_island",
+		"cards": [
+		  {
+			"id": "hi_1",
+			"title": "База экспедиции",
+			"title_en": "Expedition Base",
+			"description": "На острове Гукера организуется основная база экспедиции.",
+			"description_en": "The main expedition base is organized on Hooker Island.",
+			"effect": "restore_resources",
+			"value": 10
+		  },
+		  {
+			"id": "hi_2",
+			"title": "Географические исследования",
+			"title_en": "Geographical Studies",
+			"description": "Седов организует картографирование близлежащих островов.",
+			"description_en": "Sedov organizes mapping of nearby islands.",
+			"effect": "exploration_boost",
+			"value": 10
+		  },
+		  {
+			"id": "hi_3",
+			"title": "Подготовка к походу",
+			"title_en": "Trek Preparation",
+			"description": "Команда готовит собачьи упряжки и снаряжение для похода к полюсу.",
+			"description_en": "The team prepares dog sleds and equipment for the trek to the pole.",
+			"effect": "speed_boost",
+			"value": 2
+		  }
+		]
+	  },
+	  {
+		"locationId": "rudolf_island",
+		"cards": [
+		  {
+			"id": "ri_1",
+			"title": "Ухудшение здоровья",
+			"title_en": "Health Deterioration",
+			"description": "Здоровье Седова ухудшается, но он отказывается возвращаться.",
+			"description_en": "Sedov's health deteriorates, but he refuses to turn back.",
+			"effect": "energy_gain",
+			"value": -15
+		  },
+		  {
+			"id": "ri_2",
+			"title": "Решение идти к полюсу",
+			"title_en": "Decision to Reach the Pole",
+			"description": "Седов принимает решение идти к полюсу только с двумя спутниками.",
+			"description_en": "Sedov decides to go to the pole with only two companions.",
+			"effect": "morale_boost",
+			"value": 15
+		  },
+		  {
+			"id": "ri_3",
+			"title": "Прощание с командой",
+			"title_en": "Farewell to the Crew",
+			"description": "Седов, Линник и Пустошный прощаются с остальной командой перед походом.",
+			"description_en": "Sedov, Linnik, and Pustoshny say goodbye to the rest of the crew before the trek.",
+			"effect": "energy_gain",
+			"value": 10
+		  }
+		]
+	  },
+	  {
+		"locationId": "polar_trek",
+		"cards": [
+		  {
+			"id": "pt_1",
+			"title": "Собачьи упряжки",
+			"title_en": "Dog Sleds",
+			"description": "Три нарты с собачьими упряжками движутся по дрейфующим льдам.",
+			"description_en": "Three dog sleds move across the drifting ice.",
+			"effect": "speed_boost",
+			"value": 2
+		  },
+		  {
+			"id": "pt_2",
+			"title": "Болезнь Седова",
+			"title_en": "Sedov's Illness",
+			"description": "Седов серьезно болен, но отказывается прекращать поход.",
+			"description_en": "Sedov is seriously ill but refuses to abandon the trek.",
+			"effect": "speed_loss",
+			"value": -2
+		  },
+		  {
+			"id": "pt_3",
+			"title": "Полярная метель",
+			"title_en": "Polar Blizzard",
+			"description": "Сильная метель замедляет продвижение экспедиции.",
+			"description_en": "A severe blizzard slows the expedition's progress.",
+			"effect": "temperature_loss",
+			"value": -20
+		  }
+		]
+	  },
+	  {
+		"locationId": "final_camp",
+		"cards": [
+		  {
+			"id": "fc_1",
+			"title": "Последние слова",
+			"title_en": "Last Words",
+			"description": "Седов просит похоронить его на мысе Аук и водрузить российский флаг.",
+			"description_en": "Sedov asks to be buried at Cape Auk and for the Russian flag to be raised.",
+			"effect": "morale_boost",
+			"value": 5
+		  },
+		  {
+			"id": "fc_2",
+			"title": "Смерть исследователя",
+			"title_en": "Explorer's Death",
+			"description": "5 марта 1914 года Седов умирает от пневмонии и истощения.",
+			"description_en": "On March 5, 1914, Sedov dies from pneumonia and exhaustion.",
+			"effect": "morale_boost",
+			"value": -20
+		  },
+		  {
+			"id": "fc_3",
+			"title": "Захоронение во льдах",
+			"title_en": "Burial in Ice",
+			"description": "Линник и Пустошный хоронят Седова среди вечных льдов.",
+			"description_en": "Linnik and Pustoshny bury Sedov among the eternal ice.",
+			"effect": "energy_gain",
+			"value": -10
+		  }
+		]
+	  },
+	  {
+		"locationId": "kola_peninsula",
+		"cards": [
+		  {
+			"id": "kp_1",
+			"title": "Поморские рыбаки",
+			"title_en": "Pomor Fishermen",
+			"description": "Встреча с местными поморами, обладающими знаниями о северных путях.",
+			"description_en": "Meeting with local Pomors who have knowledge of northern routes.",
+			"effect": "exploration_boost",
+			"value": 10
+		  },
+		  {
+			"id": "kp_2",
+			"title": "Дополнительные припасы",
+			"title_en": "Additional Supplies",
+			"description": "Удается приобрести дополнительные припасы в Мурманске.",
+			"description_en": "Additional supplies are acquired in Murmansk.",
+			"effect": "food_gain",
+			"value": 15
+		  }
+		]
+	  },
+	  {
+		"locationId": "alt_white_sea",
+		"cards": [
+		  {
+			"id": "aws_1",
+			"title": "Морские течения",
+			"title_en": "Sea Currents",
+			"description": "Сильные течения Белого моря затрудняют навигацию.",
+			"description_en": "Strong White Sea currents make navigation difficult.",
+			"effect": "speed_loss",
+			"value": -1
+		  },
+		  {
+			"id": "aws_2",
+			"title": "Рыбная ловля",
+			"title_en": "Fishing",
+			"description": "Команда ловит рыбу, пополняя запасы свежей пищи.",
+			"description_en": "The crew catches fish, replenishing fresh food supplies.",
+			"effect": "food_gain",
+			"value": 10
+		  }
+		]
+	  },
+	  {
+		"locationId": "alt_solovki",
+		"cards": [
+		  {
+			"id": "asol_1",
+			"title": "Благословение монахов",
+			"title_en": "Monks' Blessing",
+			"description": "Монахи Соловецкого монастыря благословляют экспедицию.",
+			"description_en": "Monks of the Solovetsky Monastery bless the expedition.",
+			"effect": "morale_boost",
+			"value": 15
+		  },
+		  {
+			"id": "asol_2",
+			"title": "Соловецкие карты",
+			"title_en": "Solovetsky Maps",
+			"description": "В монастыре обнаружены старинные карты северных морей.",
+			"description_en": "Ancient maps of northern seas are found in the monastery.",
+			"effect": "exploration_boost",
+			"value": 15
+		  }
+		]
+	  },
+	  {
+		"locationId": "alt_route_kara",
+		"cards": [
+		  {
+			"id": "ark_1",
+			"title": "Ледяные поля",
+			"title_en": "Ice Fields",
+			"description": "Карское море покрыто плотными ледяными полями.",
+			"description_en": "The Kara Sea is covered with dense ice fields.",
+			"effect": "speed_loss",
+			"value": -2
+		  },
+		  {
+			"id": "ark_2",
+			"title": "Навигационные трудности",
+			"title_en": "Navigational Difficulties",
+			"description": "Магнитный компас работает ненадежно в высоких широтах.",
+			"description_en": "The magnetic compass works unreliably at high latitudes.",
+			"effect": "move_block",
+			"value": 1
+		  }
+		]
+	  },
+	  {
+		"locationId": "alt_severnaya_zemlya",
+		"cards": [
+		  {
+			"id": "asz_1",
+			"title": "Неизведанная земля",
+			"title_en": "Unexplored Land",
+			"description": "Экспедиция видит очертания неизвестного архипелага.",
+			"description_en": "The expedition sees the outlines of an unknown archipelago.",
+			"effect": "exploration_boost",
+			"value": 20
+		  },
+		  {
+			"id": "asz_2",
+			"title": "Смена курса",
+			"title_en": "Course Change",
+			"description": "Седов решает изменить курс в сторону Земли Франца-Иосифа.",
+			"description_en": "Sedov decides to change course towards Franz Josef Land.",
+			"effect": "speed_loss",
+			"value": -1
+		  }
+		]
+	  },
+	  {
+		"locationId": "alt_hunting_grounds",
+		"cards": [
+		  {
+			"id": "ahg_1",
+			"title": "Охота на медведя",
+			"title_en": "Bear Hunting",
+			"description": "Команде удается добыть полярного медведя.",
+			"description_en": "The crew manages to hunt a polar bear.",
+			"effect": "food_gain",
+			"value": 20
+		  },
+		  {
+			"id": "ahg_2",
+			"title": "Сбор яиц",
+			"title_en": "Egg Gathering",
+			"description": "Обнаружены птичьи базары с множеством яиц.",
+			"description_en": "Bird colonies with many eggs are discovered.",
+			"effect": "food_gain",
+			"value": 10
+		  }
+		]
+	  },
+	  {
+		"locationId": "alt_nansen_hut",
+		"cards": [
+		  {
+			"id": "anh_1",
+			"title": "Записки Нансена",
+			"title_en": "Nansen's Notes",
+			"description": "В хижине найдены записки знаменитого норвежского исследователя.",
+			"description_en": "Notes of the famous Norwegian explorer are found in the hut.",
+			"effect": "exploration_boost",
+			"value": 15
+		  },
+		  {
+			"id": "anh_2",
+			"title": "Запасы провианта",
+			"title_en": "Food Supplies",
+			"description": "В хижине обнаружены хорошо сохранившиеся запасы провианта.",
+			"description_en": "Well-preserved food supplies are found in the hut.",
+			"effect": "food_gain",
+			"value": 15
+		  }
+		]
+	  },
+	  {
+		"locationId": "alt_tikhaya_bay",
+		"cards": [
+		  {
+			"id": "atb_1",
+			"title": "Затишье",
+			"title_en": "Calm",
+			"description": "Бухта надежно защищена от штормов и ветров.",
+			"description_en": "The bay is well protected from storms and winds.",
+			"effect": "temperature_gain",
+			"value": 15
+		  },
+		  {
+			"id": "atb_2",
+			"title": "Строительство зимовья",
+			"title_en": "Winter Shelter Construction",
+			"description": "Команда строит надежное зимовье в бухте.",
+			"description_en": "The crew builds a reliable winter shelter in the bay.",
+			"effect": "restore_resources",
+			"value": 15
+		  }
+		]
+	  },
+	  {
+		"locationId": "alt_sedov_observatory",
+		"cards": [
+		  {
+			"id": "aso_1",
+			"title": "Научные наблюдения",
+			"title_en": "Scientific Observations",
+			"description": "Седов проводит тщательные научные наблюдения.",
+			"description_en": "Sedov conducts thorough scientific observations.",
+			"effect": "exploration_boost",
+			"value": 15
+		  },
+		  {
+			"id": "aso_2",
+			"title": "Картографирование",
+			"title_en": "Mapping",
+			"description": "Создание точных карт архипелага.",
+			"description_en": "Creating accurate maps of the archipelago.",
+			"effect": "morale_boost",
+			"value": 10
+		  }
+		]
+	  },
+	  {
+		"locationId": "alt_jackson_camp",
+		"cards": [
+		  {
+			"id": "ajc_1",
+			"title": "Дневники Джексона",
+			"title_en": "Jackson's Diaries",
+			"description": "Найдены дневники британской экспедиции.",
+			"description_en": "Diaries of the British expedition are found.",
+			"effect": "exploration_boost",
+			"value": 10
+		  },
+		  {
+			"id": "ajc_2",
+			"title": "Старые припасы",
+			"title_en": "Old Supplies",
+			"description": "В лагере обнаружены сохранившиеся припасы.",
+			"description_en": "Preserved supplies are found in the camp.",
+			"effect": "food_gain",
+			"value": 5
+		  }
+		]
+	  },
+	  {
+		"locationId": "alt_ice_cracks",
+		"cards": [
+		  {
+			"id": "aic_1",
+			"title": "Опасные трещины",
+			"title_en": "Dangerous Cracks",
+			"description": "Путь преграждают опасные трещины во льду.",
+			"description_en": "The path is blocked by dangerous ice cracks.",
+			"effect": "move_block",
+			"value": 2
+		  },
+		  {
+			"id": "aic_2",
+			"title": "Провал под лёд",
+			"title_en": "Falling Through Ice",
+			"description": "Одна из собачьих упряжек проваливается под лёд.",
+			"description_en": "One of the dog sleds falls through the ice.",
+			"effect": "speed_loss",
+			"value": -2
+		  }
+		]
+	  },
+	  {
+		"locationId": "alt_return_path",
+		"cards": [
+		  {
+			"id": "arp_1",
+			"title": "Возвращение",
+			"title_en": "Return Journey",
+			"description": "Линник и Пустошный возвращаются к основной команде.",
+			"description_en": "Linnik and Pustoshny return to the main crew.",
+			"effect": "speed_boost",
+			"value": 1
+		  },
+		  {
+			"id": "arp_2",
+			"title": "Вести о смерти Седова",
+			"title_en": "News of Sedov's Death",
+			"description": "Команда узнает о смерти своего руководителя.",
+			"description_en": "The crew learns about the death of their leader.",
+			"effect": "morale_boost",
+			"value": -15
+		  }
+		]
+	  }
+	]
+  }
