@@ -7,10 +7,15 @@ extends Area2D
 var location_id: String
 var is_active: bool = false
 signal location_selected(location_id: String)
+signal location_mouse_enter(location_id: String)
+signal location_mouse_exit(location_id: String)
+
 
 func _ready():
 	# В Godot 4 подключение сигналов
 	self.connect("input_event", Callable(self, "_on_input_event"))
+	self.mouse_entered.connect(func(): emit_signal("location_mouse_enter"))  
+	self.mouse_exited.connect(func(): emit_signal("location_mouse_exit"))
 	set_active(false)
 			
 func _input(event):
@@ -49,7 +54,7 @@ func set_active(active: bool):
 func set_disabled():
 	if is_active:  # Не блокировать активную точку
 		return
-	print("🔒 Блокировка:", location_id)
+	#print("🔒 Блокировка:", location_id)
 	is_active = false
 	set_process_input(false)
 	input_pickable = false

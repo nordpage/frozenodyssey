@@ -1,19 +1,182 @@
-[gd_scene load_steps=6 format=3 uid="uid://drd061tuuk07p"]
+[gd_scene load_steps=7 format=3 uid="uid://drd061tuuk07p"]
 
 [ext_resource type="Script" path="res://scripts/LocationManager.gd" id="1_0j6yh"]
 [ext_resource type="PackedScene" uid="uid://nt0jq052yahi" path="res://scenes/map.tscn" id="3_eavyi"]
-[ext_resource type="PackedScene" uid="uid://rv3b0fr42hf8" path="res://scenes/HUD.tscn" id="3_fqa3u"]
 [ext_resource type="Script" path="res://scripts/event_manager.gd" id="3_h8y4w"]
+[ext_resource type="Script" path="res://scripts/HUD.gd" id="3_y76fu"]
 [ext_resource type="Script" path="res://scripts/GameResources.gd" id="4_6vv21"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wemco"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_0j6yh")
 
 [node name="Map" parent="." instance=ExtResource("3_eavyi")]
+event_card_scene = null
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HBoxContainer" parent="CanvasLayer" instance=ExtResource("3_fqa3u")]
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 100.0
+grow_horizontal = 2
+script = ExtResource("3_y76fu")
+
+[node name="HUDContainer" type="HBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = 10.0
+offset_right = 400.0
+offset_bottom = 90.0
+grow_horizontal = 2
+size_flags_horizontal = 2
+theme_override_constants/separation = 3
+alignment = 1
+
+[node name="TempContainer" type="VBoxContainer" parent="CanvasLayer/Control/HUDContainer"]
+custom_minimum_size = Vector2(125, 80)
+layout_mode = 2
+alignment = 1
+
+[node name="TemperatureLabel" type="Label" parent="CanvasLayer/Control/HUDContainer/TempContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Temperature"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TemperatureValue" type="Label" parent="CanvasLayer/Control/HUDContainer/TempContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/Control/HUDContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="FoodContainer" type="VBoxContainer" parent="CanvasLayer/Control/HUDContainer"]
+custom_minimum_size = Vector2(125, 80)
+layout_mode = 2
+alignment = 1
+
+[node name="FoodLabel" type="Label" parent="CanvasLayer/Control/HUDContainer/FoodContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Food"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FoodValue" type="Label" parent="CanvasLayer/Control/HUDContainer/FoodContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="VSeparator2" type="VSeparator" parent="CanvasLayer/Control/HUDContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="EnergyContainer" type="VBoxContainer" parent="CanvasLayer/Control/HUDContainer"]
+custom_minimum_size = Vector2(125, 80)
+layout_mode = 2
+alignment = 1
+
+[node name="EnergyLabel" type="Label" parent="CanvasLayer/Control/HUDContainer/EnergyContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Energy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnergyValue" type="Label" parent="CanvasLayer/Control/HUDContainer/EnergyContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wemco")
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="VSeparator3" type="VSeparator" parent="CanvasLayer/Control/HUDContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="MoraleContainer" type="VBoxContainer" parent="CanvasLayer/Control/HUDContainer"]
+custom_minimum_size = Vector2(125, 80)
+layout_mode = 2
+alignment = 1
+
+[node name="MoraleLabel" type="Label" parent="CanvasLayer/Control/HUDContainer/MoraleContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Morale"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MoraleValue" type="Label" parent="CanvasLayer/Control/HUDContainer/MoraleContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="VSeparator4" type="VSeparator" parent="CanvasLayer/Control/HUDContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="DateContainer" type="VBoxContainer" parent="CanvasLayer/Control/HUDContainer"]
+custom_minimum_size = Vector2(125, 80)
+layout_mode = 2
+alignment = 1
+
+[node name="DateLabel" type="Label" parent="CanvasLayer/Control/HUDContainer/DateContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Date"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DateValue" type="Label" parent="CanvasLayer/Control/HUDContainer/DateContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="VSeparator5" type="VSeparator" parent="CanvasLayer/Control/HUDContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TurnContainer" type="VBoxContainer" parent="CanvasLayer/Control/HUDContainer"]
+custom_minimum_size = Vector2(125, 80)
+layout_mode = 2
+alignment = 1
+
+[node name="TurnLabel" type="Label" parent="CanvasLayer/Control/HUDContainer/TurnContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Turn"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TurnValue" type="Label" parent="CanvasLayer/Control/HUDContainer/TurnContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+horizontal_alignment = 1
+vertical_alignment = 3
 
 [node name="EventManager" type="Node" parent="."]
 script = ExtResource("3_h8y4w")

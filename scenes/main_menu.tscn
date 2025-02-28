@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqci15bl2hlpd"]
+[gd_scene load_steps=6 format=3 uid="uid://dqci15bl2hlpd"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_deb5v"]
+[ext_resource type="FontFile" uid="uid://c4th1f5lq1kos" path="res://assets/North.otf" id="2_c8x6i"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ric1a"]
 bg_color = Color(0.243137, 0.372549, 0.45098, 1)
@@ -53,6 +54,8 @@ alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c8x6i")
+theme_override_font_sizes/font_size = 48
 text = "Frozen Odyssey"
 horizontal_alignment = 1
 

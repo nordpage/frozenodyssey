@@ -12,7 +12,7 @@ offset_bottom = 100.0
 grow_horizontal = 2
 script = ExtResource("1_5ge8t")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HUDContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -26,67 +26,67 @@ size_flags_horizontal = 2
 theme_override_constants/separation = 3
 alignment = 1
 
-[node name="TempContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="TempContainer" type="VBoxContainer" parent="HUDContainer"]
 custom_minimum_size = Vector2(125, 80)
 layout_mode = 2
 alignment = 1
 
-[node name="TemperatureLabel" type="Label" parent="HBoxContainer/TempContainer"]
+[node name="TemperatureLabel" type="Label" parent="HUDContainer/TempContainer"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 text = "Temperature"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TemperatureValue" type="Label" parent="HBoxContainer/TempContainer"]
+[node name="TemperatureValue" type="Label" parent="HUDContainer/TempContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
 horizontal_alignment = 1
 vertical_alignment = 3
 
-[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="HUDContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="FoodContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="FoodContainer" type="VBoxContainer" parent="HUDContainer"]
 custom_minimum_size = Vector2(125, 80)
 layout_mode = 2
 alignment = 1
 
-[node name="FoodLabel" type="Label" parent="HBoxContainer/FoodContainer"]
+[node name="FoodLabel" type="Label" parent="HUDContainer/FoodContainer"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 text = "Food"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="FoodValue" type="Label" parent="HBoxContainer/FoodContainer"]
+[node name="FoodValue" type="Label" parent="HUDContainer/FoodContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
 horizontal_alignment = 1
 vertical_alignment = 3
 
-[node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
+[node name="VSeparator2" type="VSeparator" parent="HUDContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="EnergyContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="EnergyContainer" type="VBoxContainer" parent="HUDContainer"]
 custom_minimum_size = Vector2(125, 80)
 layout_mode = 2
 alignment = 1
 
-[node name="EnergyLabel" type="Label" parent="HBoxContainer/EnergyContainer"]
+[node name="EnergyLabel" type="Label" parent="HUDContainer/EnergyContainer"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 text = "Energy"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="EnergyValue" type="Label" parent="HBoxContainer/EnergyContainer"]
+[node name="EnergyValue" type="Label" parent="HUDContainer/EnergyContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
@@ -94,72 +94,72 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_ulhx4")
 horizontal_alignment = 1
 vertical_alignment = 3
 
-[node name="VSeparator3" type="VSeparator" parent="HBoxContainer"]
+[node name="VSeparator3" type="VSeparator" parent="HUDContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="MoraleContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="MoraleContainer" type="VBoxContainer" parent="HUDContainer"]
 custom_minimum_size = Vector2(125, 80)
 layout_mode = 2
 alignment = 1
 
-[node name="MoraleLabel" type="Label" parent="HBoxContainer/MoraleContainer"]
+[node name="MoraleLabel" type="Label" parent="HUDContainer/MoraleContainer"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 text = "Morale"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MoraleValue" type="Label" parent="HBoxContainer/MoraleContainer"]
+[node name="MoraleValue" type="Label" parent="HUDContainer/MoraleContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
 horizontal_alignment = 1
 vertical_alignment = 3
 
-[node name="VSeparator4" type="VSeparator" parent="HBoxContainer"]
+[node name="VSeparator4" type="VSeparator" parent="HUDContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="DateContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="DateContainer" type="VBoxContainer" parent="HUDContainer"]
 custom_minimum_size = Vector2(125, 80)
 layout_mode = 2
 alignment = 1
 
-[node name="DateLabel" type="Label" parent="HBoxContainer/DateContainer"]
+[node name="DateLabel" type="Label" parent="HUDContainer/DateContainer"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 text = "Date"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DateValue" type="Label" parent="HBoxContainer/DateContainer"]
+[node name="DateValue" type="Label" parent="HUDContainer/DateContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
 horizontal_alignment = 1
 vertical_alignment = 3
 
-[node name="VSeparator5" type="VSeparator" parent="HBoxContainer"]
+[node name="VSeparator5" type="VSeparator" parent="HUDContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="TurnContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="TurnContainer" type="VBoxContainer" parent="HUDContainer"]
 custom_minimum_size = Vector2(125, 80)
 layout_mode = 2
 alignment = 1
 
-[node name="TurnLabel" type="Label" parent="HBoxContainer/TurnContainer"]
+[node name="TurnLabel" type="Label" parent="HUDContainer/TurnContainer"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 text = "Turn"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TurnValue" type="Label" parent="HBoxContainer/TurnContainer"]
+[node name="TurnValue" type="Label" parent="HUDContainer/TurnContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6

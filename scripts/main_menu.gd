@@ -10,9 +10,9 @@ func _ready():
 	$VBoxContainer/MenuButtons/ContinueButton.disabled = !FileAccess.file_exists(SaveManager.SAVE_PATH)
 
 func _on_new_game_pressed():
+	#get_tree().change_scene_to_file("res://main.tscn")
 	AudioManager.play_sound("click")
-	LoadingScreen.load_scene("res://main.tscn", self, "on_new_game_loaded")
-
+	SceneLoader.start_loading("res://main.tscn", self, "on_new_game_loaded")
 
 
 func _on_continue_pressed():
@@ -22,7 +22,7 @@ func _on_continue_pressed():
 	var menu = self
 	
 	# Вызываем загрузку с callback
-	LoadingScreen.load_scene("res://main.tscn", menu, "on_scene_loaded")
+	SceneLoader.start_loading("res://main.tscn", menu, "on_scene_loaded")
 
 # Будет вызвано после загрузки сцены
 func on_scene_loaded():

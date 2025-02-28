@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://nt0jq052yahi"]
+[gd_scene load_steps=6 format=3 uid="uid://nt0jq052yahi"]
 
 [ext_resource type="Script" path="res://scripts/map.gd" id="1_38jes"]
 [ext_resource type="PackedScene" uid="uid://qpt7hwwh4vfu" path="res://scenes/LocationPoint.tscn" id="2_u33cd"]
-[ext_resource type="PackedScene" uid="uid://l6q7n1yicap" path="res://scenes/EventCardUI.tscn" id="3_bq1yc"]
+[ext_resource type="PackedScene" uid="uid://nmh8i2ho4jgs" path="res://scenes/EventCard.tscn" id="3_guanh"]
+[ext_resource type="Script" path="res://scenes/camera_2d.gd" id="4_37qw1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6dpdo"]
 
@@ -12,7 +13,7 @@ location_scene = ExtResource("2_u33cd")
 title_label = NodePath("CanvasLayer/Control/VFlowContainer/TitleLabel")
 description_label = NodePath("CanvasLayer/Control/VFlowContainer/DescritionLabel")
 event_panel = NodePath("CanvasLayer/Control/PanelContainer")
-event_card_scene = ExtResource("3_bq1yc")
+event_card_scene = ExtResource("3_guanh")
 
 [node name="Connections" type="Node2D" parent="."]
 
@@ -61,3 +62,6 @@ label_settings = SubResource("LabelSettings_6dpdo")
 
 [node name="DescritionLabel" type="Label" parent="CanvasLayer/Control/VFlowContainer"]
 layout_mode = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("4_37qw1")

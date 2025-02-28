@@ -2,12 +2,12 @@
 extends Control
 
 # Ссылки на UI элементы
-@onready var temperature_label = $HBoxContainer/TempContainer/TemperatureValue
-@onready var food_label = $HBoxContainer/FoodContainer/FoodValue
-@onready var energy_label = $HBoxContainer/EnergyContainer/EnergyValue
-@onready var morale_label = $HBoxContainer/MoraleContainer/MoraleValue
-@onready var turn_label = $HBoxContainer/TurnContainer/TurnValue
-@onready var date_label = $HBoxContainer/DateContainer/DateValue
+@onready var temperature_label = $HUDContainer/TempContainer/TemperatureValue
+@onready var food_label = $HUDContainer/FoodContainer/FoodValue
+@onready var energy_label = $HUDContainer/EnergyContainer/EnergyValue
+@onready var morale_label = $HUDContainer/MoraleContainer/MoraleValue
+@onready var turn_label = $HUDContainer/TurnContainer/TurnValue
+@onready var date_label = $HUDContainer/DateContainer/DateValue
 
 # Ссылка на GameResources
 @onready var game_resources = get_node_or_null("/root/Main/GameResources")
