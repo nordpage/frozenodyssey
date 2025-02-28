@@ -11,10 +11,16 @@ config_version=5
 [application]
 
 config/name="FrozenOdyssey"
-run/main_scene="res://main.tscn"
+run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/image="res://FG.png"
 config/icon="res://icon.svg"
+
+[autoload]
+
+AudioManager="*res://scripts/AudioManager.gd"
+SaveManager="*res://scripts/SaveManager.gd"
+LoadingScreen="*res://scripts/LoadingScreen.gd"
 
 [display]
 

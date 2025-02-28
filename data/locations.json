@@ -18,7 +18,7 @@
 	  "description": "Первая остановка экспедиции. Здесь Седов пополнил запасы угля.",
 	  "description_en": "The expedition's first stop. Sedov replenished coal supplies here.",
 	  "typeString": "Normal",
-	  "position": {"x": 2, "y": 0},
+	  "position": {"x": 1, "y": 0},
 	  "canCamp": false,
 	  "connectedNodes": ["start", "first_wintering", "alt_route_kara"]
 	},
@@ -29,7 +29,7 @@
 	  "description": "Бухта на Новой Земле, где экспедиция провела первую зимовку после шторма.",
 	  "description_en": "Bay on Novaya Zemlya where the expedition spent their first winter after a storm.",
 	  "typeString": "Shelter",
-	  "position": {"x": 3, "y": 1},
+	  "position": {"x": 2, "y": 0},
 	  "canCamp": true,
 	  "connectedNodes": ["novaya_zemlya", "foka_ship", "alt_hunting_grounds"]
 	},
@@ -40,7 +40,7 @@
 	  "description": "Судно, вмерзшее в лёд у берегов Земли Франца-Иосифа.",
 	  "description_en": "The ship frozen in ice near Franz Josef Land.",
 	  "typeString": "Camp",
-	  "position": {"x": 4, "y": 0},
+	  "position": {"x": 3, "y": 0},
 	  "canCamp": true,
 	  "connectedNodes": ["first_wintering", "hooker_island", "alt_nansen_hut"]
 	},
@@ -51,7 +51,7 @@
 	  "description": "Место основной базы экспедиции. Здесь построены зимовочные домики.",
 	  "description_en": "Main expedition base. Winter cabins were built here.",
 	  "typeString": "Camp",
-	  "position": {"x": 5, "y": 1},
+	  "position": {"x": 4, "y": 0},
 	  "canCamp": true,
 	  "connectedNodes": ["foka_ship", "rudolf_island", "alt_tikhaya_bay"]
 	},
@@ -62,7 +62,7 @@
 	  "description": "Самый северный остров архипелага, откуда Седов начал поход к полюсу.",
 	  "description_en": "The northernmost island of the archipelago, from where Sedov began his trek to the pole.",
 	  "typeString": "Story",
-	  "position": {"x": 6, "y": 0},
+	  "position": {"x": 5, "y": 0},
 	  "canCamp": true,
 	  "connectedNodes": ["hooker_island", "polar_trek", "alt_jackson_camp"]
 	},
@@ -73,7 +73,7 @@
 	  "description": "Маршрут Седова, Линника и Пустошного на север по дрейфующим льдам.",
 	  "description_en": "Route of Sedov, Linnik, and Pustoshny northward across drifting ice.",
 	  "typeString": "DangerZone",
-	  "position": {"x": 7, "y": 1},
+	  "position": {"x": 6, "y": 0},
 	  "canCamp": false,
 	  "connectedNodes": ["rudolf_island", "final_camp", "alt_ice_cracks"]
 	},
@@ -84,7 +84,7 @@
 	  "description": "Место смерти Седова 5 марта 1914 года. Здесь соратники похоронили его во льдах.",
 	  "description_en": "Where Sedov died on March 5, 1914. His companions buried him in the ice here.",
 	  "typeString": "Story",
-	  "position": {"x": 8, "y": 0},
+	  "position": {"x": 7, "y": 0},
 	  "canCamp": true,
 	  "connectedNodes": ["polar_trek", "alt_return_path"]
 	},
@@ -95,7 +95,7 @@
 	  "description": "Альтернативный маршрут через Мурманск, где экспедиция могла запастись припасами.",
 	  "description_en": "Alternative route through Murmansk where the expedition could stock up on supplies.",
 	  "typeString": "Normal",
-	  "position": {"x": -2, "y": 0},
+	  "position": {"x": 1, "y": 1},
 	  "canCamp": false,
 	  "connectedNodes": ["start", "alt_white_sea"]
 	},
@@ -106,7 +106,7 @@
 	  "description": "Морской путь вдоль побережья Белого моря.",
 	  "description_en": "Sea route along the White Sea coast.",
 	  "typeString": "Normal",
-	  "position": {"x": -3, "y": 1},
+	  "position": {"x": 2, "y": 1},
 	  "canCamp": false,
 	  "connectedNodes": ["kola_peninsula", "alt_solovki"]
 	},
@@ -117,7 +117,7 @@
 	  "description": "Архипелаг в Белом море с древним монастырем. Хорошее место для пополнения припасов.",
 	  "description_en": "Archipelago in the White Sea with an ancient monastery. Good place to replenish supplies.",
 	  "typeString": "Shelter",
-	  "position": {"x": -4, "y": 0},
+	  "position": {"x": 3, "y": 1},
 	  "canCamp": true,
 	  "connectedNodes": ["alt_white_sea"]
 	},
@@ -139,7 +139,7 @@
 	  "description": "Архипелаг в Северном Ледовитом океане. Был открыт позже экспедиции Седова.",
 	  "description_en": "Arctic Ocean archipelago. Was discovered after Sedov's expedition.",
 	  "typeString": "Story",
-	  "position": {"x": 3, "y": -2},
+	  "position": {"x": 3, "y": -1},
 	  "canCamp": false,
 	  "connectedNodes": ["alt_route_kara"]
 	},
@@ -172,7 +172,7 @@
 	  "description": "Защищённая бухта, где позже была основана советская полярная станция.",
 	  "description_en": "Sheltered bay where a Soviet polar station was later established.",
 	  "typeString": "Shelter",
-	  "position": {"x": 5, "y": 2},
+	  "position": {"x": 5, "y": 1},
 	  "canCamp": true,
 	  "connectedNodes": ["hooker_island", "alt_sedov_observatory"]
 	},
@@ -183,7 +183,7 @@
 	  "description": "Место, где экспедиция проводила научные наблюдения и измерения.",
 	  "description_en": "Where the expedition conducted scientific observations and measurements.",
 	  "typeString": "Story",
-	  "position": {"x": 5, "y": -1},
+	   "position": {"x": 6, "y": 1},
 	  "canCamp": false,
 	  "connectedNodes": ["alt_tikhaya_bay"]
 	},
@@ -216,7 +216,7 @@
 	  "description": "Маршрут возвращения Линника и Пустошного после смерти Седова.",
 	  "description_en": "Return route of Linnik and Pustoshny after Sedov's death.",
 	  "typeString": "Normal",
-	  "position": {"x": 7, "y": -2},
+	  "position": {"x": 8, "y": -1},
 	  "canCamp": false,
 	  "connectedNodes": ["final_camp", "rudolf_island"]
 	}

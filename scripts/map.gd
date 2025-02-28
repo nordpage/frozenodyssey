@@ -3,16 +3,17 @@ extends Node2D
 @export var location_scene: PackedScene
 @export var title_label: Label
 @export var description_label: Label
-@export var event_panel: PanelContainer  # Контейнер для карточек
-@export var event_card_scene: PackedScene  # Префаб карточки события
+@export var event_panel: PanelContainer
+@export var event_card_scene: PackedScene
 
-@onready var event_manager = get_node_or_null("/root/Main/EventManager")  # если EventManager в Main
-@onready var game_resources = get_node_or_null("/root/Main/GameResources")  # Теперь ссылаемся на узел!
-
+@onready var event_manager = get_node_or_null("/root/Main/EventManager")
+@onready var game_resources = get_node_or_null("/root/Main/GameResources")
 
 var locations_data = []
 var location_nodes = {}
-var active_location_id: String = "start"
+var active_location_id: String = ""
+var visited_locations = []
+var last_location_id = ""
 
 var resources = {
 	"Temperature": 100,
@@ -30,24 +31,31 @@ func _ready():
 	load_locations_from_json()
 	draw_connections()
 	
-# Изменить эту часть
 	if locations_data.size() > 0:
-		# Находим локацию с ID "start"
-		var start_loc_found = false
+		var start_found = false
 		for loc in locations_data:
 			if loc["id"] == "start":
 				update_active_location(loc["id"])
-				start_loc_found = true
+				start_found = true
 				break
-	
-	# Если не нашли "start", используем первую локацию
-		if not start_loc_found and locations_data.size() > 0:
+		
+		if not start_found and locations_data.size() > 0:
 			update_active_location(locations_data[0]["id"])
-
-
+			
+		disable_unreachable_locations()
+		
+	await get_tree().create_timer(0.1).timeout
+	load_event_cards(active_location_id)
+	
+	
+func save_game():
+	SaveManager.save_game(self)
+	
+func load_game():
+	return SaveManager.load_game(self)
 
 func load_locations_from_json():
-	var file = FileAccess.open("res://data/locations.json", FileAccess.READ)
+	var file = FileAccess.open("res://data/locations_new.json", FileAccess.READ)
 	if not file:
 		print("Ошибка: Не удалось открыть locations.json")
 		return
@@ -91,30 +99,26 @@ func load_locations_from_json():
 func create_location(loc):
 	var location_instance = location_scene.instantiate()
 	add_child(location_instance)
+	location_instance.default_texture = load("res://assets/location_icon.png")
+	location_instance.active_texture = load("res://assets/location_icon_active.png")
+	location_instance.disabled_texture = load("res://assets/location_icon_disabled.png")
 	location_instance.position = Vector2(loc["position"]["x"], loc["position"]["y"])
 	location_instance.location_id = loc["id"]
 	location_instance.title = loc.get("title", "")
 	location_instance.description = loc.get("description", "")
 	location_instance.connect("location_selected", Callable(self, "_on_location_selected"))
 	
-	# Устанавливаем текстуры
-	location_instance.default_texture = load("res://assets/location_icon.png")
-	location_instance.active_texture = load("res://assets/location_icon_active.png") # Предполагаемый путь
-	
 	location_nodes[loc["id"]] = location_instance
 
 func _on_location_selected(location_id: String):
-	active_location_id = location_id
-	update_active_location(location_id)
-	
-	
+	move_to_location(location_id)
+
 func get_location_events(location_id):
 	var cards = event_manager.get_location_cards(location_id)
 	if cards.size() > 0:
 		print("События для", location_id, ":", cards)
 	else:
 		print("Нет событий для", location_id)
-
 
 func draw_connections():
 	var path_lines = $Connections/PathLines
@@ -158,9 +162,8 @@ func update_active_location(location_id: String):
 		
 		# Загружаем карточки событий
 		load_event_cards(location_id)
-		
-		
-		
+		disable_unreachable_locations()
+
 func get_location_data(location_id: String) -> Dictionary:
 	for loc in locations_data:
 		if loc["id"] == location_id:
@@ -179,21 +182,11 @@ func load_event_cards(location_id: String):
 			for card in cards:
 				create_event_card(card)
 
-
-
 func create_event_button(card: Dictionary):
 	var button = Button.new()
 	button.text = card.get("title", "Unknown Event")
-	
-	# Добавляем описание в Tooltip
 	button.tooltip_text = card.get("description", "No description available.")
-
-	# Добавляем обработку клика
-	button.pressed.connect(func():
-		apply_event_effect(card)
-	)
-
-	# Добавляем кнопку в панель
+	button.pressed.connect(func(): apply_event_effect(card))
 	event_panel.add_child(button)
 	
 func create_event_card(card: Dictionary):
@@ -203,7 +196,6 @@ func create_event_card(card: Dictionary):
 
 	var event_card_instance = event_card_scene.instantiate()
 	
-	# Проверяем, есть ли нужные ноды внутри карточки
 	var title_node = event_card_instance.get_node_or_null("VBoxContainer/Title")
 	var description_node = event_card_instance.get_node_or_null("VBoxContainer/Description")
 	var apply_button = event_card_instance.get_node_or_null("VBoxContainer/ApplyButton")
@@ -212,88 +204,93 @@ func create_event_card(card: Dictionary):
 		print("❌ Ошибка: Проблема с нодами внутри карточки!")
 		return
 
-	# Устанавливаем текст заголовка и описания
 	title_node.text = card.get("title", "Unknown Event")
 	description_node.text = card.get("description", "No description available.")
 
-	# Обработчик клика на кнопку
 	apply_button.pressed.connect(func():
 		apply_event_effect(card)
-		event_card_instance.queue_free()  # Удаляем карточку после применения
+		event_card_instance.queue_free()
 	)
 
-	# Добавляем карточку в UI-контейнер
 	event_panel.add_child(event_card_instance)
-
-	# Настраиваем размер карточки
 	event_card_instance.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	event_card_instance.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 
-	
 func move_to_location(location_id: String):
+	print("Вызван move_to_location для:", location_id)
+	print("Текущая активная точка:", active_location_id)
+	
 	if not location_nodes.has(location_id):
-		print("❌ Ошибка: Точка не найдена в location_nodes:", location_id)
-		return
-
-	# Если точка уже активна или не связана с текущей — выход
-	if location_id == active_location_id:
-		print("⚠️ Точка уже активна:", location_id)
+		print("❌ Точка не найдена:", location_id)
 		return
 		
-	if not is_location_accessible(location_id):
-		print("❌ Переход невозможен в:", location_id)
+	if location_id == active_location_id:
+		print("⚠️ Точка уже активна:", location_id)
+		disable_unreachable_locations()
 		return
+
+	# Проверяем энергию сначала
+	if game_resources:
+		var energy_resource = game_resources.get_resource("Energy")
+		if energy_resource and energy_resource.amount < 10:
+			print("❌ Недостаточно энергии для хода!")
+			return
 
 	print("🚶 Переход на точку:", location_id)
 
-	# Делаем предыдущую точку неактивной
+	# Запоминаем предыдущую локацию
+	last_location_id = active_location_id
+	
+	# Добавляем в посещенные, если еще не добавлено
+	if active_location_id != "" and not visited_locations.has(active_location_id):
+		visited_locations.append(active_location_id)
+	
+	# Обновляем активную локацию
 	if active_location_id != "":
 		location_nodes[active_location_id].set_active(false)
-
-	# Устанавливаем новую активную точку
+	
 	active_location_id = location_id
 	location_nodes[active_location_id].set_active(true)
 
-	# Обновляем информацию о локации
+	# Обновляем UI
 	var location_data = get_location_data(location_id)
 	if location_data:
 		title_label.text = location_data.get("title", "Unknown Location")
 		description_label.text = location_data.get("description", "No description available.")
 
-	# Загружаем карточки событий для новой точки
+	# Загружаем карточки и затрачиваем энергию
 	load_event_cards(location_id)
-
-	# Логика уменьшения энергии и засчитывания хода
 	if game_resources:
-		game_resources.modify_resource("Energy", -10)  # Примерный расход энергии на ход
+		game_resources.modify_resource("Energy", -10)
 
-	# Блокируем все точки, кроме доступных
+	print("🧩 Вызываем disable_unreachable_locations()")
 	disable_unreachable_locations()
+	print("✅ move_to_location завершен")
 
-	
 func disable_unreachable_locations():
 	var active_location_data = get_location_data(active_location_id)
 	if not active_location_data:
 		return
 
 	var accessible_nodes = active_location_data.get("connectedNodes", [])
+	print("Доступные узлы от", active_location_id, ":", accessible_nodes)
 
+	# Сначала активируем все точки, доступные от текущей
 	for loc_id in location_nodes.keys():
-		if loc_id != active_location_id and not loc_id in accessible_nodes:
-			location_nodes[loc_id].set_disabled()  # Делаем точку неактивной
+		if loc_id == active_location_id:
+			# Активная точка всегда активна
+			location_nodes[loc_id].set_active(true)
 		elif loc_id in accessible_nodes:
-			location_nodes[loc_id].set_enabled()  # Делаем точку снова кликабельной
-
-
-
-
-func is_location_accessible(location_id: String) -> bool:
-	# Проверяем, есть ли у текущей активной локации связь с новой
-	for loc in locations_data:
-		if loc["id"] == active_location_id and location_id in loc["connectedNodes"]:
-			return true
-	return false
-
+			# Соседние точки доступны для клика
+			location_nodes[loc_id].set_enabled()
+		else:
+			# Остальные точки блокируем
+			location_nodes[loc_id].set_disabled()
+			
+	# Затем блокируем все посещенные локации
+	for prev_id in visited_locations:
+		location_nodes[prev_id].set_disabled()
+	
 
 func apply_event_effect(card: Dictionary):
 	var effect = card.get("effect", "")
@@ -318,8 +315,7 @@ func apply_event_effect(card: Dictionary):
 			print("Движение временно заблокировано!")
 
 	print("Применен эффект:", effect, "значение:", value)
-
-
+	AudioManager.play_sound("card_play")
 
 func update_resource(resource: String, amount: int):
 	if resources.has(resource):

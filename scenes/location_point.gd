@@ -26,19 +26,20 @@ func _input(event):
 			is_inside = abs(local_pos.x) < shape.size.x/2 and abs(local_pos.y) < shape.size.y/2
 			
 		if is_inside:
-			print("Клик по локации через _input:", location_id)
-			emit_signal("location_selected", location_id)
-			
-			# Обновляем активную локацию и перемещаемся в одном методе
+			AudioManager.play_sound("move")
+		# Не нужно отправлять сигнал и перемещаться - выберите один способ
 			var parent = get_parent()
 			if parent.has_method("move_to_location"):
 				parent.move_to_location(location_id)
-				# Предотвращаем дальнейшую обработку ввода
 				get_viewport().set_input_as_handled()
 
+# В location_point.gd
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		print("Клик по точке ID:", location_id)
+		print("Клик обнаружен через _on_input_event:", location_id)
+		var parent = get_parent()
+		if parent.has_method("move_to_location"):
+			parent.move_to_location(location_id)
 		
 func set_active(active: bool):
 	is_active = active
@@ -46,11 +47,16 @@ func set_active(active: bool):
 	sprite.texture = active_texture if active else default_texture
 	
 func set_disabled():
+	if is_active:  # Не блокировать активную точку
+		return
+	print("🔒 Блокировка:", location_id)
 	is_active = false
 	set_process_input(false)
-	get_node("Sprite2D").texture = disabled_texture  # Меняем текстуру
-	
+	input_pickable = false
+	get_node("Sprite2D").texture = disabled_texture
+
 func set_enabled():
-	is_active = false  # Не активно, но доступно
-	set_process_input(true)
+	is_active = false
+	set_process_input(true)   # Включаем обработку _input
+	input_pickable = true     # Включаем возможность выбора (добавьте эту строку)
 	get_node("Sprite2D").texture = default_texture

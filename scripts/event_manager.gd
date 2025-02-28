@@ -4,6 +4,7 @@ var events_data = {}
 
 func _ready():
 	load_events()
+	print("Загруженные локации событий:", events_data.keys())
 
 func load_events():
 	var file = FileAccess.open("res://data/location_cards.json", FileAccess.READ)
@@ -16,7 +17,7 @@ func load_events():
 				events_data[entry["locationId"]] = entry["cards"]
 		file.close()
 	else:
-		print("Ошибка загрузки events.json")
+		print("Ошибка загрузки location_cards.json")
 
 # Получение всех карточек для конкретной локации
 func get_location_cards(location_id):

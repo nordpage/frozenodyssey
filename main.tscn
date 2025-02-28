@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://drd061tuuk07p"]
+[gd_scene load_steps=6 format=3 uid="uid://drd061tuuk07p"]
 
 [ext_resource type="Script" path="res://scripts/LocationManager.gd" id="1_0j6yh"]
 [ext_resource type="PackedScene" uid="uid://nt0jq052yahi" path="res://scenes/map.tscn" id="3_eavyi"]
+[ext_resource type="PackedScene" uid="uid://rv3b0fr42hf8" path="res://scenes/HUD.tscn" id="3_fqa3u"]
 [ext_resource type="Script" path="res://scripts/event_manager.gd" id="3_h8y4w"]
 [ext_resource type="Script" path="res://scripts/GameResources.gd" id="4_6vv21"]
 
@@ -12,48 +13,7 @@ script = ExtResource("1_0j6yh")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Control" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control"]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_bottom = 80.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="HFlowContainer" type="HFlowContainer" parent="CanvasLayer/Control"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 70.0
-grow_horizontal = 2
-alignment = 1
-last_wrap_alignment = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/Control/HFlowContainer"]
-layout_mode = 2
-text = "label1"
-
-[node name="Label2" type="Label" parent="CanvasLayer/Control/HFlowContainer"]
-layout_mode = 2
-text = "label2"
-
-[node name="Label3" type="Label" parent="CanvasLayer/Control/HFlowContainer"]
-layout_mode = 2
-text = "label3"
-
-[node name="Label4" type="Label" parent="CanvasLayer/Control/HFlowContainer"]
-layout_mode = 2
-text = "label4"
+[node name="HBoxContainer" parent="CanvasLayer" instance=ExtResource("3_fqa3u")]
 
 [node name="EventManager" type="Node" parent="."]
 script = ExtResource("3_h8y4w")

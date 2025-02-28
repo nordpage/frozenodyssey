@@ -1,0 +1,1970 @@
+{
+   "locations":[
+	  {
+		 "id":"point_1",
+		 "date":"08.12.1912",
+		 "title":"Начало первой экспедиции",
+		 "title_en":"First Expedition Begins",
+		 "description":"Седов отправляется с двумя матросами в первую научную экскурсию на мыс Литте и Нассау.",
+		 "description_en":"Sedov sets out with two sailors on the first scientific excursion to Cape Litte and Nassau.",
+		 "diary":"В 5 часов дня, скучая от праздной жизни, с которой невольно связывает нас надоедливая полярная ночь, я отправился с двумя матросами Иоганном Томиссар и Линником в первую научную экскурсию на мыс Литте и Нассау. Припасов и провизии захватили себе на две недели. Взяли палатку, ружье, к нему 20 патронов, примус и проч. Все это было уложено в одну нарту при 10 собаках. Вес нарт достигал 15 пудов.",
+		 "diary_en":"At 5 o'clock in the evening, bored with the idle life forced upon us by the tedious polar night, I set out with two sailors, Johann Tomissar and Linnik, on the first scientific excursion to Cape Litte and Nassau. We took supplies and provisions for two weeks. We took a tent, a rifle with 20 cartridges, a primus stove, etc. All this was packed onto one sledge with 10 dogs. The weight of the sledge reached 15 poods.",
+		 "x":53.274,
+		 "y":76.249,
+		 "connectedNodes":[
+			"point_2"
+		 ]
+	  },
+	  {
+		 "id":"point_2",
+		 "date":"09.12.1912",
+		 "title":"Ночевка у мыса Прощания",
+		 "title_en":"Overnight at Cape Farewell",
+		 "description":"Экспедиция остановилась на ночлег в 15 верстах от судна, продвигаясь в направлении мыса Литте.",
+		 "description_en":"The expedition stopped to camp 15 versts from the ship, moving toward Cape Litte.",
+		 "diary":"В 1 ч. утра остановились ночевать у мыса Прощания, около 15 верст от судна. Палатка была поставлена на льду, согрели на примусе чай, разогреты Вихорева консервы и затем спали в мешках. В 6 часов при облачном небе и легком sw/2 следовали дальше. Луна лишь светила по временам. Дорогу различать трудно. Часто взбирались на ропаки. Правим по звездам.",
+		 "diary_en":"At 1 a.m. we stopped to camp at Cape Farewell, about 15 versts from the ship. The tent was set up on the ice, we heated tea on the primus stove, warmed Vikhorev's canned food, and then slept in our sleeping bags. At 6 o'clock, with cloudy skies and light SW/2 winds, we continued on. The moon only shone at times. The path was difficult to distinguish. We often climbed over ice hummocks. We navigated by the stars.",
+		 "x":53.351,
+		 "y":76.293,
+		 "connectedNodes":[
+			"point_1",
+			"point_3"
+		 ]
+	  },
+	  {
+		 "id":"point_3",
+		 "date":"12.12.1912",
+		 "title":"Работа на мысе Литке",
+		 "title_en":"Work at Cape Litke",
+		 "description":"Установка астрономического пункта и магнитные наблюдения. Первая встреча с белым медведем.",
+		 "description_en":"Setting up an astronomical point and magnetic observations. First encounter with a polar bear.",
+		 "diary":"Построили на мысу Литке Каменный гурий с крестом, на котором надпись: «Астрономический пункт». 13 декабря построили снежную иглу для магнитных наблюдений и в этот же день определили все три магнитных элемента: склонение, наклонение и гор. напряжение. 14 декабря пришел к палатке первый медведь, который в жестокой схватке был нами убит. Собаки лишь некоторые принимали участие в сражении, другие тряслись и прятались в палатку.",
+		 "diary_en":"We built a stone cairn with a cross at Cape Litke, inscribed: 'Astronomical Point'. On December 13, we built a snow igloo for magnetic observations and determined all three magnetic elements on the same day: declination, inclination, and horizontal tension. On December 14, the first bear came to the tent and was killed by us in a fierce battle. Only some of the dogs took part in the fight; others trembled and hid in the tent.",
+		 "x":53.492,
+		 "y":76.404,
+		 "connectedNodes":[
+			"point_2",
+			"point_4"
+		 ]
+	  },
+	  {
+		 "id":"point_4",
+		 "date":"15.12.1912",
+		 "title":"Медвежья охота",
+		 "title_en":"Bear Hunt",
+		 "description":"Экспедиция сталкивается с несколькими белыми медведями. Заканчиваются патроны.",
+		 "description_en":"The expedition encounters several polar bears. Running out of ammunition.",
+		 "diary":"Ещё приходило два вместе медведя, но собаки их далеко встретили и прогнали прочь, не допустив до палатки. Затем еще пришел один очень большой, с которым завязалось сражение, но благодаря сильной метели и темноте, он сильно раненый, ушел в воду. Потом еще много приходило, но мы не вступали с ними в бой, так как из взятых 20 патронов, оставалось только 10 для самозащиты (уходя в экскурсию, не предполагали, что можем встретить столько медведей).",
+		 "diary_en":"Two more bears came together, but the dogs met them far away and drove them away, not letting them reach the tent. Then another very large one came, with which a battle ensued, but due to the strong blizzard and darkness, it managed to escape into the water despite being badly wounded. Then many more came, but we did not engage them in battle, as out of the 20 cartridges we took, only 10 remained for self-defense (when leaving for the excursion, we did not expect that we would encounter so many bears).",
+		 "x":53.511,
+		 "y":76.415,
+		 "connectedNodes":[
+			"point_3",
+			"point_5"
+		 ]
+	  },
+	  {
+		 "id":"point_5",
+		 "date":"17.12.1912",
+		 "title":"Ночевка в буран",
+		 "title_en":"Overnight in a Blizzard",
+		 "description":"Седов и его спутники застигнуты бураном на обратном пути.",
+		 "description_en":"Sedov and his companions are caught in a blizzard on the return journey.",
+		 "diary":"В 4 ч. дня остановились ночевать у мыса Прощания. Холод собачий. Тр. -29.5о. Темно, двигаться совершенно невозможно. Еле при фонаре находили дорогу. На следующий день еще подвинулись к лагерю верст на 8. Остановились ночевать. Темно хоть глаз выколи. Температура спустилась до -2о. Малицы и другая одежда сделались мокрыми. Палатка тоже. Дул страшный ветер со снегом. К сожалению, примус не работал, погреться и посушиться, не было возможности. Забились в мокрые малицы и кое-как уснули.",
+		 "diary_en":"At 4 p.m. we stopped to camp at Cape Farewell. It was bitterly cold. The temperature was -29.5°. It was dark, making movement completely impossible. We could barely find our way with a lantern. The next day we moved another 8 versts toward the camp. We stopped to spend the night. It was pitch dark. The temperature dropped to -2°. Our malitsas and other clothing became wet. The tent too. A terrible wind blew with snow. Unfortunately, the primus stove was not working, so there was no way to warm up and dry off. We huddled in wet malitsas and somehow fell asleep.",
+		 "x":53.375,
+		 "y":76.332,
+		 "connectedNodes":[
+			"point_4",
+			"point_6"
+		 ]
+	  },
+	  {
+		 "id":"point_6",
+		 "date":"19.12.1912",
+		 "title":"Возвращение на судно",
+		 "title_en":"Return to the Ship",
+		 "description":"В сильный мороз экспедиция бросает снаряжение и возвращается на судно.",
+		 "description_en":"In severe frost, the expedition abandons equipment and returns to the ship.",
+		 "diary":"Штиль. Морозу -25о. Луны нет. Страшная тьма. Все так замерзло, что ни до чего нельзя было дотронуться. Одежда на нас торчала как кринолины. Рукавицы подобны были сухарю. Собаки примерзли под снегом и издавали жалобный оттуда визг. Вырыли собак. Взяли фонарь и налегке, руководствуясь звездами, побежали домой. Все бросили на месте. Собаки бежали за нами веселые и довольные, что им не приходится ничего тащить. В 2 верстах от судна мы увидели огонь, это товарищи встречали нас, о чем известили их передовые собаки.",
+		 "diary_en":"Calm. Frost -25°. No moon. Terrible darkness. Everything was so frozen that nothing could be touched. Our clothes stuck out like crinolines. Mittens resembled rusks. The dogs were frozen under the snow and made pitiful whines from there. We dug out the dogs. We took a lantern and, guided by the stars, ran home light. We left everything behind. The dogs ran behind us, happy and pleased that they didn't have to pull anything. Two versts from the ship, we saw a light; it was our comrades meeting us, having been alerted by the advance dogs.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_5",
+			"point_7"
+		 ]
+	  },
+	  {
+		 "id":"point_7",
+		 "date":"24.12.1912",
+		 "title":"Рождество Христово",
+		 "title_en":"Christmas",
+		 "description":"Экипаж празднует Рождество на зимовке.",
+		 "description_en":"The crew celebrates Christmas during winter quarters.",
+		 "diary":"Все были дома. В 8 часов утра последовал выстрел из пушки, известившей появление звезды (хотя их с 12 часов дня бесчисленное множество на небе). Пробили на бак восемь склянок. Сели за стол. Стол был накрыт белой скатертью, под скатертью по старинному обычаю лежало сено. Сначала ели холодную треску соленую, затем суп из сухой трески с пирожками. Пирожки были с треской, с горохом и с черникой. Далее шла рисовая кутья и взвар и в заключение чай. Скоромного ничего не было. Был выпущен Рождественский номер журнала «Кают-Компания».",
+		 "diary_en":"Everyone was home. At 8 o'clock in the morning, a shot was fired from the cannon, announcing the appearance of a star (although countless stars had been in the sky since noon). Eight bells were struck at the bow. We sat down at the table. The table was covered with a white tablecloth, and according to ancient custom, hay was placed under the tablecloth. First, we ate cold salted cod, then soup made from dried cod with pies. The pies were filled with cod, peas, and blueberries. Next came rice kutya and kompot, and finally tea. There was nothing non-fasting. A Christmas issue of the 'Officers' Mess' magazine was published.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_6",
+			"point_8"
+		 ]
+	  },
+	  {
+		 "id":"point_8",
+		 "date":"31.12.1912",
+		 "title":"Встреча Нового 1913 года",
+		 "title_en":"New Year 1913 Celebration",
+		 "description":"Праздничная программа встречи Нового года на зимовке.",
+		 "description_en":"Festive New Year's Eve program during winter quarters.",
+		 "diary":"Программа встречи Нового года. 1. В 9 ч. елка. Раздача сюрпризов. 2. В 10 ч. иллюминация. 3. В 11 ч. чтение свежей газеты в присутствии всей кают-компании. 4. 12 ч. 1913 г. встреча Нового Года. Пушечный салют. Меню: 1. Холодная закуски. Водка. 2. Шампанское. 3. Печеный картофель в мундире. 4. Медвежьи котлеты отбивные. 5. Консервированные фрукты. 6. Чай, кофе, десерт. Коньяк. Были произнесены тосты за здоровье семейств участников экспедиции и под гром ушек кричали «ура».",
+		 "diary_en":"New Year's Eve program: 1. At 9 o'clock, Christmas tree. Distribution of surprises. 2. At 10 o'clock, illumination. 3. At 11 o'clock, reading of a fresh newspaper in the presence of the entire officers' mess. 4. At 12 o'clock, 1913, meeting the New Year. Cannon salute. Menu: 1. Cold appetizers. Vodka. 2. Champagne. 3. Baked potatoes in their jackets. 4. Bear cutlets. 5. Canned fruits. 6. Tea, coffee, dessert. Cognac. Toasts were made to the health of the families of the expedition members, and shouts of 'hurrah' rang out under the thunder of the little cannons.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_7",
+			"point_9"
+		 ]
+	  },
+	  {
+		 "id":"point_9",
+		 "date":"01.01.1913",
+		 "title":"Начало Нового года",
+		 "title_en":"New Year's Day",
+		 "description":"Празднование первого дня нового 1913 года на зимовке.",
+		 "description_en":"Celebration of the first day of the new year 1913 during winter quarters.",
+		 "diary":"Встали в 12 часов дня. Пили кофе с черным хлебом с маслом и сыром. В 1 ч. дня совершено было краткое Богослужение. Пели многолетие. В 2 часа дня присуждение премий за литературные труды. Причем премии получили: Павлов (стихотворение «Новогодний тост») и Вите («Передовица»). За объявление получил премию я («Сестры Рубашкины»). Премия -- 30 папирос фирмы «Zaterme». В 3 часа ходил поздравить команду с Новым Годом. Беседовал с матросами на тему новой жизни, новых трудов и проч.",
+		 "diary_en":"We got up at 12 noon. Drank coffee with black bread, butter, and cheese. At 1 p.m., a brief church service was held. We sang 'Many Years'. At 2 p.m., awards were given for literary works. Prizes were received by: Pavlov (poem 'New Year's Toast') and Vite ('Editorial'). I received a prize for the announcement ('The Rubashkin Sisters'). The prize was 30 cigarettes of the 'Zaterme' brand. At 3 o'clock, I went to congratulate the crew on the New Year. I talked with the sailors about the new life, new works, etc.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_8",
+			"point_10"
+		 ]
+	  },
+	  {
+		 "id":"point_10",
+		 "date":"05.01.1913",
+		 "title":"Крещенский сочельник",
+		 "title_en":"Epiphany Eve",
+		 "description":"Подготовка к празднику Крещения. Седов вспоминает о своей любимой.",
+		 "description_en":"Preparation for the Epiphany feast. Sedov reminisces about his beloved.",
+		 "diary":"До обеда вычислял астрономические наблюдения. После обеда резались в карты на папиросы. Продул 45 штук. В 9 ч. ужин, весь постный: холодное из капусты, луку, картошки и огурцов. Соленая отварная треска, кутья рисовая, взвар и чай. После ужина гадали на жженной бумаге. Мне вышел тюлень и какой-то сфинкс. Из домашних ничего не вышло, а как мне казалось, чтобы вышла одна скверная девчонка. Но, увы, она не вышла!? Где же ты? Что с тобой, мой милый Веерок, ты мне совсем не являешься?",
+		 "diary_en":"Before dinner, I calculated astronomical observations. After dinner, we played cards for cigarettes. I lost 45 pieces. At 9 o'clock, dinner, all fasting food: cold dish of cabbage, onions, potatoes, and cucumbers. Salted boiled cod, rice kutya, kompot, and tea. After dinner, we told fortunes using burnt paper. I got a seal and some kind of sphinx. None of the family members appeared, but as it seemed to me, I wished for one naughty girl to appear. But, alas, she did not appear!? Where are you? What's wrong with you, my dear Veerok, you don't appear to me at all?",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_9",
+			"point_11"
+		 ]
+	  },
+	  {
+		 "id":"point_11",
+		 "date":"06.01.1913",
+		 "title":"Крещение Господне",
+		 "title_en":"Epiphany",
+		 "description":"Праздник Крещения на зимовке. Седову снится его возлюбленная.",
+		 "description_en":"Epiphany feast during winter quarters. Sedov dreams of his beloved.",
+		 "diary":"На дворе мертвый штиль. Морозу -39.5 градусов. Готовимся к Богослужению. Видел сон: «Мать свою в деревне в домашней обстановке. Еду с Верунькой. Ты, Верушка, каталась в обществе одной дамы и господина на автомобиле. Ездила на острова и проч., по секрету от меня. Но я каким-то образом все узнал и закатил тебе грандиозный скандал. Дама мне известна, а господина ты отказалась назвать!» Далее, примирившись, мы были близко, близко вместе. Мне было легко, хорошо, хорошо!",
+		 "diary_en":"Outside, it's dead calm. Frost -39.5 degrees. We are preparing for the church service. I had a dream: 'My mother in the village in a home setting. I'm riding with Verunka. You, Verushka, were riding in the company of a lady and a gentleman in an automobile. You went to the islands, etc., in secret from me. But I somehow found out everything and made a huge scandal for you. The lady is known to me, but you refused to name the gentleman!' Then, having reconciled, we were close, close together. I felt light, good, good!",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_10",
+			"point_12"
+		 ]
+	  },
+	  {
+		 "id":"point_12",
+		 "date":"16.01.1913",
+		 "title":"Спасение пропавшей партии",
+		 "title_en":"Rescue of the Missing Party",
+		 "description":"Седов организует спасение пропавшей группы П.Г. Кушакова.",
+		 "description_en":"Sedov organizes the rescue of P.G. Kushakov's missing group.",
+		 "diary":"В 8 с половиной часов утра, когда уже несколько рассвело, я с боцманом Инютиным при одной нарте (10 собак) налегке быстро помчались отыскивать П.Г. Кушакова с его партией. Захватили: 3 пары пимов с лентами (по числу людей), 3 пары теплых рукавиц, 3 пары носков, ½ бутылки коньяку, 1 ф. свин. сала, ½ хлеба, Охапка сухих дров, на случай если бы понадобилось отогреть путников, фонарь, фунт свечей и спички. Пройдя около 10 верст, мы встретили партию, движущуюся в благополучном состоянии домой.",
+		 "diary_en":"At 8:30 in the morning, when it had already dawned somewhat, the boatswain Inyutin and I, with one sledge (10 dogs), quickly raced off to find P.G. Kushakov and his party. We took: 3 pairs of pims with ribbons (one for each person), 3 pairs of warm mittens, 3 pairs of socks, ½ bottle of cognac, 1 pound of pork fat, ½ loaf of bread, a bundle of dry firewood in case we needed to warm up the travelers, a lantern, a pound of candles, and matches. After traveling about 10 versts, we met the party moving home in good condition.",
+		 "x":53.344,
+		 "y":76.319,
+		 "connectedNodes":[
+			"point_11",
+			"point_13"
+		 ]
+	  },
+	  {
+		 "id":"point_13",
+		 "date":"17.01.1913",
+		 "title":"Сильная вьюга",
+		 "title_en":"Strong Blizzard",
+		 "description":"Экспедиция застигнута сильнейшей вьюгой, метеорологические наблюдения затруднены.",
+		 "description_en":"The expedition is caught in a severe blizzard, making meteorological observations difficult.",
+		 "diary":"Весь день страшная вьюга от SO при 9-10 баллах. Мороз стоит -30 градусов (это самая большая вьюга и вообще холод, какой мы не имели до сих пор). Метеорологические наблюдения производить нельзя, ибо риск потерять человека, ушедшего от судна к будкам. На судне же отсчеты делались. С большим трудом и такой же напряженностью люди выходили на двор для ест. надобностей. В 9 ч. вечера обнаружили, что были завалены снегом двери кубрика, и команда не могла выходить наружу. Тотчас же офицеры дружной гурьбой кинулись туда и освободили выход.",
+		 "diary_en":"All day there was a terrible blizzard from the SE at 9-10 points. The frost stands at -30 degrees (this is the biggest blizzard and generally the coldest we have had so far). Meteorological observations cannot be made because of the risk of losing a person who has left the ship for the observation booths. However, readings were taken on the ship. With great difficulty and equal intensity, people went outside for natural needs. At 9 p.m., we discovered that the doors of the crew's quarters were buried in snow, and the crew could not get out. Immediately, the officers rushed there in a friendly crowd and freed the exit.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_12",
+			"point_14"
+		 ]
+	  },
+	  {
+		 "id":"point_14",
+		 "date":"20.01.1913",
+		 "title":"Полярное воскресенье",
+		 "title_en":"Polar Sunday",
+		 "description":"Тихий день на зимовке. Седов страдает от последствий обморожения.",
+		 "description_en":"A quiet day during winter quarters. Sedov suffers from the effects of frostbite.",
+		 "diary":"Сегодня тихое полярное воскресенье. Работ никаких. На дворе также тихо, как и в каютах. Мороз до -40 градусов. Хожу с отмороженными щеками и напоминаю собою петербургского извозчика, своей безобразной физиономией. В каюте у меня две стенки наружных, а две внутренних, поэтому половина каюты у меня с температурой \"плюс\", а половина с температурой \"минус\". Спать хорошо, но когда сидишь за рабочим столом, то голове и одному боку тепло, а ногам и другому боку холодно. Получил кажется ревматизм в ногах, ибо иногда болят суставы в коленях и чашечки.",
+		 "diary_en":"Today is a quiet polar Sunday. No work. It is as quiet outside as it is in the cabins. Frost up to -40 degrees. I walk with frostbitten cheeks and remind myself of a St. Petersburg cabman with my ugly physiognomy. In my cabin, two walls are external and two are internal, so half of my cabin has a 'plus' temperature and half has a 'minus' temperature. It's good for sleeping, but when you sit at the work table, your head and one side are warm, while your feet and the other side are cold. I think I've got rheumatism in my legs, because sometimes my knee joints and kneecaps hurt.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_13",
+			"point_15"
+		 ]
+	  },
+	  {
+		 "id":"point_15",
+		 "date":"27.01.1913",
+		 "title":"Восход солнца",
+		 "title_en":"Sunrise",
+		 "description":"Праздник возвращения солнца после полярной ночи.",
+		 "description_en":"Celebration of the sun's return after the polar night.",
+		 "diary":"Двадцать седьмого января Взошла желанная заря. Быть пиру значит тут должно, Все ждали праздника давно В бокалах плещется вино... Ура! Нам счастье суждено. В 11 часов дня тихо, ясно. Морозу -12 градусов. Все построились у судна со знаменами. Судно было расцвечено флагами. Я был с полюсным флагом. Доктор -- красный крест. Вилка, нож. Географ. -- Солнце, термометр и температ. -50.2 Ц. Геолог нац. флаг, молоток, анероид. Югом со знаменем «долой Челышева» и еще флаги. Механик с молотком, капитан с лыжной палкой. Двинулись на гору.",
+		 "diary_en":"On the twenty-seventh of January, The desired dawn rose. There must be a feast here, Everyone has long awaited the holiday, Wine splashes in the glasses... Hurrah! Happiness is destined for us. At 11 o'clock in the day, it was quiet and clear. Frost -12 degrees. Everyone lined up at the ship with banners. The ship was decorated with flags. I was with the pole flag. The doctor - red cross. Fork, knife. Geography - Sun, thermometer, and temperature -50.2°C. Geologist - national flag, hammer, aneroid. The south with the banner 'down with Chelyshev' and more flags. The mechanic with a hammer, the captain with a ski pole. We moved to the mountain.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_14",
+			"point_16"
+		 ]
+	  },
+	  {
+		 "id":"point_16",
+		 "date":"31.01.1913",
+		 "title":"Подготовка к экскурсии",
+		 "title_en":"Preparation for Excursion",
+		 "description":"Разработка плана экскурсии на северную оконечность Новой Земли.",
+		 "description_en":"Development of a plan for an excursion to the northern tip of Novaya Zemlya.",
+		 "diary":"Пасмурно. Морозу совсем мало, ожидали видеть в иллюминатор солнце, но, увы, облака закрыли. Начали подготовлять экскурсии на N оконечность Новой Земли. Выработали частью из практики, а частью по теоретическим соображениям врача следующий рецепт питания в экскурсиях: 40% мучного, 20% жиров, 20% мясного, 20% сластей (углеводы). Всего 2 ф. в день на человека. Запас для экскурсии к Северному полюсу: (3 чел., 30 собак) 1. Суш. мяса Скорикова 2 п. 2. ... Скорикова 3 п. 3. Шоколаду 1 п. 4. сала свиного 11/2 п. 5. Масла коровьего 11/2 п. 6. Сахару 2 п. 7. Сухарей 10 п.",
+		 "diary_en":"Cloudy. Very little frost; we expected to see the sun through the porthole, but, alas, clouds covered it. We began to prepare for excursions to the northern tip of Novaya Zemlya. We developed the following recipe for nutrition during excursions, partly from practice and partly from the doctor's theoretical considerations: 40% flour products, 20% fats, 20% meat, 20% sweets (carbohydrates). A total of 2 pounds per day per person. Supplies for the expedition to the North Pole: (3 people, 30 dogs) 1. Dried Skorikov meat 2 poods 2. ... Skorikov 3 poods 3. Chocolate 1 pood 4. Pork fat 1½ poods 5. Butter 1½ poods 6. Sugar 2 poods 7. Crackers 10 poods",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_15",
+			"point_17"
+		 ]
+	  },
+	  {
+		 "id":"point_17",
+		 "date":"04.02.1913",
+		 "title":"Зимний шторм",
+		 "title_en":"Winter Storm",
+		 "description":"Сильный шторм с большим количеством снега на палубе.",
+		 "description_en":"Strong storm with a large amount of snow on the deck.",
+		 "diary":"Прекратился ветер и вьюга на палубе тысячи пудов снега. Вся команда занимается сбрасыванием его за борт. Пасмурно, солнца все еще не видим, а как оно желательно! Как хочется его посмотреть, кажется, с его появлением наступит новая, более живительная что ли (трудно понять свое самочувствие) жизнь. На дворе тепло. Собаки все повеселели. Баню разобрали и погрузили на судно, а кашеварку опять заливает наледной водой. Сегодня занимались прокладкой судового простора и заполнением описного журнала подробнейшими наблюдениями можно работать уже при дневном свете.",
+		 "diary_en":"The wind and blizzard have stopped; there are thousands of poods of snow on the deck. The entire crew is engaged in throwing it overboard. It's cloudy; we still don't see the sun, and how desirable it is! How I want to look at it; it seems that with its appearance a new, more invigorating life will begin (it's difficult to understand one's own well-being). It's warm outside. All the dogs have cheered up. We disassembled the bathhouse and loaded it onto the ship, and the cookhouse is again being flooded with frozen water. Today we were engaged in plotting the ship's course and filling in the descriptive journal with detailed observations; it's already possible to work in daylight.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_16",
+			"point_18"
+		 ]
+	  },
+	  {
+		 "id":"point_18",
+		 "date":"06.02.1913",
+		 "title":"Долгожданное солнце",
+		 "title_en":"The Long-awaited Sun",
+		 "description":"Первое появление солнца после полярной ночи.",
+		 "description_en":"First appearance of the sun after the polar night.",
+		 "diary":"Сегодня в 11 ч. дня я вдруг услышал крик: «Солнце». Как безумный я б росился на двор, за мной доктор и другие. Там уже стояло несколько человек, и смотрели с захватывающей радостью на Солнце, которое показалось во всей своей красоте, такое же красное и круглое, как и раньше было, на 15 минут из-за вечной стены облаков. Кричали ура и приветствовали его шапками. Сделали выстрел из пушки. Теперь мы видели фактически Солнце, оно возвышалось над горами около 1 градуса. За обходом доктор устроил вино и лучшую нашу закуску (жареная капуста с малороссийским салом и колбасой).",
+		 "diary_en":"Today at 11 a.m., I suddenly heard a cry: 'Sun'. Like a madman, I rushed outside, followed by the doctor and others. Several people were already standing there, looking with thrilling joy at the Sun, which appeared in all its beauty, as red and round as it was before, for 15 minutes from behind the eternal wall of clouds. They shouted hurrah and greeted it with their hats. We fired a shot from the cannon. Now we actually saw the Sun; it rose above the mountains about 1 degree. After the rounds, the doctor arranged wine and our best snack (fried cabbage with Little Russian lard and sausage).",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_17",
+			"point_19"
+		 ]
+	  },
+	  {
+		 "id":"point_19",
+		 "date":"13.02.1913",
+		 "title":"Обучение медведей",
+		 "title_en":"Training Bears",
+		 "description":"Седов тренирует медведей для использования в санной упряжке.",
+		 "description_en":"Sedov trains bears for use in sledge harnesses.",
+		 "diary":"Сегодня впервые привез на медведе полено дров их бухты Св. Фоки. Думаю, что дело с медведями удастся и тогда полюс обеспечен. Торошку по неосторожности рассек кнутом правый глаз, жаль ужасно, но ничего, он скоро поправится, ранка не опасная, нужно впредь действовать хореем, а не кнутом.",
+		 "diary_en":"Today for the first time, I brought a log of firewood from St. Foka Bay on a bear. I think that the business with the bears will be successful, and then the pole is assured. I carelessly cut Toroshka's right eye with a whip; it's terribly unfortunate, but it's okay, he will recover soon, the wound is not dangerous, in the future I need to use a pole, not a whip.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_18",
+			"point_20"
+		 ]
+	  },
+	  {
+		 "id":"point_20",
+		 "date":"18.02.1913",
+		 "title":"Метель и прощание с зимой",
+		 "title_en":"Blizzard and Farewell to Winter",
+		 "description":"Сильная февральская метель, подготовка к встрече весны.",
+		 "description_en":"Strong February blizzard, preparation for the arrival of spring.",
+		 "diary":"Вот уже несколько дней подряд дует сток с вьюгой, морозы небольшие. Февраль пожалуй выходит самый ветреный, а след. и метельный месяц. сегодня несколько тише. Праздновали день рождения члена экспедиции В.Ю. Визе. Ели первые блины с маслом, сардинками и утиными потрохами. Пили водку и особо приготовленный ликер. Немного развлеклись от однообразной сидячей жизни...",
+		 "diary_en":"For several days in a row now, there has been a drain with a blizzard, the frosts are small. February is perhaps turning out to be the windiest, and consequently the most blizzardy month. Today it's somewhat quieter. We celebrated the birthday of expedition member V.Yu. Vize. We ate the first pancakes with butter, sardines, and duck giblets. We drank vodka and a specially prepared liqueur. We entertained ourselves a little from the monotonous sedentary life...",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_19",
+			"point_21"
+		 ]
+	  },
+	  {
+		 "id":"point_21",
+		 "date":"24.02.1913",
+		 "title":"Переименование судна",
+		 "title_en":"Ship Renaming",
+		 "description":"Торжественное переименование судна в «Михаил Суворин».",
+		 "description_en":"Ceremonial renaming of the ship to 'Mikhail Suvorin'.",
+		 "diary":"Сегодня последний день масленицы. Стоит чудный солнечный весенний день. Празднуем праздник переименования судна в «Михаил Суворин». С утра было богослужение. Судно расцветили флагами. После богослужения дежурный офицер перед фронтом прочел приказ о переименовании судна, который был покрыт долгим: «Ура». Произвели пушечный салют. После этого отправились кататься с гор на нартах, на лыжах и просто на собственных мягких местах. Все это кинематографировалось. Погода благоприятствовала. Все веселились с большим увлечением.",
+		 "diary_en":"Today is the last day of Maslenitsa. It's a wonderful sunny spring day. We are celebrating the renaming of the ship to 'Mikhail Suvorin'. In the morning there was a church service. The ship was decorated with flags. After the service, the duty officer read the order to rename the ship in front of the formation, which was covered with a long: 'Hurrah'. We fired a cannon salute. After that, we went sledding down the mountains on sleds, on skis, and simply on our own soft places. All this was cinematographed. The weather was favorable. Everyone had fun with great enthusiasm.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_20",
+			"point_22"
+		 ]
+	  },
+	  {
+		 "id":"point_22",
+		 "date":"25.02.1913",
+		 "title":"Подготовка экскурсии к полюсу",
+		 "title_en":"Preparation for Pole Excursion",
+		 "description":"Начало подготовки к экспедиции на северную оконечность Новой Земли.",
+		 "description_en":"Beginning of preparations for the expedition to the northern tip of Novaya Zemlya.",
+		 "diary":"В 8 1/2 ч. утра Н.В. Пинегин и Н.М. Сахаров отправились к полынье у крестовых островов на охоту на медведя и нерпу, с нартой собак. Начали возить в тянки лед с айсберга. День стоит такой чудный, как сама весна. Начинаю приготовления к своей экскурсии к N оконеч. Новой Земли.",
+		 "diary_en":"At 8:30 a.m., N.V. Pinegin and N.M. Sakharov went to the polynya at the Cross Islands to hunt for bear and ringed seal, with a dog sled. We began to transport ice from the iceberg. The day is as wonderful as spring itself. I am beginning preparations for my excursion to the northern tip of Novaya Zemlya.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_21",
+			"point_23"
+		 ]
+	  },
+	  {
+		 "id":"point_23",
+		 "date":"27.02.1913",
+		 "title":"Охота на медведя",
+		 "title_en":"Bear Hunt",
+		 "description":"Удачная охота на белого медведя, приблизившегося к судну.",
+		 "description_en":"Successful hunt of a polar bear that approached the ship.",
+		 "diary":"Около полдня, среди бела дня пришел медведь на 300 шагов к судну. В одно мгновение на судне все стало адом: собаки и люди понеслись стрелой на него. Шум, крик, гвалт. Медведь сначала был удивлен, но потом пустился бежать. Было поздно, собаки его окружили со всех сторон и не давали ему ходу. Десятка три собак буквально лезли ему на спину, но он метко отбивался. Двух собак успел подмять под себя, но прочие собаки еще с большей яростью бросились на него и отстояли товарищей. Верстах в двух от судна за мысом Обсерватория подоспели охотники, и Николай Васильевич Пинегин двумя выстрелами положил конец войне.",
+		 "diary_en":"Around noon, in broad daylight, a bear came within 300 steps of the ship. In an instant, everything on the ship turned into chaos: dogs and people rushed at him like arrows. Noise, shouting, hubbub. The bear was surprised at first, but then started to run. It was too late; the dogs surrounded him from all sides and did not allow him to move. About three dozen dogs literally climbed on his back, but he accurately fought back. He managed to crush two dogs under himself, but the other dogs rushed at him with even greater fury and defended their comrades. Two versts from the ship, behind Cape Observatory, hunters arrived, and Nikolai Vasilyevich Pinegin with two shots put an end to the war.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_22",
+			"point_24"
+		 ]
+	  },
+	  {
+		 "id":"point_24",
+		 "date":"01.03.1913",
+		 "title":"Охота на медведицу",
+		 "title_en":"Hunting a Female Bear",
+		 "description":"Седов охотится на медведицу с медвежатами у берлоги.",
+		 "description_en":"Sedov hunts a female bear with cubs near her den.",
+		 "diary":"Сегодня весна, настоящая весна. На дворе тепло и солнечно. В 1 ч. утра взял ружье и 10 патронов и один отправился на S Крестовый о-в сделать рекогносцировку для описи и попутно посмотреть медведя. (До о-ва 8-9 верст). По дороге зашел к полынье, которая тянется от мыса Кушакова до S крестов. О-ва шириной около 2 верст. Полынья покрыта тонким слоем льда, который человека не держит. Местами видна вода. Посредине полыньи видны нерп и зайцы, но до них не так, ни этак добраться нельзя. Вдоль полыньи идет по направлению к Крест. о-ву много медвежьих следов и больших и малых. Со мной было 2 собаки: Варнак и Разбойник, они очень заволновались.",
+		 "diary_en":"Today is spring, real spring. It's warm and sunny outside. At 1 a.m., I took a rifle and 10 cartridges and went alone to South Cross Island to reconnoiter for survey and, incidentally, to look for a bear. (To the island is 8-9 versts). On the way, I went to the polynya, which stretches from Cape Kushakov to the southern crosses. The island is about 2 versts wide. The polynya is covered with a thin layer of ice that cannot support a person. In places, water is visible. In the middle of the polynya, seals and hares are visible, but it is impossible to reach them one way or another. Along the polynya, in the direction of Cross Island, there are many bear tracks, both large and small. I had 2 dogs with me: Varnak and Razboinik; they became very agitated.",
+		 "x":53.492,
+		 "y":76.404,
+		 "connectedNodes":[
+			"point_23",
+			"point_25"
+		 ]
+	  },
+	  {
+		 "id":"point_25",
+		 "date":"02.03.1913",
+		 "title":"Ещё медведи",
+		 "title_en":"More Bears",
+		 "description":"П.Г. Кушаков добывает ещё медведицу с медвежатами.",
+		 "description_en":"P.G. Kushakov catches another female bear with cubs.",
+		 "diary":"В 7 ч. утра Павел Григорьевич Кушаков и матрос Линник отправились с нартой собак на Кр. о-в, привезли моего медведя и посмотреть может еще чего-нибудь кроме этого. Они, конечно, нашли тоже берлогу с медведицей и 2 медвежатами. Медведицу убили, одного медвежонка живым взяли, а другого собаки разорвали. Таким образом, они привезли домой (в 4 ч. дня) два медведя, одного живого медвежонка и двух задратых собаками. Нарта была около 30 пудов, но 12 собак великолепно её тащили. Дома сняли шкуры с медведей и мертвых медвежат, угостили собак, которые до того разнервничались, что нет им никакого удержу. В кают-компании образовалось два медвежонка (оба самцы). Одного назвали «Мишкой», а другого «Васькой».",
+		 "diary_en":"At 7 a.m., Pavel Grigorievich Kushakov and sailor Linnik set out with a dog sled to Kr. Island, brought my bear and to see if there might be something else besides this. They, of course, also found a den with a female bear and 2 cubs. They killed the female bear, took one cub alive, and the other was torn apart by dogs. Thus, they brought home (at 4 p.m.) two bears, one live cub, and two mauled by dogs. The sledge was about 30 poods, but 12 dogs pulled it magnificently. At home, they removed the skins from the bears and dead cubs, treated the dogs, which were so nervous that there was no restraining them. Two bear cubs (both males) appeared in the officers' mess. One was named 'Mishka' and the other 'Vaska'.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_24",
+			"point_26"
+		 ]
+	  },
+	  {
+		 "id":"point_26",
+		 "date":"05.03.1913",
+		 "title":"Экскурсия на Южно-Крестовые острова",
+		 "title_en":"Excursion to the South Cross Islands",
+		 "description":"Седов отправляется в экскурсию для описи Южно-Крестовых островов.",
+		 "description_en":"Sedov sets out on an excursion to survey the South Cross Islands.",
+		 "diary":"В сопровождении Н.В. Пинегина и матроса Шестакова и Югана выехал на нарте собак в экскурсию для описи южно-крестовых островов. В этот же день прибыли на остров и построили на SO мысу гурт с крестом. Раскинули лагерь на северном берегу у пролива Тобисена. На другой день (6 марта) Н.В. с Юганом отправились на собаках вдоль полыньи к мысу Кушакова за каяком, и посмотреть по пути зверя. Я занимался в этот день магнитными работами и рекогносцировкой местности. Возле нас открытая полынья (очень большая) где есть много зайцев и морских уток. Вечером вернулся Н.В. с каяком.",
+		 "diary_en":"Accompanied by N.V. Pinegin and sailors Shestakov and Yugan, I set out on a dog sledge for an excursion to survey the South Cross Islands. On the same day, we arrived at the island and built a cairn with a cross on the SE cape. We set up camp on the northern shore at the Tobisen Strait. The next day (March 6), N.V. with Yugan went on dogs along the polynya to Cape Kushakov for a kayak, and to look for animals along the way. On this day, I was engaged in magnetic work and reconnaissance of the area. Near us is an open polynya (very large) where there are many hares and sea ducks. In the evening, N.V. returned with the kayak.",
+		 "x":53.523,
+		 "y":76.427,
+		 "connectedNodes":[
+			"point_25",
+			"point_27"
+		 ]
+	  },
+	  {
+		 "id":"point_27",
+		 "date":"07.03.1913",
+		 "title":"Медвежьи берлоги",
+		 "title_en":"Bear Dens",
+		 "description":"Изучение особенностей поведения белых медведей.",
+		 "description_en":"Study of the behavioral characteristics of polar bears.",
+		 "diary":"Произвел маршрутную съемку острова. В эту ночь к нам приходили четыре медведя, но убить их не удалось. Они, по первому порыву собак, бросались вводу и быстро уплывали, так что мы не успевали сблизиться с ними на выстрел. В каяке пускаться было рискованно в открытое море ночью и при сильном ветре. Можно, чего доброго и голову потерять там.",
+		 "diary_en":"I conducted a route survey of the island. During this night, four bears came to us, but we couldn't kill them. At the first rush of the dogs, they threw themselves into the water and quickly swam away, so that we did not have time to get close enough to them for a shot. It was risky to venture out in a kayak into the open sea at night and in strong wind. One could, God forbid, lose one's head there.",
+		 "x":53.533,
+		 "y":76.435,
+		 "connectedNodes":[
+			"point_26",
+			"point_28"
+		 ]
+	  },
+	  {
+		 "id":"point_28",
+		 "date":"08.03.1913",
+		 "title":"Охота на медведицу в берлоге",
+		 "title_en":"Hunting a Female Bear in Her Den",
+		 "description":"Седов убивает медведицу в берлоге и берёт живыми двух медвежат.",
+		 "description_en":"Sedov kills a female bear in her den and takes two cubs alive.",
+		 "diary":"Общая толщина снега и льда 3 аршина 14 верш. Сухого снега 1 аршин а затем вода со снегом. 8 марта произвел съемку второго острова на SO берегу, в проливе нашли берлогу. Убили медведицу и взяли живыми двух медвежат, которых назвали: Торос и Полынья. Медведицы обыкновенно строят свои берлоги на берегу в снегу на склоне горы под мыском или камнем, поблизости открытой оды, на подветренной стороне (относительно преобладающего ветра, здесь на NW стороне). Кладут по два медвежонка, по-видимому, начало рождения в феврале. Медведица во время сражения не выскакивает из берлоги, а лишь высовывает голову в выходное отверстие и таким образом отражает собак. Охотник ее тут и стреляет.",
+		 "diary_en":"The total thickness of snow and ice is 3 arshins 14 vershoks. Dry snow is 1 arshin and then water with snow. On March 8, I surveyed the second island on the SE shore; in the strait, we found a den. We killed the female bear and took two cubs alive, which we named: Toros and Polynya. Female bears usually build their dens on the shore in the snow on the slope of a mountain under a cape or stone, near open water, on the leeward side (relative to the prevailing wind, here on the NW side). They have two cubs each, apparently, the beginning of birth in February. The female bear during the battle does not jump out of the den, but only sticks her head out through the exit hole and thus repels the dogs. The hunter shoots her there.",
+		 "x":53.544,
+		 "y":76.443,
+		 "connectedNodes":[
+			"point_27",
+			"point_29"
+		 ]
+	  },
+	  {
+		 "id":"point_29",
+		 "date":"10.03.1913",
+		 "title":"Опасное происшествие на льду",
+		 "title_en":"Dangerous Incident on the Ice",
+		 "description":"Седов оказывается на тонком льду, который начинает ломаться под нартой.",
+		 "description_en":"Sedov finds himself on thin ice, which begins to break under the sledge.",
+		 "diary":"Н.В. с Юганом и медведями вернулись домой, а я с Шестаковым отправились на северный Крестовый остров для его описи. По тонкому новообразовавшемуся льду (толщиной в 3 вер.). Этот лед покрыт большим слоем соли. Нарта как клеем приклеивается ко льду и нейдет вперед. Наша нарта весила 10 пуд. 12 собак еле везли ее, останавливаясь отдыхать после каждых 20-30 саж., таким образом, я за этот день до 9 ч. вечера едва уехал 6-7 верст, а это составляет всего лишь полпути. Все устали, измаялись. Кроме того этот лед ломало в торосы и гнало по ветру на NO. Все время под нами образовывались трещины, да нагромождались торосы, принуждали были прыгать, спасая шкуру, как козы.",
+		 "diary_en":"N.V. with Yugan and the bears returned home, and Shestakov and I went to the northern Cross Island to survey it. On thin, newly formed ice (3 vershoks thick). This ice is covered with a large layer of salt. The sledge sticks to the ice like glue and doesn't move forward. Our sledge weighed 10 poods. 12 dogs barely pulled it, stopping to rest after every 20-30 sazhens, so by 9 p.m. that day, I had barely traveled 6-7 versts, which is only half the journey. Everyone was tired, exhausted. Besides, this ice was breaking into hummocks and being driven by the wind to the NE. All the time, cracks were forming beneath us, and hummocks were piling up, forcing us to jump, saving our skins, like goats.",
+		 "x":53.566,
+		 "y":76.465,
+		 "connectedNodes":[
+			"point_28",
+			"point_30"
+		 ]
+	  },
+	  {
+		 "id":"point_30",
+		 "date":"11.03.1913",
+		 "title":"Спасение с дрейфующего льда",
+		 "title_en":"Rescue from Drifting Ice",
+		 "description":"Льдина с лагерем Седова начинает разламываться. Экспедиция спасается бегством.",
+		 "description_en":"The ice floe with Sedov's camp begins to break up. The expedition escapes.",
+		 "diary":"В 4 ч. утра заметил, что льдина наша уменьшилась до 10-15 саж. диам. Кругом нас торосы, у самой палатки трещина, дует свежий NW и лед в полном движении, шум и треск, зловещий, страшный, мы на мокром льду вымокли и все перемочили. Медлить ни минуты нельзя, запрягли быстро собак и пустились бежать через трещины и ропаки до ближайшего берега, несколько раз проваливались вводу. К счастью скоро увидели остров, от которого начали путь и благополучно добрались до него, порядком в душе я таки потрусил, хотя и не показывал вида. Нас легко могло затереть льдами или вынести в открытое море, где наш корабль -- 3-вершковая жидкая льдина должна была скоро превратиться в мелкие куски и мы очутились бы на воде. Но Бог за нас, мы спасены...",
+		 "diary_en":"At 4 a.m., I noticed that our ice floe had decreased to 10-15 sazhens in diameter. Around us are ice hummocks, at the very tent a crack, a fresh NW is blowing, and the ice is in full motion, noise and cracking, ominous, terrible, we are on wet ice, soaked and all wet through. There's not a minute to delay, we quickly harnessed the dogs and rushed to run across cracks and hummocks to the nearest shore, several times falling into the water. Fortunately, we soon saw the island from which we had begun our journey and safely reached it, quite frightened in my soul, although I did not show it. We could easily have been crushed by ice or carried out to the open sea, where our ship - a 3-vershok liquid ice floe - would soon have turned into small pieces and we would have found ourselves in the water. But God is with us, we are saved...",
+		 "x":53.476,
+		 "y":76.378,
+		 "connectedNodes":[
+			"point_29",
+			"point_31"
+		 ]
+	  },
+	  {
+		 "id":"point_31",
+		 "date":"12.03.1913",
+		 "title":"Возвращение из опасной экскурсии",
+		 "title_en":"Return from Dangerous Excursion",
+		 "description":"Благополучное возвращение на судно после опасного путешествия по льдам.",
+		 "description_en":"Safe return to the ship after a dangerous journey across the ice.",
+		 "diary":"Утром покочевали домой и в 2 часа дня благополучно прибыли на судно. Здесь нас кинематографировали. Здравствуй, милая Веруня! Что с тобой, где ты, и как здоровье твое, дорогая? Думала ли ты, милая детка, что я, любящий тебя всем сердцем и душой был в опасности. Или ты не думала, но сердце тебе что-нибудь говорило, может быть о своем Георгии-бродяге. Крепко, сильно целую тебя, обнимаю, моя славная Веруня. Господи! Как хочется ее обнять и умереть. Приди же ко мне, моя добрая, близкая, родная Веронька....",
+		 "diary_en":"In the morning we wandered home and at 2 o'clock in the afternoon safely arrived at the ship. Here we were cinematographed. Hello, dear Verunya! What's with you, where are you, and how is your health, dear? Did you think, my dear child, that I, loving you with all my heart and soul, was in danger? Or you didn't think, but your heart told you something, perhaps about your wanderer Georgy. I kiss you firmly, strongly, I embrace you, my glorious Verunya. Lord! How I want to embrace her and die. Come to me, my good, close, dear Veronka....",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_30",
+			"point_32"
+		 ]
+	  },
+	  {
+		 "id":"point_32",
+		 "date":"15.03.1913",
+		 "title":"Подготовка новых экскурсий",
+		 "title_en":"Preparation for New Excursions",
+		 "description":"Подготовка к экскурсии на мыс Желания по западному берегу Новой Земли.",
+		 "description_en":"Preparation for an excursion to Cape Desire along the western coast of Novaya Zemlya.",
+		 "diary":"Идут усиленные приготовления экскурсии: моей к мысу Желания по W берегу Новой Земли, Визе к м. Желания по Оst бер. Нов. Земли и Павлова по внутр. льду Н.З. Суета и куча забот. Медвежат перевели из кают-компании в особое помещение на палубе и в кают-компании конюшни не стало.",
+		 "diary_en":"Intensive preparations for excursions are underway: mine to Cape Desire along the W coast of Novaya Zemlya, Vize to Cape Desire along the East coast of Novaya Zemlya, and Pavlov along the internal ice of N.Z. Bustle and a heap of worries. The bear cubs were transferred from the wardroom to a special room on the deck, and the stable in the wardroom was gone.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_31",
+			"point_33"
+		 ]
+	  },
+	  {
+		 "id":"point_33",
+		 "date":"17.03.1913",
+		 "title":"Проводы экспедиций",
+		 "title_en":"Seeing Off Expeditions",
+		 "description":"Проводы экспедиций Визе и Павлова на восточную сторону Новой Земли.",
+		 "description_en":"Seeing off Vize and Pavlov's expeditions to the eastern side of Novaya Zemlya.",
+		 "diary":"Ясный, хороший день. Тр. -24.5о. В 8 ч. утра проводили две партии Визе и Павлова на Карскую сторону для научных работ. Подняли сигнал: «счастливого пути», кинематографировали и при пушечном салюте распрощались. Нарты были под флагами. Я сказал за рюмкой вина теплое напутственное слово отправляющимся.",
+		 "diary_en":"Clear, good day. Temperature -24.5°. At 8 a.m., we saw off two parties, Vize and Pavlov, to the Kara side for scientific work. We raised a signal: 'bon voyage', cinematographed, and said goodbye with a cannon salute. The sledges were under flags. I gave a warm parting word to those departing over a glass of wine.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_32",
+			"point_34"
+		 ]
+	  },
+	  {
+		 "id":"point_34",
+		 "date":"18.03.1913",
+		 "title":"Последние приготовления",
+		 "title_en":"Final Preparations",
+		 "description":"Седов завершает подготовку к своей экскурсии на мыс Желания.",
+		 "description_en":"Sedov completes preparations for his excursion to Cape Desire.",
+		 "diary":"Завтра отправляюсь я сам в сопровождении матроса Андрея Инютина по западному берегу Новой Земли до м. Желания. Моим кораблем будет служить нарта из 10 лихих собак. Корм для людей беру по следующему рецепту, считая по два фунта в день на человека (2 чел. 45 дней) = 45 пуд. 30% мучного (сухари, сушки и печенье). 20% жирова (свин. сало и кор. масло). 20% сластей (шокол. сахар, леденцы, какао, чай, кофе и кон. молоко). 20% мясного (сушеный бульон и пеммикан Скорикова). 5% зелени (карт., лук, чеснок, перец и пр.) 5% алкоголь, кл. экстракт и разная приварочная мелочь.",
+		 "diary_en":"Tomorrow I myself will set off, accompanied by sailor Andrei Inyutin, along the western coast of Novaya Zemlya to Cape Desire. My ship will be a sledge with 10 brave dogs. I take food for people according to the following recipe, counting two pounds per day per person (2 people, 45 days) = 45 poods. 30% flour products (crackers, dried bread, and cookies). 20% fats (pork fat and butter). 20% sweets (chocolate, sugar, candies, cocoa, tea, coffee, and condensed milk). 20% meat (dried broth and Skorikov's pemmican). 5% vegetables (potatoes, onions, garlic, pepper, etc.) 5% alcohol, cranberry extract, and various cooking supplies.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_33",
+			"point_35"
+		 ]
+	  },
+	  {
+		 "id":"point_35",
+		 "date":"19.03.1913",
+		 "title":"Выход на мыс Желания",
+		 "title_en":"Departure for Cape Desire",
+		 "description":"Седов в сопровождении Н.В. Пинегина отправляется в экскурсию к мысу Желания.",
+		 "description_en":"Sedov, accompanied by N.V. Pinegin, sets out on an excursion to Cape Desire.",
+		 "diary":"Меня сопровождает верст на 60 нарта Н.В. Пинегина с кинематографом, которая везет часть моих запасов. Вскоре Н. Васильевич вернулся обратно.",
+		 "diary_en":"I am accompanied for about 60 versts by N.V. Pinegin's sledge with a cinematograph, which carries part of my supplies. Soon N. Vasilyevich returned back.",
+		 "x":53.434,
+		 "y":76.366,
+		 "connectedNodes":[
+			"point_34",
+			"point_36"
+		 ]
+	  },
+	  {
+		 "id":"point_36",
+		 "date":"14.05.1913",
+		 "title":"Возвращение с мыса Желания",
+		 "title_en":"Return from Cape Desire",
+		 "description":"Седов возвращается с мыса Желания после 45-дневной экспедиции сильно похудевшим.",
+		 "description_en":"Sedov returns from Cape Desire after a 45-day expedition, much thinner.",
+		 "diary":"Я вернулся в 1 ч. утра меня встретили далеко все офицеры и команда, собаки и все, что было на судне. С судна раздался пушечный салют. Была большая радость, больше ликование, затем нас фотографировали и кинематографировали. Нас нашли (меня и матроса Инютина) черными, страшными, совершенно неузнаваемыми и худыми как скелеты. О чем могут свидетельствовать несколько фотографий... Не хотелось бы я, милая Веруня, чтобы ты меня видела в этот момент, я ужасный, больше -- страшный, хотя я душой и сердцем и всеми своими высшими чувствами так же близок к тебе как и раньше был, а может быть и еще ближе. Скучно, грустно, милая, дорогая, без тебя. А впереди еще разлуки больше года, а может быть, Бог знает, и целая веч... вечность!... Это ужасно, это тяжело.",
+		 "diary_en":"I returned at 1 a.m. I was met far away by all the officers and crew, dogs, and everything that was on the ship. From the ship came a cannon salute. There was great joy, more jubilation, then we were photographed and cinematographed. We were found (me and sailor Inyutin) black, terrible, completely unrecognizable, and thin as skeletons. As several photographs can testify... I would not wish, dear Verunya, for you to see me at this moment, I am horrible, more - terrible, although I am in soul and heart and all my higher feelings as close to you as I was before, and perhaps even closer. It's boring, sad, dear, precious, without you. And ahead there are still separations of more than a year, and perhaps, God knows, a whole eternity!... This is terrible, this is hard.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_35",
+			"point_37"
+		 ]
+	  },
+	  {
+		 "id":"point_37",
+		 "date":"15.05.1913",
+		 "title":"Вступление в должность начальника экспедиции",
+		 "title_en":"Taking Up the Post of Expedition Chief",
+		 "description":"Седов вступает в должность начальника экспедиции. Начинается вооружение судна.",
+		 "description_en":"Sedov takes up the post of expedition chief. The ship's armament begins.",
+		 "diary":"Вступил в исполнение обязанности начальника экспедиции. Страшно заболел животом. Тошнота и рвота. Это следствие того, что на голодный тощий желудок слишком много сразу поел. Сейчас сижу на диете. Эскулап следит за каждым моим шагом. Начали вооружение судна. Механики ремонтируют машины. Дни теплы, но все падает снег.",
+		 "diary_en":"I assumed the duties of the expedition chief. I got terribly sick to my stomach. Nausea and vomiting. This is a consequence of eating too much at once on an empty, hungry stomach. Now I'm on a diet. Aesculapius watches my every step. We began the armament of the ship. Mechanics are repairing machines. The days are warm, but snow still falls.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_36",
+			"point_38"
+		 ]
+	  },
+	  {
+		 "id":"point_38",
+		 "date":"17.05.1913",
+		 "title":"Экскурсия в Архангельскую губу",
+		 "title_en":"Excursion to Arkhangelsk Bay",
+		 "description":"Павлов и Пинегин отправляются в экскурсию в Архангельскую губу.",
+		 "description_en":"Pavlov and Pinegin set out on an excursion to Arkhangelsk Bay.",
+		 "diary":"Ушли в экскурсию в Архангельскую губу М.А. Павлов и Н.В. Пинегин для научных и промысловых работ. Погоды стоят мокрые -- снег при ветре, большую часть от О и W. В море уже видно много воды, а у нас все ещё и нет признаков к разрушению льда. Нужен дождь, и затем светлое яркое Солнце...",
+		 "diary_en":"M.A. Pavlov and N.V. Pinegin went on an excursion to Arkhangelsk Bay for scientific and commercial work. The weather is wet - snow with wind, mostly from O and W. In the sea, there is already a lot of water visible, but we still have no signs of ice destruction. We need rain, and then bright, clear sun...",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_37",
+			"point_39"
+		 ]
+	  },
+	  {
+		 "id":"point_39",
+		 "date":"22.05.1913",
+		 "title":"Подготовка к отправке в Архангельск",
+		 "title_en":"Preparation for Dispatch to Arkhangelsk",
+		 "description":"Седов готовит отправку части команды в Крестовую губу и далее в Архангельск.",
+		 "description_en":"Sedov prepares to send part of the crew to Cross Bay and on to Arkhangelsk.",
+		 "diary":"Свежий Оst со снегом. Вооружаем судно, ремонтируем машину, брашпиль и прочее. Усиленно вычисляю свои наблюдения к мысу Желания. Необходимо еще произвести съемку Архангельской губы. Я же еще не готов. Поправляю здоровье. Готовлю к отправке в Крестовую губу и далее в Архангельск: командира, помощника механика и трех матросов (Томиссар, Катарин и Карзин). Причина: лишение в них надобности и слабость здоровья. Отправятся на шлюпках с провизией на 3 м.",
+		 "diary_en":"Fresh East with snow. We are arming the ship, repairing the engine, windlass, and more. I am intensively calculating my observations to Cape Desire. It is still necessary to survey Arkhangelsk Bay. I am not ready yet. I'm improving my health. I am preparing to send to Cross Bay and on to Arkhangelsk: the commander, assistant mechanic, and three sailors (Tomissar, Katarin, and Karzin). Reason: lack of need for them and weakness of health. They will leave on boats with provisions for 3 months.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_38",
+			"point_40"
+		 ]
+	  },
+	  {
+		 "id":"point_40",
+		 "date":"23.05.1913",
+		 "title":"Праздник Вознесения",
+		 "title_en":"Ascension Day",
+		 "description":"Седов поздравляет команду с праздником Вознесения Господня.",
+		 "description_en":"Sedov congratulates the crew on the feast of the Ascension of the Lord.",
+		 "diary":"Вознесение Господне. Поднялся с постели в 7 ч. утра. Дует свежий и теплый, снег тает. Завтракал холодную отварную солонину с черным хлебом и маслом, затем кофе с молоком. В 101/2 ч. утра Богослужение. Служил П.Г. Кушаков. После молитвы поучаешь хорошее благоговейное настроение. Объявил матросам, что трое из них будут отправлены через Крестовую губу в Россию, а также командир судна и помощник механика. Слава Богу, есть случай послать в Комитет копии документов и милой, дорогой Верусе весточку.",
+		 "diary_en":"Ascension of the Lord. I got up from bed at 7 a.m. A fresh and warm wind is blowing, snow is melting. I had breakfast: cold boiled corned beef with black bread and butter, then coffee with milk. At 10:30 a.m., church service. P.G. Kushakov officiated. After prayer, you receive a good, reverent mood. I announced to the sailors that three of them would be sent to Russia via Cross Bay, as well as the ship's commander and assistant mechanic. Thank God, there is an opportunity to send copies of documents to the Committee and a message to my dear, precious Verusya.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_39",
+			"point_41"
+		 ]
+	  },
+	  {
+		 "id":"point_41",
+		 "date":"25.05.1913",
+		 "title":"День рождения Императрицы",
+		 "title_en":"Empress's Birthday",
+		 "description":"Празднование дня рождения Императрицы Александры Федоровны.",
+		 "description_en":"Celebration of the birthday of Empress Alexandra Feodorovna.",
+		 "diary":"Сегодня праздновали день Рождения Государыни Императрицы Александры Федоровны. С утра расцветились флагами. Правили Богослужение и произвели установленный Ея Величеству салют. Продолжает дуть NO со слякотью у Кретовых о-ов и Берха открытое море. За обедом команде дали по чарке. Нам так же перепало по две рюмки. Вечером принял чудную горячую баню. Взвесился голый и получил вес 4 п. 381/4 ф. -- Чудо! Это я за 12 дней после экскурсии на мыс Желание прибавил в весе 351/4 ф. По 3 ф. в среднем в день.",
+		 "diary_en":"Today we celebrated the birthday of Her Imperial Majesty Empress Alexandra Feodorovna. From the morning we were decorated with flags. We conducted a church service and fired the salute established for Her Majesty. NO continues to blow with slush at the Kretovy Islands, and at Berkh, there is open sea. At dinner, the crew was given a glass each. We also got two glasses each. In the evening, I took a wonderful hot bath. I weighed myself naked and got a weight of 4 poods 38¼ pounds - a miracle! This means that in 12 days after the excursion to Cape Desire, I gained 35¼ pounds in weight. An average of 3 pounds per day.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_40",
+			"point_42"
+		 ]
+	  },
+	  {
+		 "id":"point_42",
+		 "date":"26.05.1913",
+		 "title":"Тихое воскресенье",
+		 "title_en":"Quiet Sunday",
+		 "description":"Седов вычисляет астрономические наблюдения. Тихий праздничный день.",
+		 "description_en":"Sedov calculates astronomical observations. A quiet holiday.",
+		 "diary":"Сегодня опять праздник -- Тихое Воскресенье. Также NO и слякоть. Усаживаюсь за вычисления в две руки со штурманом Сахаровым. Поздравляю с праздником милую Веруню. Целую Георгий.",
+		 "diary_en":"Today is another holiday - Quiet Sunday. Also NO and slush. I am sitting down for calculations with both hands with navigator Sakharov. Congratulations on the holiday, dear Verunya. Kisses, Georgy.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_41",
+			"point_43"
+		 ]
+	  },
+	  {
+		 "id":"point_43",
+		 "date":"28.05.1913",
+		 "title":"Летний день",
+		 "title_en":"Summer Day",
+		 "description":"Тёплый летний день. Видны признаки приближающегося лета.",
+		 "description_en":"Warm summer day. Signs of approaching summer are visible.",
+		 "diary":"Чудный день. На Солнце +15.0о Ц. Тихо. Кругом видно в море вода. Начинают чернеть горы. Ходим на палубе без шапок, в одних рубашках. Медвежатам, по-видимому, жарко, они зарываются в снег. Вычисляю пункты до обалдения. Хочу кончить, чтобы с командиром успеть послать в Петербург в Комитет. Механик работает на горн на палубе, доволен. Собаки растянулись во весь рост на солнце. Кажется, все радуется святому лету.",
+		 "diary_en":"Wonderful day. In the sun, +15.0° C. Quiet. Around, water is visible in the sea. The mountains are beginning to blacken. We walk on the deck without hats, in just shirts. The bear cubs, it seems, are hot; they bury themselves in the snow. I calculate points until I'm dizzy. I want to finish so that I can send it to the Committee in St. Petersburg with the commander. The mechanic works at the forge on the deck, pleased. The dogs are stretched out full length in the sun. It seems everything rejoices in the holy summer.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_42",
+			"point_44"
+		 ]
+	  },
+	  {
+		 "id":"point_44",
+		 "date":"31.05.1913",
+		 "title":"Таяние снега",
+		 "title_en":"Snow Melting",
+		 "description":"Начинается активное таяние снега. Возвращается Павлов с охоты.",
+		 "description_en":"Active snow melting begins. Pavlov returns from hunting.",
+		 "diary":"Чудный летний день. Прибыл из экскурсии М.А. Павлов. Привез около 100 штук кайр -- вкусная птица. Началось, наконец, заметное таяние снега и разрушение льда. Вообще надо считать, что теплая погода, способная разрушать лед, а также необходимые при этом ветры и дожди наступают в конце мая -- в начале лета.",
+		 "diary_en":"Wonderful summer day. M.A. Pavlov arrived from the excursion. He brought about 100 guillemots - a tasty bird. At last, noticeable melting of snow and destruction of ice has begun. In general, it should be considered that warm weather, capable of destroying ice, as well as the winds and rains necessary for this, come at the end of May - at the beginning of summer.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_43",
+			"point_45"
+		 ]
+	  },
+	  {
+		 "id":"point_45",
+		 "date":"01.06.1913",
+		 "title":"Наглый медведь",
+		 "title_en":"Insolent Bear",
+		 "description":"К судну подходит голодный медведь в поисках добычи.",
+		 "description_en":"A hungry bear approaches the ship in search of prey.",
+		 "diary":"Пришел к судну на 15 шагов медведь и начал ловить собак. Ему, конечно, немедленно была послана пуля, а затем и снята шкура. В желудке оказалось пусто и сам худой. Видно его голод заставил сделаться таким нахальным. День стоит теплый, дождливый. Горы быстро чернеют.",
+		 "diary_en":"A bear came to the ship at 15 paces and began to catch dogs. Of course, he was immediately sent a bullet, and then his skin was removed. The stomach turned out to be empty and he himself was thin. It seems his hunger made him so insolent. The day is warm, rainy. The mountains are quickly blackening.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_44",
+			"point_46"
+		 ]
+	  },
+	  {
+		 "id":"point_46",
+		 "date":"02.06.1913",
+		 "title":"Троица",
+		 "title_en":"Trinity Sunday",
+		 "description":"Празднование Троицы. Грусть по зелёной растительности и родине.",
+		 "description_en":"Celebration of Trinity Sunday. Longing for green vegetation and homeland.",
+		 "diary":"Чудный теплый, теплый день. Сумерки. Строим магнитную иглу из снега. Гуляем вокруг судна. Собаки на свободе резвятся, того и смотри что задерут кого-нибудь из товарищей. Снаряжаем потихоньку полюсную партию. Вечером «Гоняли Принца» и играли в вист. Чудное северное сияние. Небо удивительно ясное, звездное, несмотря на то, что небольшой мороз. Воздух прозрачный, хорошая видимость. Сегодня исполнилось 14 месяцев, как мы вышли из Архангельска.",
+		 "diary_en":"Wonderful warm, warm day. Twilight. We are building a magnetic needle from snow. We walk around the ship. Dogs frolic freely, just watch that they don't maul one of their comrades. We are quietly equipping the pole party. In the evening we 'Chased the Prince' and played whist. Wonderful northern lights. The sky is amazingly clear, starry, despite the slight frost. The air is transparent, with good visibility. Today marks 14 months since we left Arkhangelsk.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_45",
+			"point_47"
+		 ]
+	  },
+	  {
+		 "id":"point_47",
+		 "date":"03.06.1913",
+		 "title":"Подготовка экспедиции",
+		 "title_en":"Expedition Preparation",
+		 "description":"Седов готовит отправку Н.Петровича в Архангельск.",
+		 "description_en":"Sedov prepares to send N. Petrovich to Arkhangelsk.",
+		 "diary":"Второй день троицы. Тепло, ветер с юга, темно как в благословенной Малороссии. С утра делал магнитные наблюдения и на этом кончили наблюдения суточного склонения. Склонение, как и наклонение варьирует так: от утра до полдня уменьшается, а с полдня до вечера снова увеличивается, а вечером до утра уменьшается и т.д. При северном сиянии замечено возмущение, отчего и кривая искажалась. За обедом белая скатерть и сладкое. За завтраком (Утро. Чай) было молоко, блины и варенье. Вечером конфеты. Водку за обедом пили как-то неохотно. Вечером играли в шахматы.",
+		 "diary_en":"Second day of Trinity. Warm, wind from the south, dark as in blessed Little Russia. From the morning I made magnetic observations, and with this we finished observations of the daily declination. The declination, like the inclination, varies as follows: from morning to noon it decreases, and from noon to evening it increases again, and from evening to morning it decreases, and so on. During the northern lights, a disturbance was noticed, which is why the curve was distorted. At dinner, a white tablecloth and something sweet. For breakfast (Morning. Tea) there was milk, pancakes, and jam. In the evening, candies. We drank vodka for dinner somewhat reluctantly. In the evening, we played chess.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_46",
+			"point_48"
+		 ]
+	  },
+	  {
+		 "id":"point_48",
+		 "date":"09.06.1913",
+		 "title":"Годовщина отплытия из Архангельска",
+		 "title_en":"Anniversary of Sailing from Arkhangelsk",
+		 "description":"Полярники встречают год с момента отправления из Архангельска.",
+		 "description_en":"Polar explorers mark one year since departing from Arkhangelsk.",
+		 "diary":"Сегодня встречаем годовщину экспедиции. Глетчера тают. Много воды. Лед постепенно разрушается. Хотим во второй половине июня идти в море. Получили посылку с кораблем. Мороженые говядина и картошка.  Прибыл Н.В. Пинегин с Горбовых островов. Привез нерпу. Это первая нерпа, которую убила экспедиция. Привез также много птиц, в которых доктор копается как у себя в огороде, все выискивает паразитов и проч.",
+		 "diary_en":"Today we celebrate the anniversary of the expedition. Glaciers are melting. Lots of water. The ice is gradually being destroyed. We want to go to sea in the second half of June. Received a package with the ship. Frozen beef and potatoes. N.V. Pinegin arrived from the Gorbovy Islands. He brought a seal. This is the first seal killed by the expedition. He also brought many birds, which the doctor is digging through as if in his own garden, looking for parasites and so on.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_47",
+			"point_49"
+		 ]
+	  },
+	  {
+		 "id":"point_49",
+		 "date":"09.06.1913",
+		 "title":"Летнее солнцестояние",
+		 "title_en":"Summer Solstice",
+		 "description":"День летнего солнцестояния. Разочарование из-за невозможности выйти в море.",
+		 "description_en":"Summer solstice day. Disappointment due to inability to set out to sea.",
+		 "diary":"Солнцестояние, поворот к ночи, опять впереди зимовка с длинными, темными ночами, но, увы, мы этого сами горячо желаем, лишь бы это было на Земле Франца Иосифа поближе к цели. После нескольких теплых тихих дней, сего дня подул сильный ветер. Собирался сегодня отправить людей со шлюпкой в Архангельскую губу, отправляемых на родину. Причем командир уедет несколькими днями позже. В кают-компании царит беспорядок, настоящее картографическое заведение. Спешно вычерчиваются карты, снимаются копии и т.д.",
+		 "diary_en":"Solstice, turn to night, again ahead is a wintering with long, dark nights, but, alas, we ourselves ardently desire this, if only it would be on Franz Josef Land closer to the goal. After several warm, quiet days, today a strong wind blew. I was going to send people with a boat to Arkhangelsk Bay today, those being sent to their homeland. Moreover, the commander will leave a few days later. Chaos reigns in the wardroom, a real cartographic institution. Maps are being drawn in a hurry, copies are being made, etc.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_48",
+			"point_50"
+		 ]
+	  },
+	  {
+		 "id":"point_50",
+		 "date":"11.06.1913",
+		 "title":"Отправка группы в Архангельск",
+		 "title_en":"Sending a Group to Arkhangelsk",
+		 "description":"Сопровождавшие доложили об успешной доставке группы, отправляемой в Архангельск.",
+		 "description_en":"Escorts reported the successful delivery of the group being sent to Arkhangelsk.",
+		 "diary":"Сопровождавшие шлюпку и людей матросы Коноплев и Коршунов вернулись обратно и доложили, что партия доставлена благополучно и размещена в Норвежской губе на Заячьем о-ве. Идет обильный снег. Покрыл снова все берега. Написал в Архангельский приветственные письма следующим лицам: Бибикову, Брянчанинову, Новинскому, Престину, Олизаровскому, Городскому голове, Управляющему таможней, Управляющему мурм. пароходством, Архангельскому Архиерею, Настоятелю Соловецкого монастыря и Норвежскому консулу.",
+		 "diary_en":"The sailors Konoplev and Korshunov, who accompanied the boat and people, returned and reported that the party was delivered safely and housed in the Norwegian Bay on Hare Island. Abundant snow is falling. It covered all the shores again. I wrote greeting letters to Arkhangelsk to the following persons: Bibikov, Bryanchaninov, Novinsky, Prestin, Olizarovsky, the City Mayor, the Customs Manager, the Murm. Shipping Manager, Arkhangelsk Archbishop, the Abbot of the Solovetsky Monastery, and the Norwegian Consul.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_49",
+			"point_51"
+		 ]
+	  },
+	  {
+		 "id":"point_51",
+		 "date":"16.06.1913",
+		 "title":"Подготовка почты",
+		 "title_en":"Mail Preparation",
+		 "description":"Седов пишет письма и отчёты для отправки в Петербург.",
+		 "description_en":"Sedov writes letters and reports to be sent to St. Petersburg.",
+		 "diary":"Закончил отчеты в Комитет. Вот уже больше недели дуют сильные W ветры со снегом и морозом (2-5о), все берега покрылись снегом, как никогда покрывались во всю зиму. Написал много больших писем милой Веруне, родителям, родственникам и знакомым. Усиленно готовили к отправке почту. Обедали свежую медвежатину.",
+		 "diary_en":"I finished reports to the Committee. For more than a week now, strong W winds have been blowing with snow and frost (2-5°); all the shores were covered with snow as they never were during the whole winter. I wrote many long letters to dear Verunya, parents, relatives, and acquaintances. We intensively prepared the mail for dispatch. We dined on fresh bear meat.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_50",
+			"point_52"
+		 ]
+	  },
+	  {
+		 "id":"point_52",
+		 "date":"20.06.1913",
+		 "title":"Отправка командира в Архангельскую губу",
+		 "title_en":"Sending the Commander to Arkhangelsk Bay",
+		 "description":"Торжественные проводы командира судна с отчётами для Комитета.",
+		 "description_en":"Ceremonial farewell to the ship's commander with reports for the Committee.",
+		 "diary":"Чудный летний день. Прибыл из экскурсии М.А. Павлов. Привез около 100 штук кайр -- вкусная птица. Началось, наконец, заметное таяние снега и разрушение льда. Вообще надо считать, что теплая погода, способная разрушать лед, а также необходимые при этом ветры и дожди наступают в конце мая -- в начале лета. Сегодня при чудном дне отправили командира в Арх. губу. Судно было расцвечено флагами, салютовали из пушки. Складывали гурий у Астр. креста и производили ... съемку.",
+		 "diary_en":"Wonderful summer day. M.A. Pavlov arrived from the excursion. He brought about 100 guillemots - a tasty bird. Finally, noticeable melting of snow and destruction of ice has begun. In general, it should be considered that warm weather, capable of destroying ice, as well as the winds and rains necessary for this, come at the end of May - at the beginning of summer. Today, on a wonderful day, we sent the commander to Arkhangelsk Bay. The ship was decorated with flags, saluted from the cannon. We were building a cairn at the Astr. cross and conducting... a survey.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_51",
+			"point_53"
+		 ]
+	  },
+	  {
+		 "id":"point_53",
+		 "date":"21.06.1913",
+		 "title":"Желанный ветер",
+		 "title_en":"Desired Wind",
+		 "description":"Наконец дует восточный ветер, который должен отогнать льды от берегов.",
+		 "description_en":"Finally, an east wind is blowing, which should drive the ice away from the shores.",
+		 "diary":"Чудный ясный день, солнце светит на всю. Дует сток 8 баллов, давно желанный. Сток, он отгонит льды от берегов и выпустит нас на волю. Нарта благополучно вернулась в 6 ч. утра, в Арх. губе все здоровы.",
+		 "diary_en":"Wonderful clear day, the sun is shining fully. A drain of 8 points is blowing, long desired. The drain, it will drive the ice away from the shores and release us to freedom. The sledge returned safely at 6 a.m.; in Arkhangelsk Bay, everyone is healthy.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_52",
+			"point_54"
+		 ]
+	  },
+	  {
+		 "id":"point_54",
+		 "date":"24.06.1913",
+		 "title":"Установление летней погоды",
+		 "title_en":"Establishment of Summer Weather",
+		 "description":"Установилась летняя погода: дождь, туман и солнце.",
+		 "description_en":"Summer weather has set in: rain, fog, and sun.",
+		 "diary":"Наконец установилась летняя погода: дождь, туман и по временам Солнце, температура все время стоит плюс. Сегодня видели три гуся. Это первые гуси. Кончили заготовку дров на выход из губы до Панкратова о-ва. У берегов вода. На собаках уже трудно ездить. На лыжах пока еще ходим.",
+		 "diary_en":"Finally, summer weather has established itself: rain, fog, and at times the Sun; the temperature is constantly plus. Today we saw three geese. These are the first geese. We finished preparing firewood for the exit from the bay to Pankratov Island. There is water by the shores. It is already difficult to ride on dogs. We still walk on skis for now.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_53",
+			"point_55"
+		 ]
+	  },
+	  {
+		 "id":"point_55",
+		 "date":"25.06.1913",
+		 "title":"Внезапная вьюга",
+		 "title_en":"Sudden Blizzard",
+		 "description":"Неожиданная зимняя вьюга в конце июня.",
+		 "description_en":"Unexpected winter blizzard at the end of June.",
+		 "diary":"Сегодня совершенно неожиданно ударила зимняя вьюга от WSW с 5о морозом. Метет снег и холодно как зимой Господи! Когда же будет лето у этих несносных берегов. Уже терпим 91/2 месяцев зимы, а лета все еще не видели. Страшно!.. Не застрять бы здесь на вторую зиму.",
+		 "diary_en":"Today, completely unexpectedly, a winter blizzard struck from the WSW with 5° of frost. Snow is sweeping and it's cold as in winter Lord! When will it be summer on these annoying shores? We have already endured 9½ months of winter, and we still haven't seen summer. Scary!.. I hope we don't get stuck here for a second winter.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_54",
+			"point_56"
+		 ]
+	  },
+	  {
+		 "id":"point_56",
+		 "date":"27.06.1913",
+		 "title":"Подготовка судна к походу",
+		 "title_en":"Preparing the Ship for the Journey",
+		 "description":"Поднимают пар в котлах. Готовят машину к походу.",
+		 "description_en":"Raising steam in the boilers. Preparing the engine for the journey.",
+		 "diary":"N sw/5 со снегом. Около 5 ч. дня собаки усмотрели в 2 верстах от судна медведицу с двумя медвежатами. Все, конечно, пустились туда, кто на лыжах, а кто просто. Вскоре настигли их около 3-4 верст от судна и всех трех убили. Интересно что медведицу до того собаки утомили, что она иногда ложилась передохнуть и позволяла себя собакам рвать. Медвежат собаки в самом начале сражения разорвали. Медвежата оказались почти в два раза больше наших, несмотря на то, что рождены в одно время. Привез медведей на судно кинематографировать. Поднимали пар в котле до 70 ф. Приготовили машину к походу.",
+		 "diary_en":"N sw/5 with snow. Around 5 p.m., the dogs spotted a female bear with two cubs 2 versts from the ship. Everyone, of course, rushed there, some on skis, and some simply. Soon they caught up with them about 3-4 versts from the ship and killed all three. Interestingly, the dogs had so exhausted the female bear that she sometimes lay down to catch her breath and allowed the dogs to tear at her. The dogs tore the cubs apart at the very beginning of the battle. The cubs turned out to be almost twice as large as ours, despite being born at the same time. I brought the bears to the ship to cinematograph. We raised steam in the boiler to 70 f. We prepared the engine for the journey.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_55",
+			"point_57"
+		 ]
+	  },
+	  {
+		 "id":"point_57",
+		 "date":"27.06.1913",
+		 "title":"Переезд на новое место",
+		 "title_en":"Moving to a New Place",
+		 "description":"Команда перебирается из кубрика под спардек.",
+		 "description_en":"The crew moves from the forecastle to under the spar deck.",
+		 "diary":"Сегодня потушили машину, в остатках теплой воды великолепно все помылись, как-то легче стало без грязи. Эту ночь спал очень хорошо в чистом белье, а главное потому хорошо и спокойно, что пароход установлен уже на зимовку в тихом месте. Команда кроме того в машине авралом стирала белье. Вчера и сегодня ели моржатину. Мясо ничего себе, и сочнее тюленьего и далеко хуже медвежьего, отличается какой-то безвкусицей. Все же охотно едим его, ибо это свежее мясо. В кают-компании идет усиленная приборка, вообще всюду кипит работа по приготовлению к зимовке.",
+		 "diary_en":"Today we extinguished the engine, and everyone washed excellently in the remains of the warm water; somehow it became easier without dirt. This night I slept very well in clean linen, and mainly because it was good and calm that the steamer was already set up for wintering in a quiet place. The crew also washed their linen by all hands in the engine room. Yesterday and today we ate walrus meat. The meat is not bad, and juicier than seal and far worse than bear, distinguished by a certain tastelessness. Nevertheless, we eat it willingly, for it is fresh meat. In the wardroom, there is enhanced cleaning; in general, work is boiling everywhere in preparation for wintering.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_56",
+			"point_58"
+		 ]
+	  },
+	  {
+		 "id":"point_58",
+		 "date":"29.06.1913",
+		 "title":"Петров день",
+		 "title_en":"St. Peter's Day",
+		 "description":"Празднование Петрова дня. Седов тоскует по любимой.",
+		 "description_en":"Celebration of St. Peter's Day. Sedov longs for his beloved.",
+		 "diary":"Сегодня тихий праздник -- Петров день. С утра отслужили Богослужение, а затем пошли на Михайлову Сопку складывать створный знак. Штиль, туман. Лед что-то медленно тает. Ужасно боюсь, что нас не выпустит отсюда... Внутри убитых медведей найдены нерпа и утиные лапы. Медведи ужасно воняют ворванью, совсем не то, что зимние медведи, которые почти не воняют. Собаки линяют, поэтому все сильно похудели и выглядят какими-то болезненными скучными... Доброе утро, милая Веруня. Как ты живешь и что теперь поделываешь в краю родном? Сильно скучаю по тебе, родная. Сегодня именинника П.Гр. будем пить вино. Я в душе буду пить за твое милое, дорогое здоровье.",
+		 "diary_en":"Today is a quiet holiday -- St. Peter's Day. In the morning we held a church service, and then went to Mikhailova Sopka to put together a range marker. Still, fog. The ice is somehow slowly melting. I'm terribly afraid that it won't release us from here... Inside the killed bears, seal and duck feet were found. The bears terribly stink of blubber, not at all like winter bears, which hardly stink at all. The dogs are molting, so they have all lost a lot of weight and look somewhat sickly and boring... Good morning, dear Verunya. How do you live and what are you doing now in the native land? I miss you a lot, my dear. Today we will drink wine for the birthday of P.Gr. In my soul, I will drink to your sweet, precious health.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_57",
+			"point_59"
+		 ]
+	  },
+	  {
+		 "id":"point_59",
+		 "date":"03.07.1913",
+		 "title":"Медленное таяние льда",
+		 "title_en":"Slow Ice Melting",
+		 "description":"Седов обеспокоен медленным таянием льда. Корабль может не освободиться.",
+		 "description_en":"Sedov is concerned about the slow melting of ice. The ship may not be freed.",
+		 "diary":"Все еще дует противный WSW, снег на льду уже подтаял, начинает киснуть лед. Воды все же нигде нет, все забито льдом. Начинают образовываться наледные пресные озера. Усиленно конопатим судно, пользуемся случаем, т.к. льдом накренило его на левый борт, поэтому есть возможность правый борт хорошо законопатить и просмолить. К вечеру штиль, туман. Когда же будет желанный SO и вынесет лед из губы?!.. Сегодня Визе и Пинегин ушли на Таисию работать. В море видно уже давно темное небо, вероятно сплошь там вода и плавают корабли, а нас все еще держит здесь Нептун в своих костях.",
+		 "diary_en":"The nasty WSW is still blowing; the snow on the ice has already thawed, the ice is beginning to sour. There is still no water anywhere; everything is blocked with ice. Fresh water lakes are beginning to form on the ice. We are intensively caulking the ship, taking advantage of the opportunity, since the ice has heeled it to the port side, so there is a possibility to caulk and tar the starboard side well. By evening, stillness, fog. When will the desired SE come and carry the ice out of the bay?!.. Today Vize and Pinegin went to work on Taisia. Dark sky has been visible at sea for a long time, probably there is water all over there and ships are sailing, but Neptune is still holding us here in his bones.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_58",
+			"point_60"
+		 ]
+	  },
+	  {
+		 "id":"point_60",
+		 "date":"05.07.1913",
+		 "title":"Летний день",
+		 "title_en":"Summer Day",
+		 "description":"Солнечный день. Проводятся магнитные наблюдения.",
+		 "description_en":"Sunny day. Magnetic observations are carried out.",
+		 "diary":"Чудный солнечный день. Тихо. Тем. на солнце +20о Ц. Идет быстрое таяние снега. Появились на льду озера простой воды. Усиленно конопатим судно. Его льдом накренило на левую сторону, поэтому спешим конопатить правый борт. С правой стороны больше потаял снег, лед поднялся и поднял судно. Сегодня за полсуток накопили воды в трюме 18''. Это усиленно оттаивают трещины в корпусе, которые были зимой замерзшие. Вчера удалось сделать хорошие наблюдения для ... и для времени по hh , а сегодня для скл. компаса. Думаю еще пронаблюдать склонений компаса вечером, чтобы получить суточную амплитуду.",
+		 "diary_en":"Wonderful sunny day. Still. Temp. in the sun +20° C. Rapid snow melting is underway. Lakes of plain water have appeared on the ice. We are intensively caulking the ship. The ice has heeled it to the left side, so we are hurrying to caulk the right side. On the right side, the snow has melted more, the ice has risen and raised the ship. Today in half a day we accumulated 18'' of water in the hold. This is intensively thawing the cracks in the hull that were frozen in winter. Yesterday I managed to make good observations for ... and for time on hh, and today for compass declination. I think I will observe compass declinations again in the evening to get the daily amplitude.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_59",
+			"point_61"
+		 ]
+	  },
+	  {
+		 "id":"point_61",
+		 "date":"07.07.1913",
+		 "title":"Тихое воскресенье",
+		 "title_en":"Quiet Sunday",
+		 "description":"Седов проводит астрономические наблюдения. Н.В. Пинегин пишет этюды.",
+		 "description_en":"Sedov conducts astronomical observations. N.V. Pinegin paints studies.",
+		 "diary":"Опять тихое воскресенье. Штиль. Ясно и тепло, как дома. Ночью ездил с П.Гр. Кушаковым на г. Суворину с мензулой делать засечки. Наблюдения вполне удались. Удалось-таки связать о-в Берхас астр. зн. м. обсерватория. Воды на льду местами встречалось до колен. Собаки неохотно идут в воду. Днем доканчивали верхний створный знак. Вечером художник Н.В. Пинегин пишет этюды. На дворе тихо, тихо и хорошо, как у Веруси под крылышком.",
+		 "diary_en":"Again a quiet Sunday. Still. Clear and warm, like at home. At night I went with P.Gr. Kushakov to Mount Suvorina with a plane table to make cuts. The observations were completely successful. I managed to connect Berkhas Island with the astr. sign of the observatory. Water on the ice was up to the knees in places. Dogs reluctantly go into the water. During the day we finished the upper range marker. In the evening, the artist N.V. Pinegin paints studies. It is quiet, quiet and good outside, like under Verusya's wing.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_60",
+			"point_62"
+		 ]
+	  },
+	  {
+		 "id":"point_62",
+		 "date":"11.07.1913",
+		 "title":"Именины Ольги",
+		 "title_en":"Olga's Name Day",
+		 "description":"Празднование именин жён членов экспедиции.",
+		 "description_en":"Celebrating name days of expedition members' wives.",
+		 "diary":"Праздник Ольги. У нас две именинницы: супруга Михаила Алексеевича и сестра Николая Васильевича. Вместе с сим сегодня, кажется праздник всея Руси -- 300 ... дома Романова. По крайней мере, в календаре значится свящ. коронование царя Михаила Федоровича. С утра расцветились флагами. За обедом набрали кое-как по рюмке спирту. Пили сначала за благополучно царствующий дом Романова, а затем за именинниц. С утра шел дождь, а вечером хорошая погода. Ходили за песцами. Занимаюсь усиленно обучением медведей нартовой езде, с тем, чтобы на них ехать на полюс.",
+		 "diary_en":"Olga's holiday. We have two celebrants: Mikhail Alekseevich's wife and Nikolai Vasilyevich's sister. Together with this, today seems to be the holiday of all Russia - 300 ... of the Romanov house. At least, the calendar indicates the sacred coronation of Tsar Mikhail Fedorovich. From the morning we were adorned with flags. For dinner we somehow managed to get a glass of alcohol each. We drank first to the prosperously reigning house of Romanov, and then to the name-day celebrants. It rained in the morning, and in the evening the weather was good. We went after arctic foxes. I am intensively engaged in training bears for sledge riding, in order to ride them to the pole.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_61",
+			"point_63"
+		 ]
+	  },
+	  {
+		 "id":"point_63",
+		 "date":"13.07.1913",
+		 "title":"Езда на медведе",
+		 "title_en":"Riding on a Bear",
+		 "description":"Седов впервые привозит на медведе полено дров.",
+		 "description_en":"Sedov brings a log of firewood on a bear for the first time.",
+		 "diary":"Штиль, туман, временами снег. Вот вам и июль! Сегодня впервые привез на медведе полено дров их бухты Св. Фоки. Думаю, что дело с медведями удастся и тогда полюс обеспечен. Торошку по неосторожности рассек кнутом правый глаз, жаль ужасно, но ничего, он скоро поправится, ранка не опасная, нужно впредь действовать хореем, а не кнутом.",
+		 "diary_en":"Still, fog, snow at times. There you have July! Today for the first time, I brought a log of firewood from St. Foka Bay on a bear. I think that the bear business will succeed and then the pole is assured. Careless me, I cut Toroshka's right eye with a whip; it's terribly unfortunate, but it's okay, he will recover soon; the wound is not dangerous. In the future, I need to use a pole, not a whip.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_62",
+			"point_64"
+		 ]
+	  },
+	  {
+		 "id":"point_64",
+		 "date":"14.07.1913",
+		 "title":"Сильный западный ветер",
+		 "title_en":"Strong Western Wind",
+		 "description":"Сильный западный ветер почти с морозом.",
+		 "description_en":"Strong western wind almost with frost.",
+		 "diary":"Сильный WSW. По временам снег, с утра до 2о мороза. Еще не было настоящего лета, а начало как будто бы поворачивать к зиме?! Сегодня обедали вкусных кайр. Привет тебе, милая Веруня, с праздником. Сегодня ведь тихое воскресение. Целую твои ручки, мое Солнце, моя радость. Скучно, скучно без тебя!..",
+		 "diary_en":"Strong WSW. Snow at times, from the morning to 2° of frost. There hasn't been real summer yet, and it seems to be turning towards winter already?! Today we dined on delicious guillemots. Greetings to you, dear Verunya, on the holiday. Today is indeed a quiet Sunday. I kiss your hands, my Sun, my joy. Boring, boring without you!..",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_63",
+			"point_65"
+		 ]
+	  },
+	  {
+		 "id":"point_65",
+		 "date":"16.07.1913",
+		 "title":"День Алевтины",
+		 "title_en":"Alevtina's Day",
+		 "description":"Празднование именин супруги Николая Васильевича.",
+		 "description_en":"Celebrating the name day of Nikolai Vasilyevich's wife.",
+		 "diary":"Сегодня Алевтина, супруга Николая Васильевича именинница. За обедом была белая скатерть и чарка водки, вечером конфеты. Собаки поймали у отдушины нарту, это вторая нарта, добытая экспедицией. Штиль, дождь, а SO все нет. Кругом лед. Неужели же нас не выпустит отсюда?!.. Это будет ужасно.",
+		 "diary_en":"Today is Alevtina, Nikolai Vasilyevich's wife's name day. For dinner there was a white tablecloth and a glass of vodka, in the evening candies. The dogs caught a seal at a breathing hole; this is the second seal obtained by the expedition. Still, rain, but no SE. Ice all around. Will it really not release us from here?!.. That would be terrible.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_64",
+			"point_66"
+		 ]
+	  },
+	  {
+		 "id":"point_66",
+		 "date":"18.07.1913",
+		 "title":"Долгожданный восточный ветер",
+		 "title_en":"Long-awaited Eastern Wind",
+		 "description":"Наконец подул восточный ветер, который может очистить бухту от льда.",
+		 "description_en":"Finally, an eastern wind blew, which could clear the bay of ice.",
+		 "diary":"Слава Богу. Наконец-таки подул сегодня желанный Оso/5, да еще с дождем. Если он продолжится дня три, то бухту очистит ото льда. К полдню штиль. Пошел пешком на Южно-Крестовые о-ва. Идти плохо, все время брел по наледной воде. Лед все еще крепкий, трещины все стаяли пресным льдом весенних заморозков. У о-ва Назимова есть полынья версты две длиной и сажен 150 шириною. На полынье есть зайцы, нерпы, кайры, чайки и даже гаги. На берегу гагичьих гнезд этого года не нашел, прошлогодних же гнезд много, в некоторых из них нашел скорлупы яиц.",
+		 "diary_en":"Thank God. Finally, today the desired ESE/5 blew, and with rain too. If it continues for three days, it will clear the bay of ice. By noon, stillness. I went on foot to the South Cross Islands. It's bad going; all the time I waded through water on the ice. The ice is still strong; all the cracks have melted into fresh ice from the spring frosts. At Nazimov Island, there is a polynya about two versts long and 150 sazhens wide. On the polynya there are hares, seals, guillemots, gulls, and even eiders. On the shore, I did not find this year's eider nests, but there are many nests from last year; in some of them I found eggshells.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_65",
+			"point_67"
+		 ]
+	  },
+	  {
+		 "id":"point_67",
+		 "date":"29.07.1913",
+		 "title":"Возвращение из экскурсии",
+		 "title_en":"Return from Excursion",
+		 "description":"Седов возвращается из экскурсии и находит всё благополучно.",
+		 "description_en":"Sedov returns from an excursion and finds everything well.",
+		 "diary":"В 1 ч. для прибыли из экскурсии на судно, где нашли все благополучно. На судне было убито 14 нерп. В Архангельской губе произвели съемку всех островов. Берх с W и NW стороны окружены движущимся паком. Вильгельм окружен водой. Сплошная вода начинается в 2 верстах к W от Рекуров в проливе. Лед везде слабый, много трещин и промоин. Полагаю, что скоро его вынесет в море.",
+		 "diary_en":"At 1 o'clock for profits from the excursion to the ship, where we found everything well. On the ship, 14 seals were killed. In Arkhangelsk Bay, we surveyed all the islands. Berkh from the W and NW sides is surrounded by moving pack ice. Wilhelm is surrounded by water. Continuous water begins 2 versts to the W of the Recurves in the strait. The ice is weak everywhere, with many cracks and pools. I believe that it will soon be carried out to sea.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_66",
+			"point_68"
+		 ]
+	  },
+	  {
+		 "id":"point_68",
+		 "date":"30.07.1913",
+		 "title":"День рождения наследника",
+		 "title_en":"Heir's Birthday",
+		 "description":"Празднование дня рождения наследника цесаревича Алексея Николаевича.",
+		 "description_en":"Celebration of the birthday of Crown Prince Tsarevich Alexei Nikolaevich.",
+		 "diary":"Праздник день Рождения Его Императорского Высочества Наследника Цесаревича Алексея Николаевича. С утра расцветились флагами и отслужили молитву, произвели установленный салют. На дворе стоит штиль. Пасмурно. Шлю милой Веруне привет с праздником. Крепко, крепко целую.",
+		 "diary_en":"Holiday, the birthday of His Imperial Highness the Heir Tsarevich Alexei Nikolaevich. From the morning we were adorned with flags and held a prayer, fired the established salute. There is stillness outside. Cloudy. I send my dear Verunya greetings with the holiday. I kiss you firmly, firmly.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_67",
+			"point_69"
+		 ]
+	  },
+	  {
+		 "id":"point_69",
+		 "date":"03.08.1913",
+		 "title":"Застрявшие во льдах",
+		 "title_en":"Stuck in the Ice",
+		 "description":"Затянувшееся пребывание в ледовом лабиринте.",
+		 "description_en":"Extended stay in the ice labyrinth.",
+		 "diary":"Пасмурно, туманно, штиль. Лед очень слаб, но за отсутствием ветров держится по всей губе сплошной массой. В море тоже кругом лед. Когда же, наконец, мы выберемся на свободу из этого лабиринта?..",
+		 "diary_en":"Cloudy, foggy, stillness. The ice is very weak, but due to the lack of winds it holds throughout the bay in a solid mass. There is also ice all around in the sea. When, finally, will we get out to freedom from this labyrinth?..",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_68",
+			"point_70"
+		 ]
+	  },
+	  {
+		 "id":"point_70",
+		 "date":"05.08.1913",
+		 "title":"Ломка льда",
+		 "title_en":"Breaking the Ice",
+		 "description":"Экспедиция приступает к активной ломке льда, чтобы освободить судно.",
+		 "description_en":"The expedition begins actively breaking the ice to free the ship.",
+		 "diary":"WSW/3 -- противный, надоедливый с туманом. сегодня приступили всеми силами к ломке льда. Пилили пилой, рубим ... и топорами. Толщина льда зимнего образования ¾ арш., а старый морской лед доходит до 2 арш. Сегодня прорубили полынью сажен 40 длины и 15 сажен ширины. Начали рубку льда устья речки на готовой небольшой полынье, саженях в 300 от судна. Как только доведем полынью до судна, начну тотчас же пробиваться в море судном. Завтра Преображение. С праздником дорогая Веруся, дорогие родители и друзья! Вы все конечно завтра празднуете, а мы будем ломать лед. Нам ведь тоже доставляет праздник каждая лишняя выломанная льдина. Сегодняшнюю ночь выпал снег.",
+		 "diary_en":"WSW/3 - nasty, annoying with fog. today we started with all our might to break the ice. We sawed with a saw, chopped ... and with axes. The thickness of the winter-formed ice is ¾ arshin, and the old sea ice reaches up to 2 arshins. Today we cut a polynya 40 sazhens long and 15 sazhens wide. We began cutting ice at the mouth of the river on a ready small polynya, about 300 sazhens from the ship. As soon as we bring the polynya to the ship, I will immediately start to break through to the sea with the ship. Tomorrow is the Transfiguration. Happy holiday, dear Verusya, dear parents and friends! You are all certainly celebrating tomorrow, and we will be breaking ice. For us, each extra broken piece of ice also brings a holiday. Snow fell tonight.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_69",
+			"point_71"
+		 ]
+	  },
+	  {
+		 "id":"point_71",
+		 "date":"08.08.1913",
+		 "title":"Утренние заморозки",
+		 "title_en":"Morning Frosts",
+		 "description":"Начались утренние заморозки.",
+		 "description_en":"Morning frosts have begun.",
+		 "diary":"Начались утренники до -3о Ц.",
+		 "diary_en":"Morning frosts have begun, down to -3° C.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_70",
+			"point_72"
+		 ]
+	  },
+	  {
+		 "id":"point_72",
+		 "date":"10.08.1913",
+		 "title":"Отправка штурмана Сахарова",
+		 "title_en":"Sending Navigator Sakharov",
+		 "description":"Седов отправляет штурмана Сахарова сменить командира Захарова в Архангельской губе.",
+		 "description_en":"Sedov sends navigator Sakharov to replace commander Zakharov in Arkhangelsk Bay.",
+		 "diary":"Отправил штурмана Сахарова сменить командира Захарова в Архангельской губе. Уполномочия возложенные передать власть начальника партии на географа Вите. После обеда убили 5 нерп в лунках «по головкам» три картечью, а две пулей. Нерпы уже начинают несколько держаться на воде, не сразу тонут. Одну нерпу, когда гарпунировал П.Г. Кушаков, то вместе с ней и гарпуном ушел с головой вводу. Затем через несколько секунд вылез из воды и вытащил нерпу. Гарпун был привязан к его руке. Если бы тюлень был легко ранен, то он мог бы утащить его под лед!..",
+		 "diary_en":"I sent navigator Sakharov to replace commander Zakharov in Arkhangelsk Bay. Authorized him to transfer the power of party chief to geographer Witte. After dinner, we killed 5 seals in holes 'by heads,' three with buckshot and two with bullets. Seals are already starting to stay somewhat on the water, not sinking immediately. One seal, when P.G. Kushakov harpooned it, he went head first into the water with it and the harpoon. Then after a few seconds, he climbed out of the water and pulled out the seal. The harpoon was tied to his arm. If the seal had been lightly wounded, it could have dragged him under the ice!..",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_71",
+			"point_73"
+		 ]
+	  },
+	  {
+		 "id":"point_73",
+		 "date":"11.08.1913",
+		 "title":"Медведи у судна",
+		 "title_en":"Bears Near the Ship",
+		 "description":"На запах нерпы к судну приходят три медведя.",
+		 "description_en":"Three bears come to the ship attracted by the smell of seal.",
+		 "diary":"Сегодня чудный милый день. Тянет легкий ветерок. На запах нерпы пришло к судну (около версты) один за другим три медведя. Все они были нами убиты. Одного раненого сражавшегося с собаками, в 10 шагах кинематографировали, а другого, засевшего в лунке, живого тянули арканом за шею на лед, т.к. в лунке быть было опасно, чтобы он не утонул. Поэтому его легко ранили и вытащили на лед, где и убили. Когда тащили (веревки 2½ саж. длины) он не кидался на людей, а упирался всеми 4 лапами об лед и не хотел идти, но 6 человек его все-таки потянули. Медведь старый. Третья была медведица без медвежат. Пострадало от ран 5 собак, все раны излечимы. Я лично тянул раненого медведя из лунки, пока еще не было веревки, за заднюю лапу, а иногда хватал и за переднюю. Команда держала меня сзади за рубашку.",
+		 "diary_en":"Today is a wonderful sweet day. A light breeze is blowing. Attracted by the smell of seal, three bears came to the ship (about a verst) one after another. They were all killed by us. One wounded one fighting with dogs was cinematographed at 10 paces, and another, sitting in a hole, was pulled alive by a lasso around the neck onto the ice, as it was dangerous for him to be in the hole in case he drowned. Therefore, he was lightly wounded and pulled onto the ice, where he was killed. When pulling (ropes 2½ sazhens long) he did not throw himself at people, but braced all 4 paws against the ice and did not want to go, but 6 people pulled him anyway. The bear was old. The third was a female bear without cubs. 5 dogs suffered from wounds, all wounds are curable. I personally pulled the wounded bear from the hole by its hind leg, while there was still no rope, and sometimes grabbed it by the front leg. The crew held me from behind by my shirt.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_72",
+			"point_74"
+		 ]
+	  },
+	  {
+		 "id":"point_74",
+		 "date":"12.08.1913",
+		 "title":"Медведь с тюленем",
+		 "title_en":"Bear with a Seal",
+		 "description":"Седов наблюдает, как белый медведь охотится на тюленя.",
+		 "description_en":"Sedov observes how a polar bear hunts a seal.",
+		 "diary":"Первый медведь, кроме себя самого, принес нам в добычу еще и тюленя в 4 пуда весом, которого он поймал в лунке и нес в зубах. Медведь лежит у лунки и выжидает когда тюлень высунет голову из воды, тогда он опрометью бросается в лунку, ныряет за ним и схватывает его зубами за голову, и затем вылазит с ним на лед, помнет ему затылок и потом уже начинает есть с кожей. Больше всего он любит ворвань.",
+		 "diary_en":"The first bear, besides itself, brought us as prey also a seal weighing 4 poods, which it had caught in a hole and was carrying in its teeth. The bear lies by the hole and waits for the seal to stick its head out of the water, then it rushes headlong into the hole, dives after it and grabs it by the head with its teeth, and then crawls out with it onto the ice, crushes its head and only then begins to eat it with the skin. Most of all it loves blubber.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_73",
+			"point_75"
+		 ]
+	  },
+	  {
+		 "id":"point_75",
+		 "date":"15.08.1913",
+		 "title":"Годовщина экспедиции",
+		 "title_en":"Expedition Anniversary",
+		 "description":"Празднование годовщины экспедиции.",
+		 "description_en":"Celebration of the expedition anniversary.",
+		 "diary":"Сегодня празднуем годовщину экспедиции. Утром Богослужение, пушечный салют. Судно расцветёт флагами. Обед состоял: медвежий пирог, медвежьи почки, медвежья жареная колбаса, жареная капуста, борщ Вихорева, компот и конфеты. Водка, красное вино и шампанское. Вечером чай с печеньем и конфетами, с играми в карты. Музыка и пение. Работ никаких не производим, т.к. весь день шёл дождь. В этот день я последний раз обнял мою милую Веруню. Как это всё кажется, недавно было, а между тем прошёл целый год, ведь это целая вечность для любящих людей. Грустно, грустно.",
+		 "diary_en":"Today we celebrate the anniversary of the expedition. Morning church service, cannon salute. The ship will be adorned with flags. Dinner consisted of: bear pie, bear kidneys, fried bear sausage, fried cabbage, Vikhorev's borsch, compote, and candies. Vodka, red wine, and champagne. In the evening, tea with cookies and candies, with card games. Music and singing. We are not doing any work, as it rained all day. On this day, I last embraced my dear Verunya. How it all seems recent, and yet a whole year has passed, which is an eternity for loving people. Sad, sad.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_74",
+			"point_76"
+		 ]
+	  },
+	  {
+		 "id":"point_76",
+		 "date":"16.08.1913",
+		 "title":"Северо-восточный ветер",
+		 "title_en":"Northeastern Wind",
+		 "description":"Дует северо-восточный ветер. Лёд трескается, но не расходится.",
+		 "description_en":"A northeastern wind is blowing. The ice cracks but doesn't disperse.",
+		 "diary":"Сегодня дует приличный NO. В море волнение, которое отражается даже у судна. Поблизости трескается лёд, на пак и ... колышется. Это немного утешает изболевший мой ум, который уже бессилен что-либо предпринять против природы. На всякий случай кругом судна обрубаем лёд, хотя это делу мало поможет. Нужны шторма, а их-то как на грех и нет. Готовим пороховую бомбу для взрыва льда, не знаю, что из этого выйдет. Боюсь что тоже ничего, - если судно и освободим немного ото льда, но зато не освободимся без шторма от окружающего нас на 6 -- 7 вёрст льда плотного, морского. Боже! Пошли шторм.",
+		 "diary_en":"Today a decent NE is blowing. There is a swell in the sea, which is reflected even at the ship. Nearby, the ice is cracking, the pack ice and ... are swaying. This somewhat comforts my aching mind, which is already powerless to do anything against nature. Just in case, we are chopping the ice around the ship, although this will help the matter little. We need storms, and, as if by jinx, there aren't any. We're preparing a powder bomb to blow up the ice; I don't know what will come of it. I'm afraid it will also be nothing - if we free the ship a little from the ice, but we won't be freed without a storm from the dense, marine ice surrounding us for 6-7 versts. God! Send a storm.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_75",
+			"point_77"
+		 ]
+	  },
+	  {
+		 "id":"point_77",
+		 "date":"17.08.1913",
+		 "title":"Мороз и находка дома",
+		 "title_en":"Frost and Finding a House",
+		 "description":"Сильный мороз. Обнаружен выброшенный на берег дом.",
+		 "description_en":"Strong frost. A house washed ashore was discovered.",
+		 "diary":"С утра до 4о мороза, а к вечеру дождь и слякоть. Нашли у Глетчера ... свой выброшенный дом. Привезли 4 нарты брёвен и досок. Нарту наваливали до 30 -- 32 пудов на 10 собак. Тут хорошо. Постараемся перевезти всё. Чудные дрова будут. По дороге на 175 -- 200 шагов убил самца пудов на 20 -- 25 на льду. Прибежал к нему, схватил за хвост и держал, пока подоспеет помощь. Минуты через три он у меня сорвался, чуть меня самого не стащил за собой в лунку. Ужасно жалею, что не удалось попользоваться его великолепной чёрно-серой шкурой и недурным мясом. Сегодня принял баню. Как сто пудов свалилось с плеч.",
+		 "diary_en":"From morning to 4° of frost, and by evening rain and slush. We found our washed-up house at the Glacier... We brought 4 sledges of logs and boards. We loaded the sledge up to 30-32 poods for 10 dogs. It's good here. We'll try to transport everything. The firewood will be wonderful. On the way, at 175-200 paces, I killed a male weighing about 20-25 poods on the ice. I ran to him, grabbed him by the tail and held him until help arrived. After about three minutes, he broke away from me, almost dragging me into the hole with him. I'm terribly sorry that I couldn't make use of his magnificent black-gray skin and quite good meat. Today I took a bath. It was like a hundred poods fell from my shoulders.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_76",
+			"point_78"
+		 ]
+	  },
+	  {
+		 "id":"point_78",
+		 "date":"18.08.1913",
+		 "title":"Полярное воскресенье",
+		 "title_en":"Polar Sunday",
+		 "description":"Именины Ивана Андреевича Зандера.",
+		 "description_en":"Ivan Andreevich Zander's name day.",
+		 "diary":"Полярное смиренное воскресенье. Мороз 3 1/2о. Западный ветер на 4 бал. Несколько шевелится лёд. Сегодня скромно чествовали механика именины Ивана Андр. Зандер. Пили по рюмке водки с керосином. Пироги с медведем и жареная медвежатина. Убил гренландского зайца, но не успел добежать, как он снова в лунку, оставив на льду массу крови. Продолжаем перевозить дом. В море открытая вода. Сегодня видел во сне Веруню, во время купания. Приятный сон. Как бы хотелось тебя действительно видеть, моя радость, моя гордость, моя милая Веруня.",
+		 "diary_en":"Polar humble Sunday. Frost 3 1/2°. Western wind at 4 points. The ice is moving a bit. Today we modestly celebrated the mechanic Ivan Andr. Zander's name day. We drank a glass of vodka with kerosene each. Pies with bear and fried bear meat. I killed a Greenland hare, but didn't manage to reach it before it went back into the hole, leaving a lot of blood on the ice. We continue to transport the house. There is open water in the sea. Today I saw Verunya in a dream, during bathing. A pleasant dream. How I would like to actually see you, my joy, my pride, my dear Verunya.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_77",
+			"point_79"
+		 ]
+	  },
+	  {
+		 "id":"point_79",
+		 "date":"19.08.1913",
+		 "title":"Астрономические наблюдения",
+		 "title_en":"Astronomical Observations",
+		 "description":"Седов проводит астрономические наблюдения, ведутся работы по установке оборудования.",
+		 "description_en":"Sedov conducts astronomical observations, work is underway to install equipment.",
+		 "diary":"Тихо. Ясно. Удалось взять соответствующие высоты солнца, продолжаем возить дом. Страсть надоело лежать. Устроили на палубе теплый ветер-клозет (закрытый). Это конечно у нас роскошь. Скучно как-то и грустно, но то тоска по родине, не то... Сам не знаю что.",
+		 "diary_en":"Quiet. Clear. Managed to take the corresponding heights of the sun, continue to transport the house. Terribly tired of lying down. We've set up a warm wind-closet on deck (closed). This is, of course, a luxury for us. Somehow boring and sad, but either it's homesickness, or... I don't know what myself.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_78",
+			"point_80"
+		 ]
+	  },
+	  {
+		 "id":"point_80",
+		 "date":"20.08.1913",
+		 "title":"Магнитные наблюдения",
+		 "title_en":"Magnetic Observations",
+		 "description":"Проведение магнитных наблюдений в трюме судна.",
+		 "description_en":"Conducting magnetic observations in the ship's hold.",
+		 "diary":"Эту ночь взбурлила большая волна подо льдом. Лёд у судна поломан. Наделано много больших трещин. Судно качается и испытывает напор льда. Волна эта или образовалась от вчерашнего ветра, или в настоящее время в море работает большой шторм. Лёд лопается толщиной в 5 аршин. Сегодня возможно со льда на палубу оба карбаса и судно приведён в парадный вид, может, Бог даст, выберемся-таки отсюда. В 2 дня приказал в машину разводить пары, т.к. в бухте мертвой зябью от старого шторма весь лёд превратило в пак. У мыса образовалась большая полынья. Думаю ночью с отливом пробовать пробиваться в море. Судно приведено уже в парадный вид. Партия геолога Павлова из экскурсии вернулась. В 9 вечера снялись с якоря, и пошли в море.",
+		 "diary_en":"This night a big wave surged under the ice. The ice near the ship is broken. Many large cracks have been made. The ship is swaying and experiencing ice pressure. This wave either formed from yesterday's wind, or a big storm is currently working in the sea. Ice 5 arshins thick is cracking. Today, possibly both longboats from the ice to the deck, and the ship is put in parade form, God willing, we'll finally get out of here. At 2 o'clock I ordered to raise steam in the engine, as in the bay with a dead swell from the old storm, all the ice has turned into pack ice. A large polynya has formed at the cape. I'm thinking of trying to break through to the sea at night with the ebb. The ship has already been put in parade form. Geologist Pavlov's party has returned from the excursion. At 9 in the evening, we weighed anchor and went to sea.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_79",
+			"point_81"
+		 ]
+	  },
+	  {
+		 "id":"point_81",
+		 "date":"21.08.1913",
+		 "title":"Выход из Мертвой зыби",
+		 "title_en":"Exit from Dead Swell",
+		 "description":"Снятие судна с якоря и выход в море.",
+		 "description_en":"Raising anchor and going to sea.",
+		 "diary":"В 12 ночи стали на ледяной якорь krw от м. Обсерватория в 1 1/1 верстах. Далее пробиваться не могу вследствие тумана. Благодарим Бога и за то, что помог нам выбраться из зимнего нашего лабиринта, где «...» оставил после себя довольно-таки неприличную и солидную «визитную карточку». В 4 утра начали пробиваться дальше, но пака так уплотнился, что мы дальше старого моста не двинулись. Отдали ледяной якорь и ждём, пока судьба снова сжалится над нами. Ветер как будто хочет перейти с западного на восточный. Это принесёт нам большое утешение.",
+		 "diary_en":"At 12 midnight we set the ice anchor krw from Cape Observatory at 1 1/1 versts. I can't break through further due to fog. We thank God for helping us get out of our winter labyrinth, where '...' left behind a rather indecent and solid 'calling card'. At 4 in the morning we started to break through further, but the pack ice has become so dense that we didn't move beyond the old bridge. We dropped the ice anchor and wait until fate takes pity on us again. The wind seems to want to shift from west to east. This will bring us great comfort.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_80",
+			"point_82"
+		 ]
+	  },
+	  {
+		 "id":"point_82",
+		 "date":"23.08.1913",
+		 "title":"Ожидание в ледовом плену",
+		 "title_en":"Waiting in Ice Captivity",
+		 "description":"Судно вновь зажато льдами, приходится ожидать изменения ветра.",
+		 "description_en":"The ship is again trapped in ice, having to wait for the wind to change.",
+		 "diary":"Дует ... wsw/2. Прижимается лёд к берегу и нас вместе с ними подвинул обратно к мысу Столбовому. Отливы так малы, что на них почти никакой надежды. Единственно нам поможет выбраться отсюда это ветер южной и юго-восточной частей компаса. Продолжаем стоять в подвижном льду (в пак) на ледяном якоре. Оказалось, что залив Цесаревича Алексея очищается ото льда раньше губы Суворина и Архангельской. Терпеливо ждём выхода в море. Поддерживаем дровами 50 фунтов пару в машине. Господи! Помоги нам выбраться на чистую воду.",
+		 "diary_en":"Blowing... wsw/2. The ice is pressing against the shore and has pushed us along with it back to Cape Stolbovoy. The tides are so small that there is almost no hope in them. The only thing that will help us get out of here is the wind from the southern and southeastern parts of the compass. We continue to stand in moving ice (in pack ice) at the ice anchor. It turned out that the Bay of Tsarevich Alexei clears of ice earlier than Suvorin Bay and Arkhangelsk. We are patiently waiting to go out to sea. We maintain 50 pounds of steam in the engine with firewood. Lord! Help us get to clear water.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_81",
+			"point_83"
+		 ]
+	  },
+	  {
+		 "id":"point_83",
+		 "date":"24.08.1913",
+		 "title":"Выход в чистую воду",
+		 "title_en":"Exit to Clear Water",
+		 "description":"Наконец судно выходит в чистую воду.",
+		 "description_en":"Finally the ship goes out into clear water.",
+		 "diary":"Слава Богу. Свежим s очистило все бухты ото льда и мы сего числа выбрались на чистую воду (10 часов вечера) идём на Б. Заячий остров оставить склад провизии и копии карт. Очистка льда началась с пролива Пантусова. Выбравшись изо льда и будучи вынесен далеко в море, раздумал идти на Заячий, а пустился прямо на s фр. Ioc. Но, отойдя около 10 миль от Панкратьева острова, встретили кругом по горизонту непроходимые ледяные поля. Ночь мешала разглядеть где-либо сводный проход. Поэтому убрал паруса и пошли обратно, а затем повернули на остров Б.Заячий.",
+		 "diary_en":"Thank God. Fresh s cleared all the bays of ice and we got out into clear water today (10 o'clock in the evening) we are going to B. Zayachy Island to leave a food depot and copies of maps. The ice clearance began from the Pantusov Strait. Having broken out of the ice and been carried far out to sea, I changed my mind about going to Zayachy, and set off straight for S Fr. Ioc. But, after going about 10 miles from Pankratiev Island, we encountered impassable ice fields all around the horizon. The night made it difficult to see a combined passage anywhere. Therefore, I took down the sails and we went back, and then turned to B. Zayachy Island.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_82",
+			"point_84"
+		 ]
+	  },
+	  {
+		 "id":"point_84",
+		 "date":"25.08.1913",
+		 "title":"Заячий остров",
+		 "title_en":"Zayachy Island",
+		 "description":"Экспедиция оставляет запасы на Заячьем острове.",
+		 "description_en":"The expedition leaves supplies on Zayachy Island.",
+		 "diary":"В 8 часов утра прибыли на Б.Заячий остров, где выгрузили запасы провизии на 17 человек на 1 месяц, два ружья тульских, триста патронов и копии карт с просьбой к каждому нашедшему склад в Норвежской избе карты доставить в Петербург в комитет экспедиции... Провизией воспользоваться в случае нужды. Слава Богу, наконец-то мы выбрались на волю. Дал бы только Бог дойти теперь до S.Фр.Ioc, а там успех дела в наших руках. В 10 ч. утра снялись с якоря, прошли Пантусовым проливом до острова Вильгельма и потом легли на вест w прямо в открытое море. Радостно и хорошо.",
+		 "diary_en":"At 8 o'clock in the morning we arrived at B. Zayachy Island, where we unloaded food supplies for 17 people for 1 month, two Tula rifles, three hundred cartridges and copies of maps with a request to anyone who finds the depot in the Norwegian hut to deliver the maps to St. Petersburg to the expedition committee... Use the provisions if needed. Thank God, we finally got out to freedom. If only God would allow us to reach S.Fr.Ioc now, and then the success of the matter is in our hands. At 10 a.m. we weighed anchor, passed through the Pantusov Strait to Wilhelm Island and then set course west W straight into the open sea. Joyful and good.",
+		 "x":53.256,
+		 "y":76.235,
+		 "connectedNodes":[
+			"point_83",
+			"point_85"
+		 ]
+	  },
+	  {
+		 "id":"point_85",
+		 "date":"26.08.1913",
+		 "title":"Курс на Землю Франца-Иосифа",
+		 "title_en":"Course to Franz Josef Land",
+		 "description":"Экспедиция берёт курс в сторону Земли Франца-Иосифа.",
+		 "description_en":"The expedition sets course towards Franz Josef Land.",
+		 "diary":"Шли на юг вдоль границы льдов до самого полуострова Адмиралтейства. Тут, кончились, наконец, льды и мы с большой радостью взяли курс утром на w. Предполагаю идти этим курсом до 50 меридиана, откуда ляжем прямо на N -- на Зем. Фр. Иосифа. Такой план плавании исходит из следующего соображения: в течение всей весны и лета преобладали ветры из sw четверти, значит лед должен быть прижат к берегам Новой Земли, а дальше от берега kzw должно быть чисто. Первое предположение уже подтвердилось, а второе, вероятно тоже подтвердится. День чудный. Светит солнышко. Хорошо как летом дома, там где живёт теперь милая Веруся.",
+		 "diary_en":"We went south along the ice border to the very Admiralty Peninsula. Here, finally, the ice ended and we joyfully set course in the morning for w. I plan to go this course to the 50th meridian, from where we will go straight N -- to Franz Josef Land. Such a sailing plan stems from the following consideration: throughout spring and summer, winds from the sw quarter prevailed, meaning the ice should be pressed against the shores of Novaya Zemlya, and further from the shore kzw should be clear. The first assumption has already been confirmed, and the second will probably be confirmed too. Wonderful day. The sun is shining. It's good, like summer at home, where dear Verusya now lives.",
+		 "x":54.256,
+		 "y":77.235,
+		 "connectedNodes":[
+			"point_84",
+			"point_86"
+		 ]
+	  },
+	  {
+		 "id":"point_86",
+		 "date":"27.08.1913",
+		 "title":"Встреча со льдами",
+		 "title_en":"Encounter with Ice",
+		 "description":"Судно встречает ледовые поля, двигается с трудом.",
+		 "description_en":"The vessel encounters ice fields, moves with difficulty.",
+		 "diary":"В 4 утра дойдя до 50 меридиана от Гринвича, легли на Ист. N, прямо на Сара Floroc. Дует лёгкий NO. Сравнительно тепло и вода тепла, кругом широко-волнующееся море. Льдов нигде не видно. Всё, Слава Богу, хорошо, одно только неважно -- имеем ходу три с лишним в час. Пока оправдалось и второе мое предположение. Думаю, что льдов не встретим на этом курсе до Самой Земли Франца Иосифа. Теперь льды должны находиться в NO части Баренцева моря. Топим машину, дрова и немного прибавляем угля. Удается держать пару до 80 гр. Пусть моё предположение не оправдалось: льды встретили под 76о сначала редкий, а потом густой пак. Пробиваемся с большим трудом вперед -- около мили в час.",
+		 "diary_en":"At 4 a.m., having reached the 50th meridian from Greenwich, we set course East. N, straight to Sara Floroc. A light NE is blowing. Relatively warm and the water is warm, around is a wide-undulating sea. No ice is visible anywhere. Everything, thank God, is good, only one thing is not good -- we have a speed of just over three knots. So far, my second assumption has also been confirmed. I think we won't encounter ice on this course until Franz Josef Land itself. Now the ice should be in the NE part of the Barents Sea. We fuel the engine, wood and add a little coal. We manage to keep steam up to 80 degrees. Let my assumption be wrong: we encountered ice at 76°, first sparse, then dense pack ice. We're breaking through with great difficulty forward -- about a mile an hour.",
+		 "x":54.256,
+		 "y":77.835,
+		 "connectedNodes":[
+			"point_85",
+			"point_87"
+		 ]
+	  },
+	  {
+		 "id":"point_87",
+		 "date":"28.08.1913",
+		 "title":"Пробивание через льды",
+		 "title_en":"Breaking Through Ice",
+		 "description":"Экспедиция пробивается сквозь лёд к Земле Франца-Иосифа.",
+		 "description_en":"The expedition breaks through the ice to Franz Josef Land.",
+		 "diary":"Стоит чудный солнечный день, штиль и каналы играют своей прозрачностью словно хрусталь. Продолжаем пробираться вперед. Иногда попадаются на 1-11/2 мили каналы, а большую частью сомкнутый пак, где приходится пробиваться с большим трудом. Иногда целый час долбишь себе проход на ... Сегодня в полдень обсервация дала 76о 32' широты. Если бы у нас было топливо то до Земли Франца Иосифа осталось пустяки, но ведь топлива всего осталось на 2 -- 3 дня. Сжигаем последние, какие есть дрова. Что будет дальше, Бог его ведает. Затем крепко обнимаю мою маленькую Веруню и закрываю дневник до завтра.",
+		 "diary_en":"It's a wonderful sunny day, calm, and the channels play with their transparency like crystal. We continue to make our way forward. Sometimes there are channels of 1-1½ miles, but mostly closed pack ice, where we have to break through with great difficulty. Sometimes you chisel a passage for a whole hour... Today at noon, the observation gave 76° 32' latitude. If we had fuel, then the distance to Franz Josef Land would be a trifle, but there is only enough fuel left for 2-3 days. We burn the last firewood we have. What will happen next, God knows. Then I firmly embrace my little Verunya and close the diary until tomorrow.",
+		 "x":54.356,
+		 "y":78.235,
+		 "connectedNodes":[
+			"point_86",
+			"point_88"
+		 ]
+	  },
+	  {
+		 "id":"point_88",
+		 "date":"29.08.1913",
+		 "title":"Бунт офицеров",
+		 "title_en":"Officers' Mutiny",
+		 "description":"Офицеры выражают желание вернуться обратно, Седов отказывает им в этом.",
+		 "description_en":"Officers express a desire to return, Sedov refuses them.",
+		 "diary":"Продолжаем пробиваться сквозь пак, который к счастью стал реже, но зато полыньи между ним замёрзли свежим льдом, в котором судно временами становится. Сегодня офицеры мне поднесли хороший подарок: заявили через вахтенного начальника, чтобы вернуться обратно. Меня это сперва очень удивило, а потом и огорчило, именно то, что пришлось им отказать в этом.",
+		 "diary_en":"We continue to break through the pack ice, which fortunately has become thinner, but the leads between it have frozen over with fresh ice, in which the vessel sometimes stops. Today the officers presented me with a nice gift: they stated through the watch commander that we should return. This first surprised me very much, and then upset me, specifically that I had to refuse them this.",
+		 "x":54.456,
+		 "y":78.635,
+		 "connectedNodes":[
+			"point_87",
+			"point_89"
+		 ]
+	  },
+	  {
+		 "id":"point_89",
+		 "date":"30.08.1913",
+		 "title":"Попутный ветер",
+		 "title_en":"Favorable Wind",
+		 "description":"Восточный ветер помогает судну продвигаться сквозь лёд.",
+		 "description_en":"The eastern wind helps the ship move through the ice.",
+		 "diary":"Слава Богу, сегодня целый день дует сильный ONO/5-6. Молодой лёд в полыньях размыло, полыньи сделались больше, местами случались данного по курсу до 10 миль. Несём все паруса, скорость имеем временами на чистой воде до 8 узлов. Машину топим ворванью, минеральным маслом со старыми концами и паклей и дровами. Уголь, которого осталось на сутки, страшно расходуется экономно. Угольный мусор перемешивается с маслом и снова отправляется в топки. Судно во льдах сходу иногда испытывает страшные удары, все от толчков валится, всё летит, люди падают, громадные льдины раскалываются пополам, а судну и горя мало, он себе прёт и прёт вперёд. Поистине крепкое, достойное льдов судно. Под 78о шир. встретили лёд другой, чем был раньше, а именно более низкий и тонкий, напоминающий собою скорее фиордовый лёд, чем морской.",
+		 "diary_en":"Thank God, all day today a strong ENE/5-6 is blowing. The young ice in the leads has been washed away, the leads have become larger, in places we had up to 10 miles of open water along our course. We're carrying all sails, our speed at times in clear water is up to 8 knots. We're fueling the engine with blubber, mineral oil with old rope ends and oakum, and wood. Coal, which we have left for a day, is being used extremely economically. Coal dust is mixed with oil and sent back to the furnaces. The ship sometimes experiences terrible blows from the ice, everything falls from the jolts, everything flies, people fall, huge ice floes split in half, but the ship doesn't care much, it just pushes and pushes forward. Truly a strong ship, worthy of the ice. At 78° latitude, we encountered ice different from before, namely lower and thinner, resembling fjord ice rather than sea ice.",
+		 "x":54.856,
+		 "y":79.035,
+		 "connectedNodes":[
+			"point_88",
+			"point_90"
+		 ]
+	  },
+	  {
+		 "id":"point_90",
+		 "date":"31.08.1913",
+		 "title":"Прибытие к Земле Франца-Иосифа",
+		 "title_en":"Arrival at Franz Josef Land",
+		 "description":"Экспедиция прибывает к Земле Франца-Иосифа.",
+		 "description_en":"The expedition arrives at Franz Josef Land.",
+		 "diary":"С утра чудный день. Дует умеренны Оst. Полынья большая, идём вперёд быстро. Под 79о широты начали встречаться ледяные сплошные поля, но между ними к нашему счастью были каналы воды по которым мы и пробирались полным ходом под всеми парусами машиной. Рано утром при ясном прозрачном небе за 60 миль по курсу увидели Землю Франца Иосифа. В 2 ч. дня вышли из льда по курсу в открытое море. Земля находится сейчас от нас в 30 милях. Окутана туманом. Слава тебе Господи, мы, кажется, придём благополучно до места. Хорошо душе и радостно сердцу, хотя физически адски устали от управления судном во льдах. В 81/2 вечера стали благополучно на якорь у посёлка Джексона на Саре Flora. Команда поздравила меня с приходом и кричала ура. Все пили шампанское. Берега земли все покрыты снегом, по-видимому, новым. Моржи большим табуном встречали нас при подходе к якорному месту.",
+		 "diary_en":"From the morning, a wonderful day. A moderate East is blowing. The polynya is large, we are moving forward quickly. At 79° latitude, we began to encounter solid ice fields, but between them, fortunately for us, there were water channels through which we made our way at full speed under all sails with the engine. Early in the morning, in the clear transparent sky, 60 miles along the course, we saw Franz Josef Land. At 2 p.m., we emerged from the ice into the open sea. The land is now 30 miles from us. Shrouded in fog. Glory to You, Lord, we, it seems, will arrive safely to the place. The soul is good and the heart is joyful, although physically we are hellishly tired from steering the ship in the ice. At 8½ in the evening, we safely anchored at Jackson's settlement on Sara Flora. The crew congratulated me on the arrival and shouted hurray. Everyone drank champagne. The shores of the land are all covered with snow, apparently new. Walruses in a large herd met us as we approached the anchorage.",
+		 "x":55.656,
+		 "y":79.835,
+		 "connectedNodes":[
+			"point_89",
+			"point_91"
+		 ]
+	  },
+	  {
+		 "id":"point_91",
+		 "date":"01.09.1913",
+		 "title":"Исследование селения Джексона",
+		 "title_en":"Exploration of Jackson's Settlement",
+		 "description":"Изучение построек и запасов в селении Джексона.",
+		 "description_en":"Study of buildings and supplies in Jackson's settlement.",
+		 "diary":"Сегодня съезжали на берег, осматривали селение Джексона. Все дома разрушены, наполовину наполнены снегом. Запасов разных много. Все они разбросаны кругом домов медведями и наполовину разрушены. Запасы большей частью испорчены. Галеты «Stella Polaris» в цельных ящиках сохранились, сравнительно хорошо. Надписи встречаются на предметах: «Vindvord», «Zigler», «Stella Polaris». Валяется много предметов одежды порченой. Есть дрова, керосин и даже 11/2 баллона Виски. Немного в стороне стоит уныло лицом на N памятник трём героям экспедиции Абруцкого, составлявшим вспомогательную партию ранее и нашедшие себе где-то под 83о преждевременную могилу. Тут же стоит столбик с дощечкой, на которой гордо красуется имя «Ермак» 1901 г. Несколько на восток -- могила с крестиком участника экспедиции Джексона.",
+		 "diary_en":"Today we went ashore, inspected Jackson's settlement. All houses are destroyed, half-filled with snow. There are many different supplies. They are all scattered around the houses by bears and half destroyed. Supplies are mostly spoiled. The 'Stella Polaris' hardtack in whole boxes has been preserved relatively well. Inscriptions are found on items: 'Vindvord', 'Zigler', 'Stella Polaris'. Many damaged clothing items are lying around. There is firewood, kerosene, and even 1½ bottles of Whiskey. A little to the side stands, facing north, a monument to three heroes of Abruzzi's expedition, who constituted an auxiliary party earlier and found their premature grave somewhere under 83°. There also stands a post with a plaque, on which the name 'Ermak' 1901 proudly adorns. Somewhat to the east is a grave with a cross of a participant in Jackson's expedition.",
+		 "x":55.656,
+		 "y":79.835,
+		 "connectedNodes":[
+			"point_90",
+			"point_92"
+		 ]
+	  },
+	  {
+		 "id":"point_92",
+		 "date":"02.09.1913",
+		 "title":"Охота на моржей",
+		 "title_en":"Walrus Hunt",
+		 "description":"Седов охотится на моржей для запасов на зимовку.",
+		 "description_en":"Sedov hunts walruses for winter supplies.",
+		 "diary":"Сравнительно хорошая, ясная погода. Я отправился с Варнаком и Разбойником с утра на охоту. Нашел затем спячку моржей подходил вплотную и бил их пулей в голову сколько хотел и каких хотел. Из 10 выстрелов пробито 10 голов, часть моржей раненых сползли в воду, а часть осталась мертвой. После этого мы отправились с доктором и художником и набили их столько, сколько нужно нам их на целый год. 20 штук, средний вес моржа можно считать 50 -- 60 пудов. В воде моржи не раз атаковали карбас по сигналу самки (маленькие клыки), но ближе сажени не подходили, мы лупили их по головам вёслами, тогда они отступали со страшным рёвом и злым выражением морды.",
+		 "diary_en":"Relatively good, clear weather. I set out with Varnak and Razboinik in the morning to hunt. I then found sleeping walruses, approached them closely and shot them in the head with bullets as many as I wanted and whichever I wanted. Out of 10 shots, 10 heads were pierced, some of the wounded walruses slid into the water, and some remained dead. After that, we went with the doctor and the artist and killed as many as we need for a whole year. 20, the average weight of a walrus can be considered 50-60 poods. In the water, walruses repeatedly attacked the boat at the signal of a female (small tusks), but did not come closer than a sazhen, we beat them on the heads with oars, then they retreated with a terrible roar and an angry expression on their muzzles.",
+		 "x":55.656,
+		 "y":79.835,
+		 "connectedNodes":[
+			"point_91",
+			"point_93"
+		 ]
+	  },
+	  {
+		 "id":"point_93",
+		 "date":"03.09.1913",
+		 "title":"Решение о зимовке",
+		 "title_en":"Decision on Wintering",
+		 "description":"Подготовка записки о планах экспедиции на зимовку и полюс.",
+		 "description_en":"Preparing a note about the expedition's plans for wintering and the pole.",
+		 "diary":"Сегодня чудный день. Прекрасная погода. Сегодня запаяли в жестяные коробки в 6 коробок спичек, 100 пульных патронов (50 разрывных, а 50 никелевых), 10 жигановских пуль для дробовки медных и 50 дробовых патронов бумажных: 25 № 1 и 25 № 5. Бумага оставленная на Сара Flora в селении Elmwood: 1913 г. 4/17 сентября. Пробыв здесь пять дней в течение которых мы взяли в посёлок Elmwood около 200 пудов угля и часть дров, а также убили в окрестностях необходимое количество, как корм для собак и ворвань для стойла моржей. Сего числа отправились дальне на север по пути к Земле Kronprinza Rudolfa. Остановимся на зимовку в зависимости от льдов и свирепствующих ныне бурь где-нибудь на этом пути по Британскому каналу или же в восточной части Архипелага, возможно что и на самой Земле Kronprinza Rudolfa, оттуда партия пойдет к полюсу.",
+		 "diary_en":"Today is a wonderful day. Beautiful weather. Today we soldered into tin boxes 6 boxes of matches, 100 bullet cartridges (50 explosive and 50 nickel), 10 Zhiganovsky bullets for a copper shotgun, and 50 paper shotgun cartridges: 25 No. 1 and 25 No. 5. Paper left on Sara Flora in the settlement of Elmwood: 1913 September 4/17. Having spent five days here during which we took about 200 poods of coal and some firewood from the Elmwood settlement, and also killed the necessary amount in the vicinity, as food for dogs and blubber for the walrus stall. On this date, we set off further north on the way to the Land of Kronprinz Rudolf. We will stop for wintering, depending on the ice and the currently raging storms, somewhere on this route along the British Channel or in the eastern part of the Archipelago, possibly on the Land of Kronprinz Rudolf itself, from where the party will go to the pole.",
+		 "x":55.656,
+		 "y":79.835,
+		 "connectedNodes":[
+			"point_92",
+			"point_94"
+		 ]
+	  },
+	  {
+		 "id":"point_94",
+		 "date":"04.09.1913",
+		 "title":"Отплытие на север",
+		 "title_en":"Sailing North",
+		 "description":"Экспедиция покидает мыс Флора и направляется на север.",
+		 "description_en":"The expedition leaves Cape Flora and heads north.",
+		 "diary":"Сегодня перешли на другое место, поскольку к 0+1-4 начали грузить моржей. Из 20 штук взяли только 10, а остальных бросили, ибо их взять нет ни времени, ни физической возможности. Удалось определить широту и долготу Сара Flora. Вечером снялись дальне на N. Погода чудная, плывем по каналу, словно в Венеции, направо и налево грандиозные айсберги, местных ледников, величина некоторых доходит до 150 с. в длину и фут 20 в высоту. Земля большую часть покрыта ледниками куполообразной формы, напоминающей собою курганы. Открытая же Земля ото льдов представляется довольно возвышенной, террасообразной, напоминающей собою пирамиды, в особенности это бросается в глаза на юге.",
+		 "diary_en":"Today we moved to another place, since at 0+1-4 we began to load walruses. Out of 20, we took only 10, and left the rest, because there is neither time nor physical ability to take them. We managed to determine the latitude and longitude of Sara Flora. In the evening we set off further to N. The weather is wonderful, we are sailing along the channel, as if in Venice, to the right and left are grandiose icebergs, local glaciers, the size of some reaching up to 150 s. in length and 20 feet in height. The land is mostly covered with dome-shaped glaciers, resembling mounds. The land open from ice appears quite elevated, terraced, resembling pyramids, especially this is noticeable in the south.",
+		 "x":55.856,
+		 "y":80.035,
+		 "connectedNodes":[
+			"point_93",
+			"point_95"
+		 ]
+	  },
+	  {
+		 "id":"point_95",
+		 "date":"05.09.1913",
+		 "title":"Продвижение по каналу",
+		 "title_en":"Movement Along the Channel",
+		 "description":"Путешествие по Британскому каналу.",
+		 "description_en":"Journey through the British Channel.",
+		 "diary":"Тихий N со снегом и туманом. В 42 снялись с якоря и пробившись около ½ версты во льдах, вышли на чистую воду и следовали дальше на север по направлению к Земле Kronprinza Rudolfa. Картина плавания так же и тут красивая, жаль только что туманы. Страшное это время: в прошлом году нас около Новой Земли в конце августа до 2 сентября уже давили 15-градусные морозы, а здесь вот 5 сентября и 81о с.ш. дают нам теплую погоду (3-4о мороза Ц). В полдень вступили у Caра Muray непроходимы льды и повернули обратно, склоняясь к SO. В 8 ч. вечера стали на якорь у Земли Skott Reltie, по SO сторону островка в Северной части. Слава Богу, сегодня буду спать спокойно. Приходится одному стоять вахту, штурман «болен». Отдохну вволю.",
+		 "diary_en":"Quiet N with snow and fog. At 42 we weighed anchor and, having broken through about ½ verst in the ice, we reached clear water and continued further north towards the Land of Kronprinz Rudolf. The picture of sailing here is also beautiful, it's only a pity that there are fogs. It's a terrible time: last year, near Novaya Zemlya at the end of August until September 2, we were already being crushed by 15-degree frosts, but here it is September 5 and 81° N, giving us warm weather (3-4° frost C). At noon we entered impassable ice at Cape Muray and turned back, inclining to SE. At 8 p.m. we anchored at Scott Keltie Land, on the SE side of the islet in the northern part. Thank God, today I will sleep peacefully. I have to stand watch alone, the navigator is 'sick'. I'll rest to my heart's content.",
+		 "x":56.156,
+		 "y":80.435,
+		 "connectedNodes":[
+			"point_94",
+			"point_96"
+		 ]
+	  },
+	  {
+		 "id":"point_96",
+		 "date":"06.09.1913",
+		 "title":"Зимовка в Тихой бухте",
+		 "title_en":"Wintering in Tikhaya Bay",
+		 "description":"Решение встать на вторую зимовку в Тихой бухте.",
+		 "description_en":"Decision to set for the second wintering in Tikhaya Bay.",
+		 "diary":"Механик доложил, что топлива всего на 10 часов ходу осталось, плюс к этому туман, снег и кругом лед, при таких обстоятельствах, конечно дальше идти невозможно, да кроме того намечается какое-то брожение в команде?! Поэтому в 4 ч. снялся с якоря и перешёл в Северную часть Земли Hooker, где в бухточке и стали на якорь лагом к берегу, вытянувшись на мель. Тут наша вторая зимовка и отсюда путь к полюсу. Поможет ли нам Бог дойти до полюса?... С кормы и с носа занесли стальной трос на берег, на камни, а с мачты взяли на берег толстый пеньковый трос, для того чтобы судно не сползло на глубину, т.к. рельеф дна у берега крутой. Грустно как-то на душе и тяжело на сердце, и все это от того, что среди состава экспедиции есть большие прохвосты. Расплата в России. Во всяком случае, возьмемся за работу и пойдём с Божьей помощью к полюсу.",
+		 "diary_en":"The mechanic reported that there is fuel left for only 10 hours of travel, plus fog, snow, and ice all around; under such circumstances, of course, it is impossible to go further, and besides, some kind of ferment is brewing in the crew?! Therefore, at 4 o'clock I weighed anchor and moved to the northern part of Hooker Land, where we anchored in a bay alongside the shore, stretching onto a shoal. Here is our second wintering and from here the path to the pole. Will God help us reach the pole?... From the stern and bow, we carried a steel cable to the shore, to the rocks, and from the mast we took a thick hemp rope to the shore, so that the ship would not slide into the depths, as the bottom relief at the shore is steep. Somehow it's sad in the soul and heavy in the heart, and all this is because among the expedition members there are big scoundrels. Payback in Russia. In any case, let's get to work and go with God's help to the pole.",
+		 "x":58.614,
+		 "y":81.049,
+		 "connectedNodes":[
+			"point_95",
+			"point_97"
+		 ]
+	  },
+	  {
+		 "id":"point_97",
+		 "date":"07.09.1913",
+		 "title":"Первый день в Тихой бухте",
+		 "title_en":"First Day in Tikhaya Bay",
+		 "description":"Начало обустройства на новой зимовке.",
+		 "description_en":"Beginning of setting up at the new wintering place.",
+		 "diary":"Сегодня потушили машину, в остатках теплой воды великолепно все помылись, как-то легче стало без грязи. Эту ночь спал очень хорошо в чистом белье, а главное потому хорошо и спокойно, что пароход установлен уже на зимовку в тихом месте. Команда кроме того в машине авралом стирала белье. Вчера и сегодня ели моржатину. Мясо ничего себе, и сочнее тюленьего и далеко хуже медвежьего, отличается какой-то безвкусицей. Все же охотно едим его, ибо это свежее мясо. В кают-компании идет усиленная приборка, вообще всюду кипит работа по приготовлению к зимовке. За одну ночь набежало воды в трюме 16 дюймов. Это пустяки, в 1-2 люди откачивают эту воду ручной помпой. Здесь что-то начинают давать себя знать WNW, на Новой Земле надоедали нам WSW, а здесь другой гость свистит.",
+		 "diary_en":"Today we extinguished the engine, and in the remains of warm water everyone washed magnificently, somehow it became easier without dirt. This night I slept very well in clean linen, and mainly because it was good and calm that the steamer was already set up for wintering in a quiet place. The crew, in addition, was washing linen in the engine room by all hands. Yesterday and today we ate walrus meat. The meat is not bad, and juicier than seal and far worse than bear, distinguished by a certain tastelessness. Nevertheless, we eat it willingly, for it is fresh meat. In the wardroom, there is enhanced cleaning; in general, work is boiling everywhere in preparation for wintering. In one night, 16 inches of water accumulated in the hold. This is nothing; 1-2 people pump out this water with a hand pump. Here, WNW is somehow making itself felt; on Novaya Zemlya, WSW bothered us, and here another guest is whistling.",
+		 "x":58.614,
+		 "y":81.049,
+		 "connectedNodes":[
+			"point_96",
+			"point_98"
+		 ]
+	  },
+	  {
+		 "id":"point_98",
+		 "date":"08.09.1913",
+		 "title":"Рождество Пресвятой Богородицы",
+		 "title_en":"Nativity of the Holy Theotokos",
+		 "description":"Седов зачитывает приказ об установке на зимовку.",
+		 "description_en":"Sedov reads out the order to set up for wintering.",
+		 "diary":"Сегодня все празднуем. Тихая бухта нас вполне скрыла от непогоды. Встал сегодня, откачали воду, было ее за ночь 16 дюймов. В 10 ч. отслужили обеденку. Все стояли на молитве с большим благоговением. Затем был прочитан мой приказ о постановке экспедиции на зимовку. С большим волнением слушали его все, и я сам волновался. Даже я сказал маленькое слово команде и поздравил всех с праздником. За обедом была, уже давно невиданная, белая скатерть, рюмка водки и жареная моржатина, которую с удовольствием все едят, а у нас ее 300 пудов. Жить можно. В кают-компании сегодня впервые затопили норвежскую печку дровами и ворванью, жара страшная. WNW все еще упорно дует при 5-6о мороза.",
+		 "diary_en":"Today we all celebrate. The quiet bay has completely hidden us from bad weather. I got up today, we pumped out the water, there was 16 inches of it overnight. At 10 o'clock, we held a liturgy. Everyone stood in prayer with great reverence. Then my order was read about setting the expedition for wintering. Everyone listened to it with great emotion, and I myself was emotional. I even said a little word to the crew and congratulated everyone on the holiday. For dinner there was a white tablecloth, not seen for a long time, a glass of vodka and fried walrus meat, which everyone eats with pleasure, and we have 300 poods of it. One can live. Today in the wardroom for the first time, we lit the Norwegian stove with firewood and blubber, the heat is terrible. WNW is still persistently blowing at 5-6° frost.",
+		 "x":58.614,
+		 "y":81.049,
+		 "connectedNodes":[
+			"point_97",
+			"point_99"
+		 ]
+	  },
+	  {
+		 "id":"point_99",
+		 "date":"09.09.1913",
+		 "title":"Купание медведей",
+		 "title_en":"Bears Bathing",
+		 "description":"Седов купает медведей и собак в море.",
+		 "description_en":"Sedov bathes bears and dogs in the sea.",
+		 "diary":"Сегодня теплая погодка, ветерок подул с юга. Купали в море медведей и собак, затем выпустили их на берег, где они очень резвились. Медведи сразу сделались беленькими. Собаки их не узнали и атаковали, но медведи все сбились в кучу и ловко отразили атаки. Когда же собакам удалось одного отделить от группы, то тогда он им был немедленно взят, пришлось отбивать. «Васька» по прежнему упорно сосет ухо «Торосу». Пришлось их разъединить: «Ваську» взяли на судно, а «Тороса» и «Полынью» оставили на берегу. Кончилось тем, что «Полынья», уступая своему женскому сердцу, бросилась с берега в воду и начала плавать вокруг судна, пришлось ее оттащить снова на берег. После этого «Васька» бросился с борта в воду, его водрузили снова на место. Собаки разжирели и форменно заедают друг друга. Ходил по Тихой бухте, доходил до рубинного рога, на нем ... склоне богатая растительность, сам он красноватого цвета, состоит из базальта.",
+		 "diary_en":"Today is warm weather, a breeze is blowing from the south. We bathed the bears and dogs in the sea, then released them on the shore, where they frolicked a lot. The bears immediately became whitish. The dogs didn't recognize them and attacked, but the bears all huddled together and skillfully repelled the attacks. When the dogs managed to separate one from the group, then he was immediately taken by them, we had to beat him off. 'Vaska' stubbornly continues to suck 'Toros's' ear. We had to separate them: we took 'Vaska' on board, and left 'Toros' and 'Polynya' on the shore. It ended with 'Polynya', yielding to her female heart, throwing herself from the shore into the water and beginning to swim around the ship; we had to drag her back to shore. After this, 'Vaska' threw himself from the side into the water; he was reinstated in his place. The dogs have grown fat and literally eat each other up. I walked around Tikhaya Bay, reached the ruby horn, on its ... slope there is rich vegetation, it itself is reddish in color, consists of basalt.",
+		 "x":58.614,
+		 "y":81.049,
+		 "connectedNodes":[
+			"point_98",
+			"point_100"
+		 ]
+	  },
+	  {
+		 "id":"point_100",
+		 "date":"10.09.1913",
+		 "title":"Краденые термометры",
+		 "title_en":"Stolen Thermometers",
+		 "description":"Медведи воруют термометры у метеорологов.",
+		 "description_en":"Bears steal thermometers from meteorologists.",
+		 "diary":"Вот уже несколько дней подряд дует сток с вьюгой, морозы небольшие. Февраль пожалуй выходит самый ветреный, а след. и метельный месяц. сегодня несколько тише. Праздновали день рождения члена экспедиции В.Ю. Визе. Ели первые блины с маслом, сардинками и утиными потрохами. Пили водку и особо приготовленный ликер. Немного развлеклись от однообразной сидячей жизни...",
+		 "diary_en":"For several days in a row now, there has been a drain with a blizzard, the frosts are small. February is perhaps turning out to be the windiest, and consequently the most blizzardy month. Today it's somewhat quieter. We celebrated the birthday of expedition member V.Yu. Vize. We ate the first pancakes with butter, sardines, and duck giblets. We drank vodka and a specially prepared liqueur. We entertained ourselves a little from the monotonous sedentary life...",
+		 "x":58.614,
+		 "y":81.049,
+		 "connectedNodes":[
+			"point_99",
+			"point_101"
+		 ]
+	  },
+	  {
+		 "id":"point_101",
+		 "date":"11.09.1913",
+		 "title":"Сильный северный ветер",
+		 "title_en":"Strong Northern Wind",
+		 "description":"Сильный северный ветер с 12-градусным морозом.",
+		 "description_en":"Strong northern wind with 12-degree frost.",
+		 "diary":"Совсем разбиты ноги ревматизмом. По определению врача -- простуда. Слегка повышена температура и кашель. Хожу в пимах, больше впрочем лежу. На дворе тихо, но туманно и от этого темно. Партия к полюсу усилено готовится, я же не менее усиленно начинаю беречь свои ноги. К вечеру лучше. В 1 ч. ночи уснул.",
+		 "diary_en":"Legs completely broken by rheumatism. According to the doctor -- a cold. Slightly elevated temperature and cough. I walk in pims, but mostly lie down. It's quiet outside, but foggy and hence dark. The party to the pole is intensively preparing, and I am no less intensively beginning to take care of my legs. By evening, it's better. At 1 a.m. I fell asleep.",
+		 "x":58.614,
+		 "y":81.049,
+		 "connectedNodes":[
+			"point_100",
+			"point_102"
+		 ]
+	  },
+	  {
+		 "id":"point_102",
+		 "date":"13.11.1913",
+		 "title":"Болезнь Седова",
+		 "title_en":"Sedov's Illness",
+		 "description":"Седов сильно болен, страдает от простуды и ревматизма.",
+		 "description_en":"Sedov is seriously ill, suffering from a cold and rheumatism.",
+		 "diary":"Сегодня встал от сна вместо обычных шести часов в 8 ч. ура. После чая занимался. Упражнения по определению магнитного напряжения. Чувствую себя уже достаточно подготовленным, чтобы начать настоящие наблюдения. Медведи положительно разоряют метеорологическую станцию, велел зачинщицу из них: «Полышку» привязать. Благодаря продолжительным южным ветрам, хотя и не сильным, в канале местами образовалась вода, лучше бы случилось это ранним летом, когда нам это более интересно, а теперь вода ни к чему. Строим ледяной дворец.",
+		 "diary_en":"Today I got up from sleep at 8 o'clock instead of the usual six hours. After tea, I was occupied. Exercises on determining magnetic tension. I feel already sufficiently prepared to begin real observations. Bears are positively devastating the meteorological station; I ordered the ringleader among them: 'Polyshka' to be tied up. Thanks to prolonged southern winds, although not strong, water has formed in places in the channel, it would be better if this had happened in early summer, when it was more interesting to us, but now water is useless. We are building an ice palace.",
+		 "x":58.614,
+		 "y":81.049,
+		 "connectedNodes":[
+			"point_101",
+			"point_103"
+		 ]
+	  },
+	  {
+		 "id":"point_103",
+		 "date":"21.11.1913",
+		 "title":"Празднование дня Михаила Архангела",
+		 "title_en":"Celebration of St. Michael the Archangel's Day",
+		 "description":"Праздничное богослужение и салют из пушек.",
+		 "description_en":"Festive church service and cannon salute.",
+		 "diary":"Дует свирепый NO, вьюга. Скончался «Весёлка», бедняжка, хорошая была собачка. Жаль друга и хорошего верного спутника. Выяснилось, что его очень много подрали собаки, сделали ему серьезные прокусы, помяли позвонок, отчего он и издох. В помещении держится температура + 6-7о R. На улице холодно в особенности это чувствуется, когда приходится выйти за «делом». Сегодня белая скатерть, медвежий пирог, сладкое и конфеты. Вечером шахматы и карты, а на сон грядущий привет Веруне.",
+		 "diary_en":"A fierce NE is blowing, a blizzard. 'Veselka' died, poor thing, was a good dog. Sorry for the friend and good faithful companion. It turned out that he was very much torn by the dogs, they made serious bites on him, bruised his vertebra, from which he died. The temperature in the room is + 6-7° R. It's cold outside, especially noticeable when you have to go out for 'business'. Today, a white tablecloth, bear pie, sweets, and candies. In the evening, chess and cards, and before sleep, greetings to Verunya.",
+		 "x":58.614,
+		 "y":81.049,
+		 "connectedNodes":[
+			"point_102",
+			"point_104"
+		 ]
+	  },
+	  {
+		 "id":"point_104",
+		 "date":"16.01.1914",
+		 "title":"Подготовка к походу на полюс",
+		 "title_en":"Preparations for the Expedition to the Pole",
+		 "description":"Седов завершает подготовку к экспедиции на полюс.",
+		 "description_en":"Sedov completes preparations for the expedition to the pole.",
+		 "diary":"Сегодня чудный тихий день, хоть мороз стоит все-таки -35о. В полдень выходил гулять, на улице так светло, что можно уже читать книгу, написанную крупным шрифтом. Заря уже светло-малиновая. Разбивали на льду полюсную палатку, вышла великолепной. Заканчиваем мешок. П.Г. Кушаков подал рапорт о предании матроса Линника суду за нанесенное ему Куш. оскорбление. Приказал члену экспед. Пинегину произвести дознание, а самый суд откладываю до Петербурга. Я уже совсем поправился. Радуйся, Веруся! Кстати попутно тебя крепко целую, весь твой Георгий.",
+		 "diary_en":"Today is a wonderful quiet day, although the frost is still -35°. At noon I went out for a walk, it's so light outside that you can already read a book written in large print. The dawn is already bright raspberry. We were breaking up the pole tent on the ice, it turned out magnificent. We are finishing the bag. P.G. Kushakov submitted a report on bringing sailor Linnik to trial for the insult he inflicted on Kush. I ordered expedition member Pinegin to conduct an investigation, and I postpone the trial itself until Petersburg. I've already completely recovered. Rejoice, Verusya! By the way, I kiss you firmly, all yours, Georgy.",
+		 "x":58.614,
+		 "y":81.049,
+		 "connectedNodes":[
+			"point_103",
+			"point_105"
+		 ]
+	  },
+	  {
+		 "id":"point_105",
+		 "date":"30.01.1914",
+		 "title":"Последние приготовления к походу",
+		 "title_en":"Final Preparations for the Expedition",
+		 "description":"Последние дни перед отправлением к полюсу.",
+		 "description_en":"Last days before departing for the pole.",
+		 "diary":"Сегодня отвратительная погода: ветер от N, метет снег и 30о мороз. Собирался делать астрономические наблюдения и не мог по случаю дурной погоды. Занимался укладкой в поход инструментов, карт, книг. Чувствую себя немного простуженным, испытываю какое-то болезненное состояние, а через два дня уже нужно выезжать к полюсу!? Сегодня Николай Васильевич нашел в футляре .. измятую, каким-то образом затесавшуюся туда с лета папиросу, он ей был рад как родной и торжественно ее выкурил.",
+		 "diary_en":"Today the weather is awful: wind from the N, snow blowing and 30° frost. I was going to make astronomical observations and couldn't due to the bad weather. I was busy packing instruments, maps, books for the trip. I feel a bit under the weather, experiencing some kind of painful condition, and in two days I already need to leave for the pole!? Today Nikolai Vasilyevich found in a case a .. crumpled cigarette, somehow squeezed in there since summer, he was as happy with it as with a relative and solemnly smoked it.",
+		 "x":58.614,
+		 "y":81.049,
+		 "connectedNodes":[
+			"point_104",
+			"point_106"
+		 ]
+	  },
+	  {
+		 "id":"point_106",
+		 "date":"31.01.1914",
+		 "title":"Последний день перед походом",
+		 "title_en":"Last Day Before the Expedition",
+		 "description":"Седов вычисляет астрономические наблюдения и готовит инструменты.",
+		 "description_en":"Sedov calculates astronomical observations and prepares instruments.",
+		 "diary":"Погода в общем неважная. Днем пасмурно и небольшой ветер. В 2 ч утра при -34о морозу делал астрономические и магнитные наблюдения. Шибко коряво наблюдать, а главное, неудобно, от дыхания линзы и стекла замерзают. Намучился, пока кончил наблюдения. Затем производим вычисление времени и азимута. Сегодня укладывали нарты и вообще заканчивали снаряжение. Собак корм до отвала мясом, салом и галетами. Вечером стригся и мылся в дорогу этак месяца на 4. Опять ноги простудил, опять голени болят, придется идти с больными ногами. Вот паршивая квартира!",
+		 "diary_en":"The weather is generally poor. Cloudy during the day and a light wind. At 2 a.m. with -34° frost, I made astronomical and magnetic observations. Very awkward to observe, and most importantly, inconvenient, as lenses and glasses freeze from breathing. I suffered until I finished the observations. Then we calculate time and azimuth. Today we were packing the sledges and finishing the equipment in general. Dogs fed to the full with meat, fat, and hardtack. In the evening, I got a haircut and washed for the road, for about 4 months. Again I caught a cold in my legs, again my shins hurt, I'll have to go with sick legs. What a lousy quarters!",
+		 "x":58.614,
+		 "y":81.049,
+		 "connectedNodes":[
+			"point_105",
+			"point_107"
+		 ]
+	  },
+	  {
+		 "id":"point_107",
+		 "date":"01.02.1914",
+		 "title":"Подробное снаряжение полюсной партии",
+		 "title_en":"Detailed Equipment of the Pole Party",
+		 "description":"Перечень снаряжения и припасов для экспедиции к полюсу.",
+		 "description_en":"List of equipment and supplies for the expedition to the pole.",
+		 "diary":"Снаряжение полюсной партии: На 3 нартах, при 24 собаках и 3 человеках. Запасы провизии и керосина 4 месяца. Запас собачьих галет на 11/2 месяца (Скорикова). 1. Бульону Скорикова - 4 п. 00 ф. 2. Сухарей пшеничных норвежских (в т.ч. собачьих галет) - 5 п. 25 ф. 3. Печенья мясного Скорикова - 1 п. 15 ф. 4. Сала свиного - 2 п. 20 ф. 5. Шоколаду мясного Скорикова - 1 п. 25 ф. 6. То же обыкновенного - 1 п. 25 ф. 7. Сахару - 1 п. 00 ф. 8. Чаю - 1.5 ф. 9. Какао - 16 ф. 10. Кофе - 2 ф. 11. Соли - 8 ф. 12. Сушеной зелени - 9 ф. 13. Суш. фруктов - 10. 14. Клюкв. экстракту - 3.5 ф. 15. Консер. молока - 5 ф. 16. Молочной муки нестли - 10 ф. 17. Леденцов - 2 ф. 18. Коньяку - 3 ф. 19. Рому - 4 ф. 20. Денат. спирту - 8 ф. 21. Керосину - 3 п. 3 ф. 22. Спичек 20 коробков (6 запасно) - ¼ ф.",
+		 "diary_en":"Equipment of the pole party: On 3 sledges, with 24 dogs and 3 people. Supplies of provisions and kerosene for 4 months. Supply of dog hardtack for 1½ months (Skorikov's). 1. Skorikov's broth - 4 p. 00 f. 2. Norwegian wheat crackers (including dog hardtack) - 5 p. 25 f. 3. Skorikov's meat cookies - 1 p. 15 f. 4. Pork fat - 2 p. 20 f. 5. Skorikov's meat chocolate - 1 p. 25 f. 6. The same ordinary - 1 p. 25 f. 7. Sugar - 1 p. 00 f. 8. Tea - 1.5 f. 9. Cocoa - 16 f. 10. Coffee - 2 f. 11. Salt - 8 f. 12. Dried greens - 9 f. 13. Dried fruits - 10. 14. Cranberry extract - 3.5 f. 15. Canned milk - 5 f. 16. Nestle milk flour - 10 f. 17. Lozenges - 2 f. 18. Cognac - 3 f. 19. Rum - 4 f. 20. Denatured alcohol - 8 f. 21. Kerosene - 3 p. 3 f. 22. Matches 20 boxes (6 spare) - ¼ f.",
+		 "x":58.614,
+		 "y":81.049,
+		 "connectedNodes":[
+			"point_106",
+			"point_108"
+		 ]
+	  },
+	  {
+		 "id":"point_108",
+		 "date":"02.02.1914",
+		 "title":"Выход к полюсу",
+		 "title_en":"Departure for the Pole",
+		 "description":"Экспедиция Седова отправляется к Северному полюсу на собачьих упряжках в условиях суровой полярной зимы.",
+		 "description_en":"Sedov's expedition departs for the North Pole with dog sleds in harsh winter conditions.",
+		 "diary":"С утра тихо, пасмурно, температура -13° Ц, ночью выпал глубокий снег. Несмотря на это, у нас к отходу все готово. Свету нет, жертвую кинематографом. В 10 ч. отслужили обедню. Прочли мои приказы, говорили речи: я, доктор и боцман Лебедев. Я, доктор и многие другие прослезились. В 11 сели за стол позавтракать. В 12 ч. при темп. -20° и ветре NО/3 под пушечные выстрелы отвалили от судна к полюсу. Свету мало, удалось лишь снять с нас фотографии. Провожали нас верст пять вся здоровая команда и офицеры. Сначала дорога была плохая, но зато собакам помогла команда, а затем дорога улучшилась, а в конце Гукера встретили огромные ропаки, через которые пришлось переправляться благодаря наступившей темноте с большим препятствием.",
+		 "diary_en":"Morning is calm and cloudy, temperature -13°C, deep snow fell overnight. Despite this, everything is ready for our departure. There's little light, I'm sacrificing the cinematograph. At 10 we held a liturgy. Read my orders, with speeches from myself, the doctor, and Boatswain Lebedev. The doctor, others and I shed tears. At 11 we sat for breakfast. At 12, with temperature at -20° and NE wind force 3, we departed for the Pole under cannon fire. There was only enough light to take photos. The entire healthy crew and officers accompanied us for five versts. The path was initially poor, but the crew helped the dogs, then the road improved, until at the end of Hooker we met enormous ice hummocks, which we had to cross with great difficulty in the growing darkness.",
+		 "x":58.614,
+		 "y":81.049,
+		 "connectedNodes":[
+			"point_107",
+			"point_109"
+		 ]
+	  },
+	  {
+		 "id":"point_109",
+		 "date":"03.02.1914",
+		 "title":"Первый день похода",
+		 "title_en":"First Day of the Expedition",
+		 "description":"Трудности первого дня путешествия - сильный мороз и выпавший снег.",
+		 "description_en":"Difficulties of the first day of travel - severe frost and fallen snow.",
+		 "diary":"В 9 снялись с лагеря, дорога скверная: выпало много снегу, в нарты врезаются в него, собаки еле тащат. Подвигаемся тихо, тормозом является также 3-я нарта, которая без человека. Холод собачий ---35°, при этом ветерок прямо в лоб. В Британском канале снял айсберг-арку, видели свежий медвежий след, который шел с севера на юг. В 4 ч., пройдя около 12 верст, остановились ночевать у Кетлицланд. Здесь бросили пару лыж, ветр. рубашки и другие ненужные вещи. Собакам дали сала медв., но они отказались его есть. Некоторых собак страшно бьет холод. Мы-то боремся, а собакам беда, берем бедняг в палатку. Ноги мои поправляются, слава богу.",
+		 "diary_en":"At 9 we broke camp, the road is bad: a lot of snow has fallen, the sledges sink into it, the dogs can barely pull. We're moving slowly, the 3rd sledge, which has no person, is also a brake. It's dog-cold ---35°, with a breeze right in the face. In the British Channel I photographed an iceberg arch, saw a fresh bear track that went from north to south. At 4 o'clock, having traveled about 12 versts, we stopped to camp at Ketlitz Land. Here we threw away a pair of skis, wind. shirts and other unnecessary things. We gave the dogs bear fat, but they refused to eat it. Some dogs are terribly hit by the cold. We are fighting, but for dogs it's a disaster, we take the poor things into the tent. My legs are getting better, thank God.",
+		 "x":58.714,
+		 "y":81.149,
+		 "connectedNodes":[
+			"point_108",
+			"point_110"
+		 ]
+	  },
+	  {
+		 "id":"point_110",
+		 "date":"04.02.1914",
+		 "title":"Проблемы с собаками",
+		 "title_en":"Problems with Dogs",
+		 "description":"Собаки бегут, отказываются есть, некоторые пострадали от холода.",
+		 "description_en":"Dogs run away, refuse to eat, some suffered from the cold.",
+		 "diary":"В 9 снялись. Эту ночь «Мальчика», «Пирата» отогревали в палатке. Перед запряжкой три собаки удрали: «Пират», «Мальчик» и «Ободрыш», едва поймали. Сколько хлопот с этими собаками! Под утро задрали «Волка», если бы не выскочил Линник и не отбил, то разодрали бы. Полдень, чудная красная желанная заря. Дорога несколько лучше --- снег утрамбовало. Собаки идут хорошо, хотя третий день ничего не едят, сало медвежье есть отказались, сегодня дали по галете, съели. Прошли верст 15, остановились ночевать у N конца Кетлицланд. Сегодня было здорово холодно. Я шел в рубашке, сильно продрог. Спасаемся примусом, жжем керосину около 2 ф. в день. Это вдвое больше положенного, но я надеюсь в Теплиц-бае керосин пополнить. Ропаков много. Сегодня беру в палатку на ночь 4 собаки: «Куцого», «Мальчика», «Пирата» и «Пана».",
+		 "diary_en":"At 9 we broke camp. This night we were warming 'Malchik' and 'Pirat' in the tent. Before harnessing, three dogs ran away: 'Pirat', 'Malchik' and 'Obodrysh', we barely caught them. So much trouble with these dogs! Towards morning they mauled 'Volk', if Linnik hadn't jumped out and beaten them off, they would have torn him apart. Noon, a wonderful red desired dawn. The road is somewhat better --- the snow has been packed down. The dogs are going well, although they haven't eaten anything for the third day, they refused to eat bear fat, today we gave them a hardtack each, they ate. We went about 15 versts, stopped to camp at the N end of Ketlitz Land. Today it was really cold. I walked in a shirt, got very chilled. We're saving ourselves with the primus, burning about 2 f. of kerosene per day. This is twice as much as it should be, but I hope to replenish the kerosene in Teplitz Bay. There are many hummocks. Today I'm taking 4 dogs into the tent for the night: 'Kutsyi', 'Malchik', 'Pirat' and 'Pan'.",
+		 "x":58.814,
+		 "y":81.249,
+		 "connectedNodes":[
+			"point_109",
+			"point_111"
+		 ]
+	  },
+	  {
+		 "id":"point_111",
+		 "date":"05.02.1914",
+		 "title":"Собаки мерзнут",
+		 "title_en":"Dogs are Freezing",
+		 "description":"Путешествие продолжается при сильном морозе, собаки страдают от холода.",
+		 "description_en":"The journey continues in severe frost, dogs suffer from the cold.",
+		 "diary":"В 9 снялись. «Пан», конечно, отогревшись в палатке, удрал на промысел, поймали его только в пути, за что получил хорошую дерку. Сегодня прошли тоже около 15 верит и остановилась ночевать у К. Richthofen, по пути встретили два старых медвежьих следа. Стали попадаться трещины и полыньи, покрытые уже толстым солончаком. Море королевы Виктории темное, вероятно, там вода или большие полыньи, покрытые солончаком. Держусь ближе к берегу, по крепкому льду, но зато здесь много ропаков. В общем, сегодня дорога выпала отвратительная: много рыхлого снега и ропаков. К вечеру потянул ветер из пролива, было адски холодно, а я умудрился и сегодня шагать в рубашке, ибо в полушубке тяжело. Продрог снова, в особенности замерзла холка, спина и плечи. Кашляю, тяжело очень при большом морозе дышать на ходу, приходится глубоко втягивать в грудь холодный воздух, боюсь, чтобы не простудить легкие. Ноги мои заметно поправляются, опухоль сходит, ребята мои настроены хорошо, охотно идут вперед. Собаки пока держатся все, даем по 2ф. галет.",
+		 "diary_en":"At 9 we broke camp. 'Pan', of course, having warmed up in the tent, ran off hunting, we only caught him on the way, for which he got a good whipping. Today we also went about 15 versts and stopped to camp at Cape Richthofen, on the way we met two old bear tracks. Cracks and polynyas began to appear, already covered with thick sea ice. Queen Victoria Sea is dark, probably there is water or large polynyas covered with saline ice. I'm keeping closer to the shore, on solid ice, but there are many hummocks here. In general, today the road was awful: a lot of loose snow and hummocks. By evening, a wind from the strait began to blow, it was hellishly cold, and I managed to walk in a shirt today too, because it's heavy in a fur coat. I got chilled again, especially frozen were the withers, back and shoulders. I'm coughing, it's very hard to breathe while walking in severe frost, you have to inhale cold air deeply into your chest, I'm afraid of getting pneumonia. My legs are noticeably getting better, the swelling is going down, my guys are in good spirits, willingly go forward. The dogs are all holding up so far, we give them 2f. of hardtack each.",
+		 "x":58.914,
+		 "y":81.349,
+		 "connectedNodes":[
+			"point_110",
+			"point_112"
+		 ]
+	  },
+	  {
+		 "id":"point_112",
+		 "date":"06.02.1914",
+		 "title":"Болезнь Седова усиливается",
+		 "title_en":"Sedov's Illness Worsens",
+		 "description":"Седов не может идти из-за болезни, едет на нарте.",
+		 "description_en":"Sedov cannot walk due to illness, rides on a sledge.",
+		 "diary":"В 9ч двинулись дальше. Дорога отвратительная: ропаки, рыхлый снег, встретили в сажен 10 полынью, которая достаточно вымерзла, чтобы мы ее свободно перешли. У меня опять заболели ноги и усилился бронхит. Идти очень трудно, дышать еще труднее, но тем не менее прошли около 15 верст и в 4 ч. остановились на ночевку у мыса Эрмитаж. Идем тихо, но что же делать, зато идем вперед. Сегодня снилась Веруся, да спасут ее боги. Я совсем болен, но духом не падаю.",
+		 "diary_en":"At 9 o'clock we moved on. The road is terrible: hummocks, loose snow, we met a polynya 10 sazhens wide, which was frozen enough for us to cross it freely. My legs started hurting again and my bronchitis worsened. It's very hard to walk, even harder to breathe, but nevertheless we went about 15 versts and at 4 o'clock stopped for the night at Cape Hermitage. We're going slowly, but what can we do, at least we're going forward. Today I dreamed of Verusya, may the gods save her. I'm completely sick, but I'm not losing spirit.",
+		 "x":59.014,
+		 "y":81.449,
+		 "connectedNodes":[
+			"point_111",
+			"point_113"
+		 ]
+	  },
+	  {
+		 "id":"point_113",
+		 "date":"07.02.1914",
+		 "title":"Потеря в снежной буре",
+		 "title_en":"Lost in a Snowstorm",
+		 "description":"Экспедиция потеряла направление в снежной буре.",
+		 "description_en":"The expedition lost direction in a snowstorm.",
+		 "diary":"Сегодня Линник случайно поднял нас в 3 ч. утра; так как мы перележали все бока, то охотно все выползли из мешка, согревали чай и сидели с примусом до 7ч утра, когда сравнительно светло, запрягли собак и в 8ч следовали дальше. Сегодня тер. миним. показал ---40° Ц. Дорога сегодня была ужасно мучительная: ропаки и рыхлый глубокий снег, откуда он взялся, неизвестно; да и плюс к этому --- 35° мороза и ветер О/4, как раз в правую скулу. Страшно тяжело было идти, а в особенности мне, больному. Собаки-бедняжки Не знали, куда свои морды прятать. Очень ходко на холоде идут, но стоит только стать, как сейчас же роют себе ямки и прячутся туда от холода. От 2 до 4 была вьюга, это окончательно нас убило, мы едва подвигались вперед. Я все время оттирал лицо и все-таки не усмотрел, как немного отморозил нос. В 4 ч. стали лагерем у мыса Ficher, пройдя и сегодня, несмотря ни на что, около 14-15 верст.",
+		 "diary_en":"Today Linnik accidentally woke us up at 3 a.m.; since we had overslept on all sides, everyone willingly crawled out of the bag, we warmed tea and sat with the primus until 7 a.m., when it was relatively light, harnessed the dogs and at 8 o'clock proceeded further. Today ter. minim. showed ---40° C. The road today was terribly torturous: hummocks and loose deep snow, where it came from, unknown; and plus to this --- 35° frost and wind E/4, right in the right cheekbone. It was terribly hard to walk, and especially for me, sick. The poor dogs didn't know where to hide their muzzles. They go very briskly in the cold, but as soon as they stop, they immediately dig holes for themselves and hide there from the cold. From 2 to 4 there was a blizzard, this finally killed us, we barely moved forward. I was rubbing my face all the time and still didn't notice how I got a bit of frostbite on my nose. At 4 o'clock we set up camp at Cape Ficher, having traveled today, despite everything, about 14-15 versts.",
+		 "x":59.114,
+		 "y":81.549,
+		 "connectedNodes":[
+			"point_112",
+			"point_114"
+		 ]
+	  },
+	  {
+		 "id":"point_114",
+		 "date":"08.02.1914",
+		 "title":"Больной в палатке",
+		 "title_en":"Sick in the Tent",
+		 "description":"Седов болеет в палатке, у всех проблемы с обмороженными конечностями.",
+		 "description_en":"Sedov is sick in the tent, everyone has problems with frostbitten extremities.",
+		 "diary":"Сегодня выехали позднее обыкновенного, около 9ч утра. Я долго возился с лечением ранок на руке, которые я получил от примуса, и на ногах в шагу, которые натер брюками. Надел другие брюки, почувствовал облегчение. Ночью была вьюга, 5 собак ночевали в палатке. Мешок местами уже обледенел, спать было холодно. Простыня внутри мешка здорово холодит, потеет, замерзает и т. д. Думаю ее в Теплиц-бае выкинуть. Встретили много больших ропаков и глубокий снег, но в общем сегодня была дорога сносная, попадались солончаковые поля. Одно было ужасно скверно, это NNW/2, ветер в лицо при --- 35° морозу. Я окончательно простудил себе грудь. Бронхит меня давит, не могу отдышаться, под вечер страшно лихорадит, едва отогрелся на примусе. Ах, дорогой, дорогой спаситель наш примус! Собак сильно бьет мороз. Кормили их досыта по 1 ф. и более галет. Прошли около 15 верст и остановились в 4 ч. ночевать за островом Мария-Елизавета.",
+		 "diary_en":"Today we left later than usual, around 9 a.m. I spent a long time treating the sores on my hand, which I got from the primus, and on my legs in the crotch, which I chafed with my pants. I put on different pants, felt relief. There was a blizzard at night, 5 dogs spent the night in the tent. The bag is already iced in places, it was cold to sleep. The sheet inside the bag cools considerably, sweats, freezes etc. I think I'll throw it away in Teplitz Bay. We met many large hummocks and deep snow, but in general today the road was tolerable, there were saline fields. One thing was terribly bad, this NNW/2, wind in the face at --- 35° frost. I have finally given my chest a cold. Bronchitis is pressing on me, I can't catch my breath, towards evening I have a terrible fever, barely warmed up on the primus. Ah, dear, dear savior our primus! The frost is hitting the dogs hard. We fed them to satiety with 1 f. and more of hardtack each. We went about 15 versts and stopped at 4 o'clock to spend the night beyond Maria-Elizabeth Island.",
+		 "x":59.114,
+		 "y":81.549,
+		 "connectedNodes":[
+			"point_113",
+			"point_115"
+		 ]
+	  },
+	  {
+		 "id":"point_115",
+		 "date":"09.02.1914",
+		 "title":"Седов не может идти",
+		 "title_en":"Sedov Cannot Walk",
+		 "description":"Седов едет на нарте, так как не в состоянии идти. Празднование зимовки Нансена.",
+		 "description_en":"Sedov rides on a sledge, as he is unable to walk. Celebration of Nansen's wintering.",
+		 "diary":"Сегодня с утра «Варнак» устроил себе праздник. Убежал в ропаки, а затем преспокойно конвоировал нас по курсу до обеда, после полудня его удалось поймать и запрячь. Сегодня было хотя и много градусов мороза, но ветру было мало и двигаться было сравнительно тепло. Снялись, по обыкновению, в 9 утра и, пройдя около 15 верст, в 3 ч. стали ночевать у зимовья Нансена. Ропаков было мало, но рыхлого снегу уйма, так что в общем дорога была тяжелая. Я до того заболел бронхитом, что не мог идти. Шел вперед Линник, а я сидел на нарте, в которую подпрягли двух лишних собак. Этой же нартой я с трудом управлял. Мне дышать совсем трудно на морозе за работой. Боже, неужели я не поправлюсь до Теплиц-бая! Не то скандал. Сегодня вечером чай с ромом. Примус меня очень спасает. Было 4 чистилки, а осталась только одна, три сломали. Уж очень они плохие, а без них худо, оставшуюся берегу, как свой глаз. Собаки сильно работают. Кормим их досыта по фунту и более галет. Ночью мерзлячек беру в палатку.",
+		 "diary_en":"Today from the morning 'Varnak' arranged a holiday for himself. He ran away into the hummocks, and then calmly convoyed us along the course until dinner, after noon we managed to catch him and harness him. Today there were many degrees of frost, but there was little wind and it was relatively warm to move. We set off, as usual, at 9 in the morning, and having covered about 15 versts, at 3 o'clock we stopped for the night at Nansen's wintering place. There were few hummocks, but a lot of loose snow, so that in general the road was difficult. I got so sick with bronchitis that I couldn't walk. Linnik walked ahead, and I sat on a sledge, to which two extra dogs were harnessed. I barely managed to control this sledge. It is very difficult for me to breathe in the frost while working. God, will I not recover by Teplitz Bay! Otherwise it's a scandal. This evening, tea with rum. The primus saves me a lot. There were 4 cleaning rods, and only one is left, three broke. They are very bad, and without them it's bad, I keep the remaining one as the apple of my eye. The dogs work hard. We feed them to satiety with a pound and more of hardtack each. At night I take the cold ones into the tent.",
+		 "x":59.114,
+		 "y":81.749,
+		 "connectedNodes":[
+			"point_114",
+			"point_116"
+		 ]
+	  },
+	  {
+		 "id":"point_116",
+		 "date":"10.02.1914",
+		 "title":"Седов на нарте",
+		 "title_en":"Sedov on a Sledge",
+		 "description":"Седов едет на нарте, завёрнутый в полюсный костюм.",
+		 "description_en":"Sedov rides on a sledge, wrapped in a polar suit.",
+		 "diary":"В 9 двинулись дальше. Я до того оказался слаб и болен бронхитом, что не мог 10 шагов пройти вперед. Сидел опять на нарте. Адски промерз, так как был одет для ходу. Кажется, еще больше усилил простуду, ибо стала болеть грудь и все ниже в правой стороне, страшно лихорадит. Дорога была скверная, и я все-таки был принужден управлять своей нартой, был настоящим мучеником. Едва дотянул до 4 часов, когда остановились ночевать у К. Климентса. Сейчас в палатке при огне очень дурно себя чувствую. Ужасно боюсь, чтобы не получить воспаления легких. Здесь встретили немного воды и айсберги плавающие, тюленьи продушины стали попадаться по тонкому льду. Одна сейчас в 5 саж. от палатки. Тюлени сопят и страшно волнуют собак, вероятно, всю ночь бедняги не будут спать. У Пустошного шла кровь ртом и носом. У Линника сильно ноги мерзли.",
+		 "diary_en":"At 9 we moved on. I turned out to be so weak and sick with bronchitis that I couldn't walk 10 steps forward. I sat on the sledge again. Froze hellishly, as I was dressed for walking. It seems I intensified the cold even more, because my chest began to hurt and all lower on the right side, terrible fever. The road was bad, and I was still forced to manage my sledge, was a real martyr. Barely made it until 4 o'clock, when we stopped for the night at Cape Kliments. Now in the tent by the fire I feel very bad. I'm terribly afraid of getting pneumonia. Here we met a little water and floating icebergs, seal breathing holes began to appear on thin ice. One is now 5 sazhens from the tent. Seals snort and terribly excite the dogs, probably all night the poor things won't sleep. Pustoshny had blood from his mouth and nose. Linnik's legs were freezing badly.",
+		 "x":59.114,
+		 "y":81.849,
+		 "connectedNodes":[
+			"point_115",
+			"point_117"
+		 ]
+	  },
+	  {
+		 "id":"point_117",
+		 "date":"11.02.1914",
+		 "title":"Седов в полюсном костюме",
+		 "title_en":"Sedov in a Polar Suit",
+		 "description":"Седов наконец надевает полюсный костюм, чтобы не мёрзнуть на нарте.",
+		 "description_en":"Sedov finally puts on a polar suit to avoid freezing on the sledge.",
+		 "diary":"Сегодня снялись из-за моей болезни в 10 ч. утра. Я оделся в пимы и полюсный костюм и ехал на нарте, как баба. Дорога была вся в ропаках, и только под вечер встретился солончак. Собаки с утра все сильно дрожали и везли плохо и только под вечер разошлись. Встретили песцовый след. У Линника шла носом кровь, у Пустошного до того ноги замерзли, что он по дороге вынужден был надеть пимы и в них идти. В 4 ч. встали на ночевку, пройдя около 15 верст, у Земли Александра. Сегодня была такая заря, что в ней казалось почти солнце. Виден уже Теплиц-бай. Я лучше чувствую себя, ибо был тепло одет и все время сидел на нарте спокойно.",
+		 "diary_en":"Today we set out due to my illness at 10 a.m. I dressed in pims and a polar suit and rode on the sledge, like a woman. The road was all in hummocks, and only towards evening did we encounter saline ice. In the morning all the dogs were shaking badly and pulled poorly, and only towards evening did they get going. We met an arctic fox track. Linnik had blood from his nose, Pustoshny's legs were so frozen that he had to put on pims on the way and walk in them. At 4 o'clock we stopped for the night, having covered about 15 versts, at Alexander Land. Today there was such a dawn that it almost seemed like the sun was in it. Teplitz Bay is already visible. I feel better, because I was warmly dressed and sat on the sledge calmly all the time.",
+		 "x":59.114,
+		 "y":81.899,
+		 "connectedNodes":[
+			"point_116",
+			"point_118"
+		 ]
+	  },
+	  {
+		 "id":"point_118",
+		 "date":"12.02.1914",
+		 "title":"Адский холод",
+		 "title_en":"Hellish Cold",
+		 "description":"Самый холодный день путешествия. Встречен свежий медвежий след.",
+		 "description_en":"The coldest day of the journey. Fresh bear tracks encountered.",
+		 "diary":"Сегодня снялись в 8ч утра. Холод стоял адский, при 35° ветер в 3 балла и метет снег. Это самый холодный день. Я еду больным в полюсном костюме, как чучело, и все-таки прозяб, дорога отвратительная: масса ропаков, приходится проводить по одной нарте, целое мученье, собаки очень мерзнут и плохо везут. Встретили свежий медвежий след и много следов песцовых, слева, кажется недалеко, вода, за туманом ее не видно; отогревали Арестанта. Линник подморозил на ногах большие пальцы. Прошли около 15 верст и остановились в 4 ч. ночевать уже у Земли Рудольфа. Сегодня был минимум --- 42°. Сейчас дует балла на 4 Ost. Палатку изрядно треплет, мы же, как цыгане, сидим вокруг примуса.",
+		 "diary_en":"Today we set out at 8 a.m. The cold was hellish, at 35° wind at 3 points and snow blowing. This is the coldest day. I'm riding sick in a polar suit, like a scarecrow, and still frozen through, the road is disgusting: a mass of hummocks, we have to lead the sledges one by one, a real torture, the dogs are very cold and pull poorly. We met a fresh bear track and many arctic fox tracks, to the left, there seems to be water not far away, it's not visible through the fog; we warmed up Arestant. Linnik got frostbite on his toes. We went about 15 versts and stopped at 4 o'clock to spend the night already at Rudolf Land. Today was a minimum of --- 42°. Now the East is blowing at 4 points. The tent is shaking considerably, we, like gypsies, are sitting around the primus.",
+		 "x":59.114,
+		 "y":81.949,
+		 "connectedNodes":[
+			"point_117",
+			"point_119"
+		 ]
+	  },
+	  {
+		 "id":"point_119",
+		 "date":"13.02.1914",
+		 "title":"Неудачное число",
+		 "title_en":"Unlucky Number",
+		 "description":"Заблудились в тумане, нашли медведя, но не смогли его застрелить.",
+		 "description_en":"Got lost in the fog, found a bear but couldn't shoot it.",
+		 "diary":"13 число неудачное, как вообще. Снялись в 9 и пошли в тумане (идет снег), дорога тяжелая, собаки еле везут, ничего не видно. Забрели в какой-то пролив, между островками, но только не в Теплиц-бай, хотя он уже чувствуется близко. После 2-х разъяснело, сделался чудный, теплый день, но дорога тяжелая: снег и ропаки, тащимся дальше по курсу. В океане, видно, воды много, ибо видать черное небо. Встретили зайца у лунки, не подпустил на выстрел, сполз. В 5 ч. остановились ночевать, кажется у Земли Рудольфа, трудно с уверенностью судить, так как в этом месте карта страшно не верна. Посмотрим, что покажет завтрашний день. Вечером пришел медведь к палатке, огромный, собаки его погнали. Я, несмотря на болезнь, пошел с Линником на собачий лай. Пройдя кое-как около 2 верст, мы нашли медведя сидящим в лунке, окруженного собаками. Я несколько раз стрелял в него с аршинного расстояния, но ружье так замерзло, что не дало ни одного выстрела. Когда пошли мы, разочарованные, назад, то я уже двигаться из-за болезни не мог. Пришлось остаться с собаками сторожить медведя, а Линник пошел за нартой. Вскоре медведь выскочил из лунки и побежал на SW, собаки за ним. Через два часа меня нашла нарта и привезла, как труп, в палатку. Здоровье свое ухудшил, а тут еще нужно залезть в замерзший обледенелый мешок.",
+		 "diary_en":"The 13th is an unlucky number, as usual. We set out at 9 and went in the fog (it's snowing), the road is difficult, the dogs can barely pull, nothing is visible. We wandered into some strait, between islets, but not into Teplitz Bay, although it already feels close. After 2 o'clock it cleared up, it became a wonderful, warm day, but the road is difficult: snow and hummocks, we're dragging along the course. In the ocean, there seems to be a lot of water, because you can see a black sky. We met a hare at a hole, it didn't let us get close enough for a shot, it slipped away. At 5 o'clock we stopped for the night, it seems at Rudolf Land, it's difficult to judge with certainty, as the map is terribly inaccurate in this place. Let's see what tomorrow shows. In the evening a bear came to the tent, huge, the dogs chased it. I, despite my illness, went with Linnik to the dogs' barking. Having somehow walked about 2 versts, we found the bear sitting in a hole, surrounded by dogs. I shot at it several times from an arshin's distance, but the rifle was so frozen that it didn't fire a single shot. When we went back, disappointed, I could no longer move due to illness. I had to stay with the dogs to guard the bear, and Linnik went for the sledge. Soon the bear jumped out of the hole and ran to the SW, dogs after it. After two hours the sledge found me and brought me, like a corpse, to the tent. I worsened my health, and now I also need to get into a frozen, icy bag.",
+		 "x":59.114,
+		 "y":81.999,
+		 "connectedNodes":[
+			"point_118",
+			"point_120"
+		 ]
+	  },
+	  {
+		 "id":"point_120",
+		 "date":"14.02.1914",
+		 "title":"Стоянка в тумане",
+		 "title_en":"Stop in the Fog",
+		 "description":"Из-за тумана экспедиция почти не продвигается вперёд.",
+		 "description_en":"Due to fog, the expedition barely moves forward.",
+		 "diary":"Сегодня в 9 часов потащились дальше. Снег, туман, ничего не видать, собаки не везут --- караул. Протащились около 3-4 верст и стали лагерем. У группы маленьких островков между Землями Рудольфа и Александра (у С. самого N), к W и N вода, дальше ничего не видно. Буду здесь стоять лагерем, пока не дождусь ясной погоды. Здоровье мое очень скверно, вчерашний медведь ухудшил его. Кончился пуд керосина, начали другой.",
+		 "diary_en":"Today at 9 o'clock we dragged on further. Snow, fog, nothing to see, dogs don't pull --- help. We dragged about 3-4 versts and set up camp. At a group of small islands between Rudolf and Alexander Lands (at the very N), to the W and N is water, nothing visible further. I will stand camp here until I get clear weather. My health is very bad, yesterday's bear made it worse. A pood of kerosene is finished, we started another one.",
+		 "x":59.114,
+		 "y":82.049,
+		 "connectedNodes":[
+			"point_119",
+			"point_121"
+		 ]
+	  },
+	  {
+		 "id":"point_121",
+		 "date":"15.02.1914",
+		 "title":"Попытка перейти на Землю Рудольфа",
+		 "title_en":"Attempt to Cross to Rudolf Land",
+		 "description":"Обнаружен тонкий лед, провалилась нарта.",
+		 "description_en":"Thin ice discovered, a sledge fell through.",
+		 "diary":"В 10 ч. утра ясно, морозу 30 градусов. Пошли через проливы к Земле Рудольфа, которая ясно была видна, пройдя около 12 верст, наткнулись на сплошной, тонкий (1 вер.) солончак. Взошли первой нартой на него (Льдинкой), а она и провалилась, вместе с ней и собаки. Люди держались свободно. С большим трудом вытащили нарту назад, ничего не подмочив, так как каяк великолепно плавал. Остановились здесь же ночевать и ждать, пока достаточно замерзнет пролив. Сегодня у воды видели стада тысячные птиц: люмсы и кайры. Я ужасно разбит болезнью. Сильнейший бронхит, болит горло и опухли ноги. Лежу все время в мешке, настоящий мученик.",
+		 "diary_en":"At 10 a.m. it's clear, 30 degrees of frost. We went through straits to Rudolf Land, which was clearly visible, having gone about 12 versts, we came across a solid, thin (1 ver.) saline ice. We went onto it with the first sledge (Ldinka), and it fell through, along with the dogs. People held up freely. With great difficulty, we pulled the sledge back, not getting anything wet, as the kayak floated magnificently. We stopped here to spend the night and wait until the strait freezes enough. Today we saw thousands of birds by the water: lummes and guillemots. I am terribly broken by illness. Severe bronchitis, sore throat and swollen legs. I lie in the bag all the time, a real martyr.",
+		 "x":59.014,
+		 "y":82.049,
+		 "connectedNodes":[
+			"point_120",
+			"point_122"
+		 ]
+	  },
+	  {
+		 "id":"point_122",
+		 "date":"16.02.1914",
+		 "title":"Солнце вернулось",
+		 "title_en":"The Sun Returns",
+		 "description":"Впервые за зиму над горами показалось солнце, но силы Седова на исходе. Экспедиция остановлена открытой водой.",
+		 "description_en":"For the first time all winter the Sun appeared above the hills, but Sedov's strength is at its end. The expedition is stopped by open water.",
+		 "diary":"Сегодняшний день сидели у пролива и ждали, пока он замерзнет. А он не замерзает — и только, видно, здесь большое течение. Люди ходили версты три-четыре к середине пролива и встретили там открытую широкую воду. Птиц и зверья менее. Завтра думаем тащиться на восток, может быть, там обойду воду. Болен я адски и никуда не гожусь. Сегодня опять мне будут растирать спиртом ноги. Питаюсь только одним компотом и водой, другого ничего душа не принимает. Конечно, съел бы яичко, сметанки, жареного цыпленка, даже чашку кислой капусты. Но где все это? Увидели выше гор впервые милое, родное солнце. Ах, как оно красиво и хорошо! При виде его в нас весь мир перевернулся. Привет тебе, чудеснейшее чудо природы! Посвети нашим близким на родине, как мы ютимся в палатке, как больные, удрученные, под 82° широты.",
+		 "diary_en":"Today we sat by the strait and waited for it to freeze. But it doesn't freeze - and that's all, there seems to be a strong current here. People went three or four versts to the middle of the strait and met a wide open water there. Fewer birds and animals. Tomorrow we think of dragging to the east, maybe there I'll get around the water. I am hellishly sick and good for nothing. Today they will again rub my legs with alcohol. I feed only on compote and water, my soul accepts nothing else. Of course, I would eat an egg, sour cream, fried chicken, even a cup of sauerkraut. But where is all this? We saw above the mountains for the first time the dear, native sun. Oh, how beautiful and good it is! At the sight of it, the whole world turned upside down in us. Greetings to you, the most wonderful miracle of nature! Shine on our loved ones in our homeland, how we huddle in a tent, like sick, dejected ones, under 82° latitude.",
+		 "x":59.014,
+		 "y":82.049,
+		 "connectedNodes":[
+			"point_121",
+			"point_123"
+		 ]
+	  },
+	  {
+		 "id":"point_123",
+		 "date":"17.02.1914",
+		 "title":"Попытка двигаться на восток",
+		 "title_en":"Attempt to Move East",
+		 "description":"Безуспешная попытка обойти открытую воду с востока.",
+		 "description_en":"Unsuccessful attempt to go around open water from the east.",
+		 "diary":"К сожалению, дневник обрывается. Г.Я. Седов умер 5 (18) марта 1914 г.",
+		 "diary_en":"Unfortunately, the diary breaks off. G.Y. Sedov died on March 5 (18), 1914.",
+		 "x":59.014,
+		 "y":82.049,
+		 "connectedNodes":[
+			"point_122"
+		 ]
+	  }
+   ]
+}

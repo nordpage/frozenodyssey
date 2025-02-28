@@ -1,3 +1,167 @@
-[gd_scene format=3 uid="uid://rv3b0fr42hf8"]
+[gd_scene load_steps=3 format=3 uid="uid://rv3b0fr42hf8"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" path="res://scripts/HUD.gd" id="1_5ge8t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ulhx4"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 100.0
+grow_horizontal = 2
+script = ExtResource("1_5ge8t")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = 10.0
+offset_right = 400.0
+offset_bottom = 90.0
+grow_horizontal = 2
+size_flags_horizontal = 2
+theme_override_constants/separation = 3
+alignment = 1
+
+[node name="TempContainer" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(125, 80)
+layout_mode = 2
+alignment = 1
+
+[node name="TemperatureLabel" type="Label" parent="HBoxContainer/TempContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Temperature"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TemperatureValue" type="Label" parent="HBoxContainer/TempContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="FoodContainer" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(125, 80)
+layout_mode = 2
+alignment = 1
+
+[node name="FoodLabel" type="Label" parent="HBoxContainer/FoodContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Food"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FoodValue" type="Label" parent="HBoxContainer/FoodContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="EnergyContainer" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(125, 80)
+layout_mode = 2
+alignment = 1
+
+[node name="EnergyLabel" type="Label" parent="HBoxContainer/EnergyContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Energy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnergyValue" type="Label" parent="HBoxContainer/EnergyContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ulhx4")
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="VSeparator3" type="VSeparator" parent="HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="MoraleContainer" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(125, 80)
+layout_mode = 2
+alignment = 1
+
+[node name="MoraleLabel" type="Label" parent="HBoxContainer/MoraleContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Morale"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MoraleValue" type="Label" parent="HBoxContainer/MoraleContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="VSeparator4" type="VSeparator" parent="HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="DateContainer" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(125, 80)
+layout_mode = 2
+alignment = 1
+
+[node name="DateLabel" type="Label" parent="HBoxContainer/DateContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Date"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DateValue" type="Label" parent="HBoxContainer/DateContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="VSeparator5" type="VSeparator" parent="HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TurnContainer" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(125, 80)
+layout_mode = 2
+alignment = 1
+
+[node name="TurnLabel" type="Label" parent="HBoxContainer/TurnContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Turn"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TurnValue" type="Label" parent="HBoxContainer/TurnContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+horizontal_alignment = 1
+vertical_alignment = 3

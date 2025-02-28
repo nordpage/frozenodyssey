@@ -7,7 +7,7 @@ func _ready():
 	load_event_cards()
 
 func load_event_cards():
-	var file = FileAccess.open("res://data/locations.json", FileAccess.READ)
+	var file = FileAccess.open("res://data/location_cards.json", FileAccess.READ)
 	if file:
 		var json_text = file.get_as_text()
 		var json_data = JSON.parse_string(json_text)
@@ -30,3 +30,4 @@ func load_event_cards():
 					event_cards[location_id].append(card)
 	
 	print("✅ Event cards loaded successfully!")
+	

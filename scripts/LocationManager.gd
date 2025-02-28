@@ -4,6 +4,7 @@ var locations = {}
 var connections = {}
 
 func _ready():
+	AudioManager.play_music("res://audio/ambient/arctic_theme.ogg", -20)
 	load_locations()
 
 func load_locations():
