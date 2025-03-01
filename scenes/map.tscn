@@ -1,17 +1,17 @@
 [gd_scene load_steps=6 format=3 uid="uid://nt0jq052yahi"]
 
 [ext_resource type="Script" path="res://scripts/map.gd" id="1_38jes"]
-[ext_resource type="PackedScene" uid="uid://qpt7hwwh4vfu" path="res://scenes/LocationPoint.tscn" id="2_u33cd"]
 [ext_resource type="PackedScene" uid="uid://nmh8i2ho4jgs" path="res://scenes/EventCard.tscn" id="3_guanh"]
+[ext_resource type="FontFile" uid="uid://dwoc2raqb1pnf" path="res://assets/NotoSans-VariableFont_wdth,wght.ttf" id="3_w1f84"]
 [ext_resource type="Script" path="res://scenes/camera_2d.gd" id="4_37qw1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6dpdo"]
 
-[node name="Map" type="Node2D" node_paths=PackedStringArray("title_label", "description_label", "event_panel")]
+[node name="Map" type="Node2D" node_paths=PackedStringArray("title_label", "description_label", "diary_label", "event_panel")]
 script = ExtResource("1_38jes")
-location_scene = ExtResource("2_u33cd")
 title_label = NodePath("CanvasLayer/Control/VFlowContainer/TitleLabel")
 description_label = NodePath("CanvasLayer/Control/VFlowContainer/DescritionLabel")
+diary_label = NodePath("CanvasLayer/Control/VFlowContainer/DiaryLabel")
 event_panel = NodePath("CanvasLayer/Control/PanelContainer")
 event_card_scene = ExtResource("3_guanh")
 
@@ -44,24 +44,37 @@ offset_bottom = 250.0
 
 [node name="VFlowContainer" type="VFlowContainer" parent="CanvasLayer/Control"]
 layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 539.0
-offset_top = -50.0
-offset_right = -22.0
-offset_bottom = 30.0
-grow_horizontal = 2
-grow_vertical = 2
+anchor_bottom = 1.0
+offset_left = -652.0
+offset_top = -300.0
+offset_right = -42.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/h_separation = 3
+theme_override_constants/v_separation = 10
 alignment = 1
 
 [node name="TitleLabel" type="Label" parent="CanvasLayer/Control/VFlowContainer"]
+custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_w1f84")
+theme_override_font_sizes/font_size = 32
 label_settings = SubResource("LabelSettings_6dpdo")
 
 [node name="DescritionLabel" type="Label" parent="CanvasLayer/Control/VFlowContainer"]
+custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_w1f84")
+
+[node name="DiaryLabel" type="Label" parent="CanvasLayer/Control/VFlowContainer"]
+custom_minimum_size = Vector2(600, 100)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_w1f84")
+autowrap_mode = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("4_37qw1")

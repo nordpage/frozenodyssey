@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://qpt7hwwh4vfu"]
+[gd_scene load_steps=7 format=3 uid="uid://qpt7hwwh4vfu"]
 
 [ext_resource type="Script" path="res://scenes/location_point.gd" id="1_ku2o3"]
+[ext_resource type="Texture2D" uid="uid://doj4x3r21lc5n" path="res://assets/expedition_icon.png" id="2_d6n4n"]
 [ext_resource type="Texture2D" uid="uid://y2eql3w4aivl" path="res://assets/location_icon.png" id="2_noupc"]
-[ext_resource type="Texture2D" uid="uid://bemoqd6fcwu47" path="res://assets/location_icon_active.png" id="3_8hmr2"]
-[ext_resource type="Texture2D" uid="uid://dh21y3noghug7" path="res://assets/location_icon_disabled.png" id="4_bw5ho"]
+[ext_resource type="Texture2D" uid="uid://cisk6im2hwfpe" path="res://assets/expedition_icon_active.png" id="3_iro47"]
+[ext_resource type="Texture2D" uid="uid://b75bpiipd5ifq" path="res://assets/expedition_icon_disabled.png" id="4_vx4a4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2tr5r"]
 radius = 40.0
@@ -12,9 +13,9 @@ radius = 40.0
 process_mode = 3
 z_index = 3
 script = ExtResource("1_ku2o3")
-default_texture = ExtResource("2_noupc")
-active_texture = ExtResource("3_8hmr2")
-disabled_texture = ExtResource("4_bw5ho")
+default_texture = ExtResource("2_d6n4n")
+active_texture = ExtResource("3_iro47")
+disabled_texture = ExtResource("4_vx4a4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_noupc")
