@@ -7,7 +7,6 @@ extends Control
 @onready var energy_label = $HUDContainer/EnergyContainer/EnergyValue
 @onready var morale_label = $HUDContainer/MoraleContainer/MoraleValue
 @onready var turn_label = $HUDContainer/TurnContainer/TurnValue
-@onready var date_label = $HUDContainer/DateContainer/DateValue
 
 # Ссылка на GameResources
 @onready var game_resources = get_node_or_null("/root/Main/GameResources")
@@ -35,7 +34,6 @@ func update_hud():
 	
 	# Обновляем ход и дату
 	turn_label.text = str(current_turn)
-	date_label.text = current_date
 
 func update_resource_label(label, resource_name):
 	var resource = game_resources.get_resource(resource_name)

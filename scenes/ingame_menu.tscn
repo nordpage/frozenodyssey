@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=3 uid="uid://drqu2def5fptm"]
+
+[ext_resource type="Script" path="res://scripts/ingame_menu.gd" id="1_0gipl"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0gipl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.435294, 0.435294, 0.435294, 0.392157)
+
+[node name="Menu" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -153.0
+offset_right = 125.0
+offset_bottom = 153.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="Menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="Menu"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ResumeButton" type="Button" parent="Menu/Buttons"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Resume"
+
+[node name="Button2" type="Button" parent="Menu/Buttons"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Save game"
+
+[node name="Button3" type="Button" parent="Menu/Buttons"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Load game"
+
+[node name="Button4" type="Button" parent="Menu/Buttons"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "To main menu"
+
+[node name="ExitButton" type="Button" parent="Menu/Buttons"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Exit
+"

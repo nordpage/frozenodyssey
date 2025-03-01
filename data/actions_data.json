@@ -1,0 +1,229 @@
+{
+  "actions": [
+		{
+			"id": "act_1",
+			"title": "Разведка местности перед походом",
+			"title_en": "Exploring the area before the journey",
+			"description": "Осмотр территории, поиск маршрута и возможных угроз.",
+			"description_en": "Surveying the area, looking for routes and potential threats.",
+			"boost": {"food": 2, "energy": -5, "warmth": -3},
+			"points": 3
+		},
+		{
+			"id": "act_2",
+			"title": "Поиск следов животных",
+			"title_en": "Tracking animal footprints",
+			"description": "Определение присутствия животных для возможной охоты.",
+			"description_en": "Identifying animal presence for potential hunting.",
+			"boost": {"food": 3, "energy": -4, "morale": -2},
+			"points": 4
+		},
+		{
+			"id": "act_3",
+			"title": "Изучение льдов и погоды",
+			"title_en": "Studying ice and weather",
+			"description": "Определение состояния льдов и прогнозирование погоды.",
+			"description_en": "Assessing ice conditions and forecasting weather.",
+			"boost": {"energy": -3, "morale": 2},
+			"points": 2
+		},
+		{
+			"id": "act_4",
+			"title": "Прокладывание маршрута через разломы",
+			"title_en": "Charting a path through ice fractures",
+			"description": "Поиск безопасного пути через ледяные разломы.",
+			"description_en": "Finding a safe route through ice fractures.",
+			"boost": {"energy": -6, "morale": 3},
+			"points": 5
+		},
+		{
+			"id": "act_5",
+			"title": "Распределение нагрузки",
+			"title_en": "Redistributing supplies",
+			"description": "Оптимизация груза для более эффективного передвижения.",
+			"description_en": "Optimizing load for more efficient movement.",
+			"boost": {"energy": 3, "morale": -2},
+			"points": 3
+		},
+		{
+			"id": "act_6",
+			"title": "Оценка погоды перед переходом",
+			"title_en": "Assessing weather before moving",
+			"description": "Прогнозирование возможных погодных изменений перед движением.",
+			"description_en": "Predicting potential weather changes before moving.",
+			"boost": {"energy": -2, "warmth": 2},
+			"points": 2
+		},
+		{
+			"id": "act_7",
+			"title": "Выбор маршрута",
+			"title_en": "Choosing the route",
+			"description": "Решение, идти ли по короткому, но опасному пути, или по долгому, но безопасному.",
+			"description_en": "Deciding whether to take a short but dangerous route or a long but safe one.",
+			"boost": {"morale": -3, "energy": -4},
+			"points": 4
+		},
+		{
+			"id": "act_8",
+			"title": "Охота на тюленя",
+			"title_en": "Hunting a seal",
+			"description": "Попытка добыть еду, используя копья и ловушки.",
+			"description_en": "Attempting to gather food using spears and traps.",
+			"boost": {"food": 10, "energy": -5},
+			"points": 4
+		},
+		{
+			"id": "act_9",
+			"title": "Охота на белого медведя",
+			"title_en": "Hunting a polar bear",
+			"description": "Опасная охота на медведя. Может принести много еды, но очень рискованно.",
+			"description_en": "A dangerous hunt for a polar bear. Can provide a lot of food, but very risky.",
+			"boost": {"food": 20, "morale": -5, "energy": -10},
+			"points": 6
+		},
+		{
+			"id": "act_10",
+			"title": "Ловля рыбы в полынье",
+			"title_en": "Fishing in an ice hole",
+			"description": "Рыбалка в ледяной воде. Требует времени и энергии, но даёт еду.",
+			"description_en": "Fishing in icy water. Takes time and energy but provides food.",
+			"boost": {"food": 5, "warmth": -2, "energy": -3},
+			"points": 3
+		},
+		{
+			"id": "act_11",
+			"title": "Оборудование лагеря",
+			"title_en": "Setting up camp",
+			"description": "Установка укрытия, защита от ветра, создание места отдыха.",
+			"description_en": "Setting up a shelter, protecting from the wind, and creating a resting place.",
+			"boost": {"warmth": 10, "morale": 3, "energy": -5},
+			"points": 4
+		},
+		{
+			"id": "act_12",
+			"title": "Заготовка топлива",
+			"title_en": "Collecting fuel",
+			"description": "Добыча жира, угля или дров для обогрева лагеря.",
+			"description_en": "Gathering blubber, coal, or firewood to keep the camp warm.",
+			"boost": {"warmth": 7, "energy": -4},
+			"points": 3
+		},
+		{
+			"id": "act_13",
+			"title": "Ремонт снаряжения",
+			"title_en": "Repairing equipment",
+			"description": "Чинить повреждённые санки, палатки, инструменты.",
+			"description_en": "Repairing damaged sleds, tents, and tools.",
+			"boost": {"energy": -4, "morale": 1},
+			"points": 4
+		},
+		{
+			"id": "act_14",
+			"title": "Экстренный выход в пургу",
+			"title_en": "Emergency retreat in a blizzard",
+			"description": "Срочный выход из лагеря из-за неблагоприятных погодных условий.",
+			"description_en": "An urgent departure from camp due to adverse weather conditions.",
+			"boost": {"warmth": -10, "energy": -10, "morale": -5},
+			"points": 7
+		},
+		{
+			"id": "act_15",
+			"title": "Поддержка больного участника",
+			"title_en": "Helping an injured member",
+			"description": "Забота о больном или раненом члене команды, требующая дополнительных сил.",
+			"description_en": "Taking care of a sick or injured team member, requiring extra effort.",
+			"boost": {"morale": 5, "energy": -6},
+			"points": 5
+		},
+		{
+			"id": "act_16",
+			"title": "Заморозка конечностей",
+			"title_en": "Frostbite",
+			"description": "Обморожение, требующее лечения или принятия мер по восстановлению.",
+			"description_en": "Frostbite that requires treatment or measures to recover.",
+			"boost": {"energy": -5, "morale": -3},
+			"points": 4
+		},
+		{
+			"id": "act_17",
+			"title": "Разговор у костра / поддержка друг друга",
+			"title_en": "Campfire talk / supporting each other",
+			"description": "Обсуждение ситуации и поддержка, способствующая поднятию морального духа.",
+			"description_en": "Discussing the situation and offering support to boost morale.",
+			"boost": {"morale": 5, "warmth": 2, "energy": -2},
+			"points": 3
+		},
+		{
+			"id": "act_18",
+			"title": "Споры в команде из-за тяжёлых условий",
+			"title_en": "Arguments due to harsh conditions",
+			"description": "Напряжённые разногласия, негативно влияющие на командный дух.",
+			"description_en": "Tense disagreements that negatively affect team spirit.",
+			"boost": {"morale": -5, "energy": -3},
+			"points": 2
+		},
+		{
+			"id": "act_19",
+			"title": "Разделение последних припасов",
+			"title_en": "Dividing the last supplies",
+			"description": "Принятие решения о распределении оставшихся ресурсов между членами команды.",
+			"description_en": "Deciding how to distribute the remaining resources among the team members.",
+			"boost": {"morale": 3, "energy": 0},
+			"points": 3
+		},
+		{
+			"id": "act_20",
+			"title": "Отдать честь капитану",
+			"title_en": "Salute the Captain",
+			"description": "Проявление уважения к капитану экспедиции, выполняемое в финальной точке.",
+			"description_en": "A tribute to the expedition captain, performed at the final point.",
+			"boost": {"morale": 10, "energy": -2},
+			"points": 5
+		},
+		{
+			"id": "act_21",
+			"title": "Проводы экспедиции",
+			"title_en": "Expedition Farewell",
+			"description": "Прощание с лагерем и подготовка к переходу на следующий этап экспедиции.",
+			"description_en": "Farewell to the camp and preparation to move on to the next stage of the expedition.",
+			"boost": {"morale": 4, "energy": -3},
+			"points": 4
+		},
+		{
+			"id": "act_22",
+			"title": "Воспоминание о погибших",
+			"title_en": "Memorial for the Fallen",
+			"description": "Моменты памяти о потерянных членах экспедиции, укрепляющие командный дух, но и отягощающие его.",
+			"description_en": "Moments of remembrance for the lost members of the expedition, boosting morale while also weighing heavily on the heart.",
+			"boost": {"morale": 6, "energy": -2},
+			"points": 3
+		},
+		{
+			"id": "act_23",
+			"title": "Молитва за спасение",
+			"title_en": "Prayer for Deliverance",
+			"description": "Молитва, помогающая поднять моральный дух в отчаянной ситуации.",
+			"description_en": "A prayer that helps uplift the team's spirit in desperate times.",
+			"boost": {"morale": 5, "energy": -1},
+			"points": 2
+		},
+		{
+			"id": "act_24",
+			"title": "Торжественная церемония",
+			"title_en": "Solemn Ceremony",
+			"description": "Официальная церемония, отмечающая важный этап экспедиции.",
+			"description_en": "A formal ceremony marking an important milestone of the expedition.",
+			"boost": {"morale": 8, "energy": -3},
+			"points": 4
+		},
+		{
+			"id": "act_25",
+			"title": "Прощание с зимовкой",
+			"title_en": "Farewell to the Winter Camp",
+			"description": "Эмоциональное прощание с лагерем зимовки, поднимающее мораль, но требующее усилий.",
+			"description_en": "An emotional farewell to the winter camp where the expedition stayed, boosting morale but costing energy.",
+			"boost": {"morale": 7, "energy": -4},
+			"points": 4
+		}
+	]
+}

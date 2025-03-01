@@ -1,0 +1,24 @@
+{
+  "behaviors": [
+		{ "point_id": "point_1", "behaviors": ["act_1", "act_6", "act_5"] },
+		{ "point_id": "point_2", "behaviors": ["act_11", "act_17"] },
+		{ "point_id": "point_3", "behaviors": ["act_3", "act_4"] },
+		{ "point_id": "point_4", "behaviors": ["act_9", "act_2"] },
+		{ "point_id": "point_5", "behaviors": ["act_14", "act_15"] },
+		{ "point_id": "point_6", "behaviors": ["act_6", "act_5"] },
+		{ "point_id": "point_7", "behaviors": ["act_17"] },
+		{ "point_id": "point_8", "behaviors": ["act_17", "act_23"] },
+		{ "point_id": "point_9", "behaviors": ["act_17", "act_23"] },
+		{ "point_id": "point_10", "behaviors": ["act_23", "act_17"] },
+		{ "point_id": "point_11", "behaviors": ["act_23"] },
+		{ "point_id": "point_12", "behaviors": ["act_1", "act_7"] },
+		{ "point_id": "point_13", "behaviors": ["act_14", "act_16"] },
+		{ "point_id": "point_14", "behaviors": ["act_17"] },
+		{ "point_id": "point_15", "behaviors": ["act_24", "act_17"] },
+		{ "point_id": "point_16", "behaviors": ["act_3", "act_4"] },
+		{ "point_id": "point_17", "behaviors": ["act_14", "act_16"] },
+		{ "point_id": "point_18", "behaviors": ["act_17", "act_23"] },
+		{ "point_id": "point_19", "behaviors": ["act_9"] },
+		{ "point_id": "point_20", "behaviors": ["act_14", "act_16"] }
+	]
+}

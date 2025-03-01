@@ -3,7 +3,7 @@ extends Node2D
 @export var title_label: Label
 @export var description_label: Label
 @export var diary_label: Label
-@onready var date_label = $"../CanvasLayer/Control/HUDContainer/DateContainer/DateValue"
+@export var date_label: Label
 @export var event_panel: PanelContainer
 @export var event_card_scene: PackedScene
 @export var camera_speed: float = 500.0
@@ -14,6 +14,8 @@ extends Node2D
 
 var expedition_data = {}
 var location_nodes = {}
+var cards = {}
+var behaviors = {}
 var active_location_id: String = ""
 var visited_locations = []
 var last_location_id = ""
@@ -59,13 +61,9 @@ func _ready():
 	# Загружаем данные и создаем ноды
 	load_expedition_data()
 	create_location_nodes_linear()
+	load_actions()
+	load_behaviors()
 	
-	# Применяем логику отображения как в Total War:
-	# 1. Все экспедиции видны
-	# 2. Только первая экспедиция активна
-	# 3. Этапы скрыты до клика
-	# 4. Группы скрыты до клика
-	# 5. Точки скрыты до клика
 	set_total_war_visibility()
 	
 	# Устанавливаем начальную локацию
@@ -94,88 +92,35 @@ func _ready():
 	
 	
 func set_total_war_visibility():
-	# Проходим по всем нодам и устанавливаем видимость
 	for loc_id in location_nodes.keys():
 		var node = location_nodes[loc_id]
 		
 		match node.location_type:
 			"expedition":
-				# Экспедиция всегда видна и активна
 				node.visible = true
 				node.set_active(true)
-				# Сразу разворачиваем для показа этапов
 				node.is_expanded = true
 				
 			"stage":
 				# Все этапы видны
 				node.visible = true
 				
-				# Только первый этап активен, остальные заблокированы
+				# Только первый этап активен
 				var first_stage_id = ""
 				if expedition_data.has("levels") and expedition_data["levels"].size() > 0:
 					first_stage_id = expedition_data["levels"][0]["id"]
 				
 				if loc_id == first_stage_id:
 					node.set_enabled()
-					# Разворачиваем первый этап для показа первой группы
-					node.is_expanded = true
 				else:
 					node.set_disabled()
 					
-			"group":
-				# Группы видны только для активного этапа
-				var parent_node = null
-				if node.parent_id != "" and location_nodes.has(node.parent_id):
-					parent_node = location_nodes[node.parent_id]
-				
-				if parent_node and parent_node.is_expanded:
-					node.visible = true
-					
-					# Только первая группа активна
-					var first_group_id = ""
-					if parent_node.children_ids.size() > 0:
-						first_group_id = parent_node.children_ids[0]
-					
-					if loc_id == first_group_id:
-						node.set_enabled()
-					else:
-						node.set_disabled()
-				else:
-					node.visible = false
-					
-			"point":
-				# Точки скрыты изначально за исключением первой точки в первой группе
+			"group", "point":
+				# Группы и точки скрыты по умолчанию
 				node.visible = false
-				
-				# Проверяем, это первая точка в группе?
-				var parent_node = null
-				if node.parent_id != "" and location_nodes.has(node.parent_id):
-					parent_node = location_nodes[node.parent_id]
-				
-				if parent_node and parent_node.children_ids.size() > 0 and parent_node.children_ids[0] == loc_id:
-					# Это первая точка в группе
-					if parent_node.is_expanded:
-						node.visible = true
-						node.set_enabled()
-					else:
-						node.set_disabled()
-				else:
-					node.set_disabled()
+				node.set_disabled()
 	
-	# Отображаем первую точку в первой группе первого этапа
-	if expedition_data.has("levels") and expedition_data["levels"].size() > 0:
-		var first_stage = expedition_data["levels"][0]
-		if first_stage.has("children") and first_stage["children"].size() > 0:
-			var first_group = first_stage["children"][0]
-			if first_group.has("children") and first_group["children"].size() > 0:
-				var first_point_id = first_group["children"][0]["id"]
-				if location_nodes.has(first_point_id):
-					# Разблокируем и показываем первую точку
-					location_nodes[first_point_id].set_enabled()
-					
-					# Если группа развернута, делаем точку видимой
-					if location_nodes.has(first_group["id"]) and location_nodes[first_group["id"]].is_expanded:
-						location_nodes[first_point_id].visible = true
+	draw_connections()
 
 # Предзагрузка текстур для повышения производительности
 func preload_textures():
@@ -234,7 +179,61 @@ func load_expedition_data():
 
 	expedition_data = json["expedition"]
 	print("✅ Данные экспедиции загружены:", expedition_data["name"])
+	
+func load_actions():
+	print("Загрузка карточек...")
+	var file_path = "res://data/actions_data.json"
+	
+	if not FileAccess.file_exists(file_path):
+		print("❌ Ошибка: Файл не найден:", file_path)
+		return
+		
+	var file = FileAccess.open(file_path, FileAccess.READ)
+	if not file:
+		print("❌ Ошибка: Не удалось открыть файл:", file_path)
+		return
 
+	var json_text = file.get_as_text()
+	print("Чтение данных JSON:", json_text.substr(0, 100) + "...")
+	
+	var json = JSON.parse_string(json_text)
+	if not json:
+		print("❌ Ошибка: Неверный формат JSON")
+		return
+
+	if not json.has("actions"):
+		print("❌ Ошибка: Нет ключа 'actions' в JSON")
+		return
+
+	cards = json["actions"]
+		
+func load_behaviors():
+	print("Загрузка действий...")
+	var file_path = "res://data/point_behaviors.json"
+	# Загрузим привязку карточек к точкам из JSON
+	if not FileAccess.file_exists(file_path):
+		print("❌ Ошибка: Файл не найден:", file_path)
+		return
+		
+	var file = FileAccess.open(file_path, FileAccess.READ)
+	if not file:
+		print("❌ Ошибка: Не удалось открыть файл:", file_path)
+		return
+
+	var json_text = file.get_as_text()
+	print("Чтение данных JSON:", json_text.substr(0, 100) + "...")
+	
+	var json = JSON.parse_string(json_text)
+	if not json:
+		print("❌ Ошибка: Неверный формат JSON")
+		return
+
+	if not json.has("behaviors"):
+		print("❌ Ошибка: Нет ключа 'behaviors' в JSON")
+		return
+
+	behaviors = json["behaviors"]
+	
 # Создание нод локаций в линейном расположении
 func create_location_nodes_linear():
 	if expedition_data.size() == 0:
@@ -380,7 +379,9 @@ func create_points_linear(points, start_x, start_y, parent_id):
 		point_node.position = Vector2(start_x, y_pos)
 		point_node.location_id = point["id"]
 		point_node.title = point["title"]
+		point_node.title_en = point["title_en"]
 		point_node.description = point.get("description", "")
+		point_node.description_en = point.get("description_en", "")
 		point_node.date_range = point.get("date", "")
 		point_node.parent_id = parent_id
 		
@@ -391,6 +392,7 @@ func create_points_linear(points, start_x, start_y, parent_id):
 		# Дневниковая запись
 		if point.has("diary"):
 			point_node.diary = point["diary"]
+			point_node.diary_en = point["diary_en"]
 		
 		# Координаты для навигации
 		if point.has("coordinates") and point["coordinates"].size() >= 2:
@@ -423,8 +425,8 @@ func create_points_linear(points, start_x, start_y, parent_id):
 
 # Обработка сигналов
 # In map.gd
+# map.gd - _on_location_selected
 func _on_location_selected(location_id: String):
-	# Обработка клика на локацию
 	print("Локация выбрана:", location_id)
 	
 	if not location_nodes.has(location_id):
@@ -448,23 +450,42 @@ func _on_location_selected(location_id: String):
 	active_location_id = location_id
 	selected_node.set_active(true)
 	
+	if selected_node.location_type == "stage" and selected_node.is_expanded:
+		for i in range(selected_node.children_ids.size()):
+			var child_id = selected_node.children_ids[i]
+			if location_nodes.has(child_id) and location_nodes[child_id].location_type == "group":
+				if i == 0:
+					# Разблокируем только первую группу
+					location_nodes[child_id].set_enabled()
+				else:
+					location_nodes[child_id].set_disabled()
+					
+	# Если выбрана группа, активируем первую точку
+	if selected_node.location_type == "group" and selected_node.has_children:
+		var first_point_id = ""
+		if selected_node.children_ids.size() > 0:
+			first_point_id = selected_node.children_ids[0]
+			
+		if location_nodes.has(first_point_id) and location_nodes[first_point_id].location_type == "point":
+			location_nodes[first_point_id].set_enabled()
+	
 	# Если выбрана точка, добавляем её в посещенные
 	if selected_node.location_type == "point" and not visited_locations.has(location_id):
 		visited_locations.append(location_id)
 		# Разблокируем следующую точку в группе
+		for entry in behaviors:
+			if entry["point_id"] == location_id:
+				var loc_actions = []
+				for beh in entry["behaviors"]:
+					for card in cards:
+						if card["id"] == beh:
+							create_event_card(card)
+							loc_actions.append(card)
+				print(loc_actions)
 		unlock_next_point_in_group(selected_node.parent_id)
 	
 	# Перемещаем камеру к выбранной локации
 	move_camera_to_location(selected_node.position)
-	
-	# Особая обработка для групп - нужно всегда показывать точки сразу
-	if selected_node.location_type == "group" and selected_node.has_children and not selected_node.is_expanded:
-		selected_node.is_expanded = true
-		expand_location(location_id)
-	# Для других типов разворачиваем только по запросу
-	elif selected_node.has_children and not selected_node.is_expanded:
-		selected_node.is_expanded = true
-		expand_location(location_id)
 	
 	# Обеспечиваем видимость выбранной локации и её родителей
 	ensure_hierarchy_visible(location_id)
@@ -481,6 +502,7 @@ func _on_location_selected(location_id: String):
 	# Перерисовываем соединения
 	draw_connections()
 	
+# map.gd - unlock_next_point_in_group и поддержка разблокировки следующего этапа
 func unlock_next_point_in_group(group_id: String):
 	if not location_nodes.has(group_id):
 		return
@@ -490,26 +512,30 @@ func unlock_next_point_in_group(group_id: String):
 		return
 	
 	var points_in_group = []
+	var all_visited = true
 	
 	# Собираем все точки в группе
 	for child_id in group_node.children_ids:
 		if location_nodes.has(child_id) and location_nodes[child_id].location_type == "point":
 			points_in_group.append(child_id)
+			# Проверяем, все ли точки посещены
+			if not visited_locations.has(child_id):
+				all_visited = false
 	
-	# Находим последнюю посещенную точку
-	var last_visited_index = -1
-	for i in range(points_in_group.size()):
-		if visited_locations.has(points_in_group[i]):
-			last_visited_index = i
-	
-	# Если есть следующая точка - разблокируем её
-	if last_visited_index < points_in_group.size() - 1:
-		var next_point_id = points_in_group[last_visited_index + 1]
-		location_nodes[next_point_id].set_enabled()
-		print("✅ Разблокирована следующая точка:", next_point_id)
-	
-	# Если все точки в группе посещены - разблокируем следующую группу
-	elif last_visited_index == points_in_group.size() - 1:
+	if not all_visited:
+		# Находим последнюю посещенную точку
+		var last_visited_index = -1
+		for i in range(points_in_group.size()):
+			if visited_locations.has(points_in_group[i]):
+				last_visited_index = i
+		
+		# Если есть следующая точка - разблокируем её
+		if last_visited_index < points_in_group.size() - 1:
+			var next_point_id = points_in_group[last_visited_index + 1]
+			location_nodes[next_point_id].set_enabled()
+			print("✅ Разблокирована следующая точка:", next_point_id)
+	else:
+		# Если все точки в группе посещены - разблокируем следующую группу
 		unlock_next_group(group_node.parent_id, group_id)
 		
 func unlock_next_group(stage_id: String, current_group_id: String):
@@ -591,11 +617,52 @@ func _on_location_mouse_exit(location_id: String):
 
 func _on_location_expand(location_id: String):
 	print("Раскрытие локации:", location_id)
-	expand_location(location_id)
+	if location_nodes.has(location_id):
+		var node = location_nodes[location_id]
+		node.is_expanded = true
+		expand_location(location_id)
 
+# В map.gd - _on_location_collapse
 func _on_location_collapse(location_id: String):
 	print("Сворачивание локации:", location_id)
-	collapse_location(location_id)
+	if location_nodes.has(location_id):
+		var node = location_nodes[location_id]
+		node.is_expanded = false
+		
+		# Важно: сначала устанавливаем default состояние иконки
+		# Возвращаем стандартное состояние (default)
+		if node.is_active:
+			node.set_active(false)
+			node.set_enabled()  # Это устанавливает default внешний вид
+		
+		# Затем скрываем дочерние элементы
+		collapse_location(location_id)
+
+# Новые вспомогательные функции
+func show_direct_children(node_id: String):
+	if not location_nodes.has(node_id):
+		return
+		
+	var node = location_nodes[node_id]
+	
+	for child_id in node.children_ids:
+		if location_nodes.has(child_id):
+			location_nodes[child_id].visible = true
+			print("Показываем узел:", child_id)
+
+func hide_all_tree(node_id: String):
+	if not location_nodes.has(node_id):
+		return
+		
+	var node = location_nodes[node_id]
+	
+	for child_id in node.children_ids:
+		if location_nodes.has(child_id):
+			location_nodes[child_id].visible = false
+			
+			# Если у узла есть свои дети
+			if location_nodes[child_id].is_expanded:
+				hide_all_tree(child_id)
 
 # Выделение связей локации при наведении
 func highlight_connections(location_id: String):
@@ -698,6 +765,8 @@ func create_connection_line(start_node, end_node, connection_type):
 
 # Раскрытие локации (показ дочерних элементов)
 # Исправленная функция expand_location в map.gd
+# В map.gd, переделанная функция expand_location:
+# map.gd - expand_location
 func expand_location(location_id: String):
 	if not location_nodes.has(location_id):
 		return
@@ -707,27 +776,30 @@ func expand_location(location_id: String):
 	
 	print("Разворачиваем локацию:", location_id, "тип:", node.location_type)
 	
-	# Показываем все дочерние элементы
+	# Показываем дочерние элементы
 	for child_id in node.children_ids:
 		if location_nodes.has(child_id):
-			# Показываем дочерний элемент
 			location_nodes[child_id].visible = true
-			print("Показываем дочерний элемент:", child_id)
-			location_nodes[child_id].modulate.a = 1.0
 			
-			# Автоматически разворачиваем первую группу
-			if node.location_type == "stage" and location_nodes[child_id].location_type == "group":
+			# Если это группа, разблокируем только первую точку
+			if node.location_type == "group" and location_nodes[child_id].location_type == "point":
 				if child_id == node.children_ids[0]:
-					# Если это первая группа в этапе
-					location_nodes[child_id].is_expanded = true
-					expand_location(child_id)
+					location_nodes[child_id].set_enabled()
+					print("Разблокируем первую точку:", child_id)
+				else:
+					location_nodes[child_id].set_disabled()
+			
+			# Если это Stage, разблокируем только первую группу
+			elif node.location_type == "stage" and location_nodes[child_id].location_type == "group":
+				if child_id == node.children_ids[0]:
+					location_nodes[child_id].set_enabled()
+				else:
+					location_nodes[child_id].set_disabled()
 	
 	# Перерисовываем соединения
 	draw_connections()
 
-# Сворачивание локации (скрытие дочерних элементов)
-# Исправленная функция collapse_location в map.gd
-# Исправленная версия collapse_location в map.gd
+# Загружаем сцену
 func collapse_location(location_id: String):
 	if not location_nodes.has(location_id):
 		return
@@ -735,14 +807,21 @@ func collapse_location(location_id: String):
 	var node = location_nodes[location_id]
 	node.is_expanded = false
 	
+	print("Сворачиваем локацию:", location_id)
+	
 	# Скрываем все дочерние элементы
 	for child_id in node.children_ids:
 		if location_nodes.has(child_id):
 			location_nodes[child_id].visible = false
 			
-			# Скрываем рекурсивно все дочерние элементы, но НЕ сбрасываем их состояние
-			var processed = []
-			hide_children_without_state_reset(child_id, processed)
+			# Рекурсивно скрываем всех потомков
+			var processed_nodes = [location_id]
+			hide_all_children(child_id, processed_nodes)
+			
+	title_label.text = ""
+	date_label.text = ""
+	description_label.text = ""
+	diary_label.text = ""
 	
 	# Перерисовываем соединения
 	draw_connections()
@@ -919,57 +998,45 @@ func update_ui_with_location_data(location_id: String):
 	var node = location_nodes[location_id]
 	
 	# Обновляем заголовок для всех типов
-	title_label.text = node.title
+	
 	
 	# Описание и дневник обновляем только для Point
 	if node.location_type == "point":
-		description_label.text = node.description
+		title_label.text = node.title_en
+		description_label.text = node.description_en
 		
 		# Обновляем дневник, если есть
 		if diary_label and node.diary != "":
-			diary_label.text = node.diary
+			diary_label.text = node.diary_en
 			diary_label.visible = true
 		elif diary_label:
 			diary_label.visible = false
-	else:
-		# Для других типов - скрываем или обнуляем информацию
-		description_label.text = ""
-		if diary_label:
-			diary_label.visible = false
-	
-	# Обновляем дату
-	update_date_from_node(node)
+			
+		# Для точек используем их конкретную дату
+		if node.date_range != "":
+			date_label.text = node.date_range
+			print("Дата из точки:", node.date_range)
 	
 	
 # Новая функция для обновления даты
+# В map.gd в методе update_date_from_node:
 func update_date_from_node(node):
 	if not date_label:
 		return
-	
-	# Для типа Point - берем дату из узла
-	if node.location_type == "point" and node.date_range != "":
-		current_date = node.date_range
-		date_label.text = node.date_range
-		return
 		
-	# Если это не точка - используем начальную дату экспедиции
-	var initial_date = "01.01.1912"  # Дата по умолчанию
+	var date_text = ""
 	
-	# Получаем первую дату из первого этапа
-	if expedition_data.has("levels") and expedition_data["levels"].size() > 0:
-		var first_stage = expedition_data["levels"][0]
-		if first_stage.has("date_range"):
-			var date_parts = first_stage["date_range"].split(" – ")
-			if date_parts.size() > 0:
-				initial_date = date_parts[0]
+	# Исправить проверку для точки:
+	if node.location_type == "point":
+		# Точка может использовать date_range вместо date
+		if node.date_range != "":
+			date_text = node.date_range
+			current_date = node.date_range
+			print("Установлена дата из точки:", date_text)
 	
-	# Если текущая дата пуста, используем начальную
-	if current_date == "" or current_date == null:
-		current_date = initial_date
-	
-	# Обновляем дату на лейбле
-	date_label.text = current_date
-	print("Установлена дата:", current_date)
+	# Устанавливаем текст даты
+	if date_text != "":
+		date_label.text = date_text
 
 # Перемещение камеры к локации
 func move_camera_to_location(target_pos):
@@ -984,13 +1051,14 @@ func move_camera_to_location(target_pos):
 	tween.tween_property(camera, "position", target_pos, 0.5).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 
 # Обновление видимых локаций
+# В функции update_visible_locations нужно изменить:
 func update_visible_locations():
 	# Блокируем точки, которые не доступны по дате
 	for loc_id in location_nodes.keys():
 		var node = location_nodes[loc_id]
 		
 		# Проверяем дату для точек
-		if node.location_type == "point" and node.date_range != "":
+		if node.location_type == "point":
 			if is_date_passed(node.date_range, current_date):
 				# Если дата прошла, разблокируем точку
 				node.set_enabled()
@@ -998,7 +1066,7 @@ func update_visible_locations():
 				# Иначе блокируем
 				node.set_disabled()
 	
-	# Блокируем все посещенные локации
+	# Блокируем ТОЛЬКО посещенные точки, но не все подряд
 	for prev_id in visited_locations:
 		if location_nodes.has(prev_id) and prev_id != active_location_id:
 			location_nodes[prev_id].set_disabled()
@@ -1119,14 +1187,10 @@ func _unhandled_input(event):
 			KEY_D:
 				camera_move.x = 1.0 if event.pressed else 0.0 if camera_move.x > 0 else camera_move.x
 			KEY_ESCAPE:
-				if event.pressed and active_location_id != "":
-					var node = location_nodes[active_location_id]
-					if node.is_expanded:
-						node.is_expanded = false
-						collapse_location(active_location_id)
-					elif node.parent_id != "":
-						# Переходим к родителю, если есть
-						move_to_location(node.parent_id)
+				get_tree().paused = true
+				var GameMenuScene = preload("res://scenes/ingame_menu.tscn").instantiate()
+				add_child(GameMenuScene)
+
 
 # Функция для масштабирования камеры
 func zoom_camera(factor):

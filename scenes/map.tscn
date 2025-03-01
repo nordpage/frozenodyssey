@@ -1,17 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://nt0jq052yahi"]
+[gd_scene load_steps=7 format=3 uid="uid://nt0jq052yahi"]
 
 [ext_resource type="Script" path="res://scripts/map.gd" id="1_38jes"]
 [ext_resource type="PackedScene" uid="uid://nmh8i2ho4jgs" path="res://scenes/EventCard.tscn" id="3_guanh"]
-[ext_resource type="FontFile" uid="uid://dwoc2raqb1pnf" path="res://assets/NotoSans-VariableFont_wdth,wght.ttf" id="3_w1f84"]
+[ext_resource type="FontFile" uid="uid://cjao58hlhxmt6" path="res://assets/Roboto/Roboto-Bold.ttf" id="3_nnh1i"]
 [ext_resource type="Script" path="res://scenes/camera_2d.gd" id="4_37qw1"]
+[ext_resource type="FontFile" uid="uid://drr2a23atdwkf" path="res://assets/Roboto/Roboto-Regular.ttf" id="4_htfi7"]
+[ext_resource type="FontFile" uid="uid://dirb3heqhqr8r" path="res://assets/Kalam/Kalam-Regular.ttf" id="5_4i1rt"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_6dpdo"]
-
-[node name="Map" type="Node2D" node_paths=PackedStringArray("title_label", "description_label", "diary_label", "event_panel")]
+[node name="Map" type="Node2D" node_paths=PackedStringArray("title_label", "description_label", "diary_label", "date_label", "event_panel")]
 script = ExtResource("1_38jes")
-title_label = NodePath("CanvasLayer/Control/VFlowContainer/TitleLabel")
-description_label = NodePath("CanvasLayer/Control/VFlowContainer/DescritionLabel")
-diary_label = NodePath("CanvasLayer/Control/VFlowContainer/DiaryLabel")
+title_label = NodePath("CanvasLayer/Control/VBoxContainer/HBoxContainer/TitleLabel")
+description_label = NodePath("CanvasLayer/Control/VBoxContainer/VBoxContainer/DescritionLabel")
+diary_label = NodePath("CanvasLayer/Control/VBoxContainer/VBoxContainer/DiaryLabel")
+date_label = NodePath("CanvasLayer/Control/VBoxContainer/HBoxContainer/DateLabel")
 event_panel = NodePath("CanvasLayer/Control/PanelContainer")
 event_card_scene = ExtResource("3_guanh")
 
@@ -42,7 +43,7 @@ layout_mode = 2
 offset_right = 500.0
 offset_bottom = 250.0
 
-[node name="VFlowContainer" type="VFlowContainer" parent="CanvasLayer/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -54,26 +55,39 @@ offset_top = -300.0
 offset_right = -42.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_constants/h_separation = 3
-theme_override_constants/v_separation = 10
-alignment = 1
+theme_override_constants/separation = 24
 
-[node name="TitleLabel" type="Label" parent="CanvasLayer/Control/VFlowContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="DateLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_nnh1i")
+theme_override_font_sizes/font_size = 24
+clip_text = true
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_nnh1i")
+theme_override_font_sizes/font_size = 28
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="DescritionLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_w1f84")
-theme_override_font_sizes/font_size = 32
-label_settings = SubResource("LabelSettings_6dpdo")
+theme_override_fonts/font = ExtResource("4_htfi7")
+theme_override_font_sizes/font_size = 24
 
-[node name="DescritionLabel" type="Label" parent="CanvasLayer/Control/VFlowContainer"]
-custom_minimum_size = Vector2(600, 0)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_w1f84")
-
-[node name="DiaryLabel" type="Label" parent="CanvasLayer/Control/VFlowContainer"]
+[node name="DiaryLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(600, 100)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_w1f84")
+theme_override_fonts/font = ExtResource("5_4i1rt")
+theme_override_font_sizes/font_size = 24
 autowrap_mode = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
