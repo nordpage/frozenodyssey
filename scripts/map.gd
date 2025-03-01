@@ -1085,6 +1085,7 @@ func load_event_cards(location_id: String):
 				create_event_card(card)
 
 # Создание карточки события
+# Создание карточки события
 func create_event_card(card: Dictionary):
 	if not event_card_scene:
 		print("Ошибка: Префаб карточки событий не назначен!")
@@ -1100,11 +1101,22 @@ func create_event_card(card: Dictionary):
 		print("❌ Ошибка: Проблема с нодами внутри карточки!")
 		return
 
-	title_node.text = card.get("title", "Unknown Event")
-	description_node.text = card.get("description", "No description available.")
+	# Используем правильные поля из card
+	title_node.text = card.get("title_en", card.get("title", "Unknown Event"))
+	description_node.text = card.get("description_en", card.get("description", "No description available."))
 
 	apply_button.pressed.connect(func():
-		apply_event_effect(card)
+		# Создаем эффект на ресурсы из boost
+		var boost = card.get("boost", {})
+		for resource_name in boost:
+			update_resource(resource_name, boost[resource_name])
+		
+		# Добавляем очки (если есть)
+		var points = card.get("points", 0)
+		
+		print("Применен эффект карточки:", card.get("title", ""), "очки:", points)
+		AudioManager.play_sound("card_play")
+		
 		event_card_instance.queue_free()
 	)
 
