@@ -31,6 +31,7 @@ func _ready():
 # В BaseLocationPoint.gd обновите функцию _on_input_event:
 # Улучшенная функция _on_input_event для BaseLocationPoint.gd
 # Исправленная версия _on_input_event в BaseLocationPoint.gd
+# In BaseLocationPoint.gd
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		print("Клик на локации:", location_id, "(", location_type, ")")
@@ -42,19 +43,17 @@ func _on_input_event(viewport, event, shape_idx):
 		# Прерываем событие
 		get_viewport().set_input_as_handled()
 		
-		# Делаем точку активной всегда при клике
+		# Сигнал о выборе локации
 		emit_signal("location_selected", location_id)
 		
-		# Обрабатываем разворачивание/сворачивание только для Stage и Group
-		if location_type == "stage" or location_type == "group":
+		# Разворачивание/сворачивание только для определенных типов
+		if (location_type == "stage" or location_type == "group") and has_children:
 			if is_expanded:
-				# Если уже развернуто - сворачиваем
-				print("Сворачиваем:", location_id)
+				# Сворачиваем
 				emit_signal("location_collapse", location_id)
 				is_expanded = false
 			else:
-				# Если свернуто - разворачиваем
-				print("Разворачиваем:", location_id)
+				# Разворачиваем
 				emit_signal("location_expand", location_id)
 				is_expanded = true
 

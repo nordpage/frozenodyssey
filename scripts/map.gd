@@ -422,6 +422,7 @@ func create_points_linear(points, start_x, start_y, parent_id):
 		y_pos += VERTICAL_SPACING
 
 # Обработка сигналов
+# In map.gd
 func _on_location_selected(location_id: String):
 	# Обработка клика на локацию
 	print("Локация выбрана:", location_id)
@@ -456,8 +457,12 @@ func _on_location_selected(location_id: String):
 	# Перемещаем камеру к выбранной локации
 	move_camera_to_location(selected_node.position)
 	
-	# Разворачиваем выбранную локацию, если у неё есть дочерние элементы
-	if selected_node.has_children and not selected_node.is_expanded:
+	# Особая обработка для групп - нужно всегда показывать точки сразу
+	if selected_node.location_type == "group" and selected_node.has_children and not selected_node.is_expanded:
+		selected_node.is_expanded = true
+		expand_location(location_id)
+	# Для других типов разворачиваем только по запросу
+	elif selected_node.has_children and not selected_node.is_expanded:
 		selected_node.is_expanded = true
 		expand_location(location_id)
 	
@@ -705,17 +710,15 @@ func expand_location(location_id: String):
 	# Показываем все дочерние элементы
 	for child_id in node.children_ids:
 		if location_nodes.has(child_id):
-			# Сразу делаем видимым дочерний элемент
+			# Показываем дочерний элемент
 			location_nodes[child_id].visible = true
 			print("Показываем дочерний элемент:", child_id)
-			
-			# Установим непрозрачность обратно на 1
 			location_nodes[child_id].modulate.a = 1.0
 			
-			# Если это Group, и мы хотим сразу показать его дочерние Points
+			# Автоматически разворачиваем первую группу
 			if node.location_type == "stage" and location_nodes[child_id].location_type == "group":
-				# Автоматически разворачиваем первую группу, если она еще не развернута
-				if child_id == node.children_ids[0] and not location_nodes[child_id].is_expanded:
+				if child_id == node.children_ids[0]:
+					# Если это первая группа в этапе
 					location_nodes[child_id].is_expanded = true
 					expand_location(child_id)
 	
@@ -730,23 +733,32 @@ func collapse_location(location_id: String):
 		return
 		
 	var node = location_nodes[location_id]
+	node.is_expanded = false
 	
-	print("Сворачиваем локацию:", location_id)
-	node.is_expanded = false  # Явно устанавливаем флаг сворачивания
-	
-	# Скрываем все дочерние элементы сразу, без анимации
+	# Скрываем все дочерние элементы
 	for child_id in node.children_ids:
 		if location_nodes.has(child_id):
 			location_nodes[child_id].visible = false
 			
-			# Также сворачиваем все дочерние элементы, чтобы при следующем разворачивании не было проблем
-			location_nodes[child_id].is_expanded = false
-			
-			# Рекурсивно скрываем дочерние элементы дочерних элементов
-			hide_all_children(child_id)
+			# Скрываем рекурсивно все дочерние элементы, но НЕ сбрасываем их состояние
+			var processed = []
+			hide_children_without_state_reset(child_id, processed)
 	
-	# Перерисовываем соединения ПОСЛЕ скрытия всех точек
+	# Перерисовываем соединения
 	draw_connections()
+	
+# Новая функция для скрытия дочерних элементов без сброса состояния
+func hide_children_without_state_reset(node_id: String, processed: Array = []):
+	if not location_nodes.has(node_id) or processed.has(node_id):
+		return
+	
+	processed.append(node_id)
+	var node = location_nodes[node_id]
+	
+	for child_id in node.children_ids:
+		if location_nodes.has(child_id):
+			location_nodes[child_id].visible = false
+			hide_children_without_state_reset(child_id, processed)
 
 # Новая функция для скрытия всех дочерних элементов без анимации
 # Fixed version to prevent infinite recursion
@@ -933,29 +945,31 @@ func update_ui_with_location_data(location_id: String):
 func update_date_from_node(node):
 	if not date_label:
 		return
-		
-	var date_text = ""
 	
-	# Получаем дату в зависимости от типа
+	# Для типа Point - берем дату из узла
 	if node.location_type == "point" and node.date_range != "":
-		date_text = node.date_range
 		current_date = node.date_range
-	elif node.location_type == "group" and node.date_range != "":
-		date_text = node.date_range
-		# Берем первую часть диапазона
-		current_date = node.date_range.split(" – ")[0] if " – " in node.date_range else node.date_range
-	elif node.location_type == "stage" and node.date_range != "":
-		date_text = node.date_range
-		current_date = node.date_range.split(" – ")[0] if " – " in node.date_range else node.date_range
-	
-	# Устанавливаем текст даты, если он был найден
-	if date_text != "":
-		date_label.text = date_text
-	else:
-		# Иначе используем текущую дату
-		date_label.text = current_date
+		date_label.text = node.date_range
+		return
 		
-	print("Обновлена дата:", date_label.text)
+	# Если это не точка - используем начальную дату экспедиции
+	var initial_date = "01.01.1912"  # Дата по умолчанию
+	
+	# Получаем первую дату из первого этапа
+	if expedition_data.has("levels") and expedition_data["levels"].size() > 0:
+		var first_stage = expedition_data["levels"][0]
+		if first_stage.has("date_range"):
+			var date_parts = first_stage["date_range"].split(" – ")
+			if date_parts.size() > 0:
+				initial_date = date_parts[0]
+	
+	# Если текущая дата пуста, используем начальную
+	if current_date == "" or current_date == null:
+		current_date = initial_date
+	
+	# Обновляем дату на лейбле
+	date_label.text = current_date
+	print("Установлена дата:", current_date)
 
 # Перемещение камеры к локации
 func move_camera_to_location(target_pos):
