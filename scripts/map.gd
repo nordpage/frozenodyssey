@@ -1299,7 +1299,6 @@ func create_event_card(card: Dictionary):
 	margin.add_theme_constant_override("margin_bottom", 10)
 	margin.add_child(event_card_instance)
 	hbox_container.add_child(margin)
-
 # Создание стиля для карточек
 func create_card_style() -> StyleBoxFlat:
 	var style = StyleBoxFlat.new()
@@ -1452,14 +1451,6 @@ func style_expedition_info():
 				parent.move_child(diary_container, idx)
 				
 				# Добавляем заголовок для дневника
-				var diary_title = Label.new()
-				diary_title.name = "DiaryTitle"
-				diary_title.text = "From the diary:"
-				diary_title.add_theme_font_size_override("font_size", 14)
-				diary_title.add_theme_color_override("font_color", Color(0.7, 0.8, 0.9))
-				diary_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-				diary_container.add_child(diary_title)
-				diary_container.move_child(diary_title, 0)
 				
 				# Стилизуем текст дневника
 				diary_label.add_theme_font_size_override("font_size", 13)

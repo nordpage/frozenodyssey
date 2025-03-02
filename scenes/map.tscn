@@ -1,21 +1,37 @@
-[gd_scene load_steps=6 format=3 uid="uid://nt0jq052yahi"]
+[gd_scene load_steps=9 format=3 uid="uid://nt0jq052yahi"]
 
 [ext_resource type="Script" path="res://scripts/map.gd" id="1_38jes"]
-[ext_resource type="Script" path="res://scripts/HUD.gd" id="3_acs6w"]
+[ext_resource type="PackedScene" uid="uid://rv3b0fr42hf8" path="res://scenes/HUD.tscn" id="3_bltid"]
 [ext_resource type="PackedScene" uid="uid://nmh8i2ho4jgs" path="res://scenes/EventCard.tscn" id="3_guanh"]
+[ext_resource type="FontFile" uid="uid://cjao58hlhxmt6" path="res://assets/Roboto/Roboto-Bold.ttf" id="3_nnh1i"]
 [ext_resource type="Script" path="res://scenes/camera_2d.gd" id="4_37qw1"]
+[ext_resource type="FontFile" uid="uid://drr2a23atdwkf" path="res://assets/Roboto/Roboto-Regular.ttf" id="4_htfi7"]
+[ext_resource type="FontFile" uid="uid://dirb3heqhqr8r" path="res://fonts/Kalam-Regular.ttf" id="5_4i1rt"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xm858"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7tnyv"]
+bg_color = Color(0.101961, 0.121569, 0.14902, 0.701961)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.4, 0.501961, 0.6, 0.501961)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [node name="Map" type="Node2D" node_paths=PackedStringArray("title_label", "description_label", "diary_label", "date_label", "event_panel")]
 script = ExtResource("1_38jes")
-title_label = NodePath("CanvasLayer/VBoxContainer/HBoxContainer/Title")
-description_label = NodePath("CanvasLayer/VBoxContainer/Description")
-diary_label = NodePath("CanvasLayer/VBoxContainer/Diary")
-date_label = NodePath("CanvasLayer/VBoxContainer/HBoxContainer/Date")
-event_panel = NodePath("CanvasLayer/EventPanel")
+title_label = NodePath("CanvasLayer/Control/VBoxContainer/HBoxContainer/TitleLabel")
+description_label = NodePath("CanvasLayer/Control/VBoxContainer/VBoxContainer/DescritionLabel")
+diary_label = NodePath("CanvasLayer/Control/VBoxContainer/VBoxContainer/DiaryLabel")
+date_label = NodePath("CanvasLayer/Control/VBoxContainer/HBoxContainer/DateLabel")
+event_panel = NodePath("CanvasLayer/Control/Panel/PanelContainer")
 event_card_scene = ExtResource("3_guanh")
-camera_speed = null
 
 [node name="Connections" type="Node2D" parent="."]
 
@@ -27,178 +43,93 @@ default_color = Color(0.572988, 0.572988, 0.572988, 1)
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 100.0
-grow_horizontal = 2
-script = ExtResource("3_acs6w")
-
-[node name="HUDContainer" type="HBoxContainer" parent="CanvasLayer/Control"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -400.0
-offset_right = 400.0
-offset_bottom = 80.0
-grow_horizontal = 2
-size_flags_horizontal = 2
-theme_override_constants/separation = 3
-alignment = 1
-
-[node name="TempContainer" type="VBoxContainer" parent="CanvasLayer/Control/HUDContainer"]
-custom_minimum_size = Vector2(125, 80)
-layout_mode = 2
-alignment = 1
-
-[node name="TemperatureLabel" type="Label" parent="CanvasLayer/Control/HUDContainer/TempContainer"]
-custom_minimum_size = Vector2(0, 20)
-layout_mode = 2
-text = "Temperature"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TemperatureValue" type="Label" parent="CanvasLayer/Control/HUDContainer/TempContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
-horizontal_alignment = 1
-vertical_alignment = 3
-
-[node name="VSeparator" type="VSeparator" parent="CanvasLayer/Control/HUDContainer"]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-size_flags_vertical = 0
-
-[node name="FoodContainer" type="VBoxContainer" parent="CanvasLayer/Control/HUDContainer"]
-custom_minimum_size = Vector2(125, 80)
-layout_mode = 2
-alignment = 1
-
-[node name="FoodLabel" type="Label" parent="CanvasLayer/Control/HUDContainer/FoodContainer"]
-custom_minimum_size = Vector2(0, 20)
-layout_mode = 2
-text = "Food"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="FoodValue" type="Label" parent="CanvasLayer/Control/HUDContainer/FoodContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
-horizontal_alignment = 1
-vertical_alignment = 3
-
-[node name="VSeparator2" type="VSeparator" parent="CanvasLayer/Control/HUDContainer"]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-size_flags_vertical = 0
-
-[node name="EnergyContainer" type="VBoxContainer" parent="CanvasLayer/Control/HUDContainer"]
-custom_minimum_size = Vector2(125, 80)
-layout_mode = 2
-alignment = 1
-
-[node name="EnergyLabel" type="Label" parent="CanvasLayer/Control/HUDContainer/EnergyContainer"]
-custom_minimum_size = Vector2(0, 20)
-layout_mode = 2
-text = "Energy"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="EnergyValue" type="Label" parent="CanvasLayer/Control/HUDContainer/EnergyContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
-theme_override_styles/normal = SubResource("StyleBoxEmpty_xm858")
-horizontal_alignment = 1
-vertical_alignment = 3
-
-[node name="VSeparator3" type="VSeparator" parent="CanvasLayer/Control/HUDContainer"]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-size_flags_vertical = 0
-
-[node name="MoraleContainer" type="VBoxContainer" parent="CanvasLayer/Control/HUDContainer"]
-custom_minimum_size = Vector2(125, 80)
-layout_mode = 2
-alignment = 1
-
-[node name="MoraleLabel" type="Label" parent="CanvasLayer/Control/HUDContainer/MoraleContainer"]
-custom_minimum_size = Vector2(0, 20)
-layout_mode = 2
-text = "Morale"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MoraleValue" type="Label" parent="CanvasLayer/Control/HUDContainer/MoraleContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
-horizontal_alignment = 1
-vertical_alignment = 3
-
-[node name="VSeparator4" type="VSeparator" parent="CanvasLayer/Control/HUDContainer"]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-size_flags_vertical = 0
-
-[node name="TurnContainer" type="VBoxContainer" parent="CanvasLayer/Control/HUDContainer"]
-custom_minimum_size = Vector2(125, 80)
-layout_mode = 2
-alignment = 1
-
-[node name="TurnLabel" type="Label" parent="CanvasLayer/Control/HUDContainer/TurnContainer"]
-custom_minimum_size = Vector2(0, 20)
-layout_mode = 2
-text = "Turn"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TurnValue" type="Label" parent="CanvasLayer/Control/HUDContainer/TurnContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
-horizontal_alignment = 1
-vertical_alignment = 3
-
-[node name="EventPanel" type="HBoxContainer" parent="CanvasLayer"]
-custom_minimum_size = Vector2(500, 0)
-anchors_preset = 2
+anchors_preset = 12
 anchor_top = 1.0
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -300.0
-offset_right = 500.0
+offset_left = -0.42
+offset_top = -250.0
+offset_right = -0.420044
+grow_horizontal = 2
 grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
-custom_minimum_size = Vector2(500, 0)
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -500.0
+offset_left = -652.0
 offset_top = -300.0
+offset_right = -42.0
 grow_horizontal = 0
 grow_vertical = 0
+theme_override_constants/separation = 24
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 24
 
-[node name="Date" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+[node name="DateLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(125, 0)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_nnh1i")
+theme_override_font_sizes/font_size = 24
+clip_text = true
 
-[node name="Title" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+[node name="TitleLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_nnh1i")
+theme_override_font_sizes/font_size = 28
 
-[node name="Description" type="Label" parent="CanvasLayer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/VBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 16
 
-[node name="Diary" type="Label" parent="CanvasLayer/VBoxContainer"]
-custom_minimum_size = Vector2(500, 0)
+[node name="DescritionLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
-autowrap_mode = 3
+theme_override_fonts/font = ExtResource("4_htfi7")
+theme_override_font_sizes/font_size = 24
+
+[node name="DiaryLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 100)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_4i1rt")
+theme_override_font_sizes/font_size = 24
+autowrap_mode = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = -20.0
+offset_right = 520.0
+offset_bottom = 230.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7tnyv")
+
+[node name="PanelContainer" type="HBoxContainer" parent="CanvasLayer/Control/Panel"]
+custom_minimum_size = Vector2(500, 250)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -250.0
+offset_right = 500.0
+grow_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 100.0
+grow_horizontal = 2
+
+[node name="Control2" parent="CanvasLayer/CenterContainer" instance=ExtResource("3_bltid")]
+custom_minimum_size = Vector2(700, 100)
+layout_mode = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("4_37qw1")
