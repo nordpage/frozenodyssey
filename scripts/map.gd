@@ -4,7 +4,7 @@ extends Node2D
 @export var description_label: Label
 @export var diary_label: Label
 @export var date_label: Label
-@export var event_panel: PanelContainer
+@export var event_panel: HBoxContainer
 @export var event_card_scene: PackedScene
 @export var camera_speed: float = 500.0
 
@@ -22,6 +22,10 @@ var last_location_id = ""
 var original_positions = {}
 var current_date = "08.12.1912"
 var camera_move = Vector2.ZERO
+
+var info_panel_container = null
+
+
 
 # Кэш текстур
 var texture_cache = {}
@@ -66,6 +70,9 @@ func _ready():
 	
 	set_total_war_visibility()
 	
+	if event_panel:
+		event_panel.visible = false
+	
 	# Устанавливаем начальную локацию
 	var initial_id = "expedition"
 	if expedition_data.has("levels") and expedition_data["levels"].size() > 0:
@@ -89,6 +96,7 @@ func _ready():
 	
 	# Дополнительная отладочная информация
 	print_debug_info()
+	style_all_ui_elements()
 	
 	
 func set_total_war_visibility():
@@ -208,31 +216,36 @@ func load_actions():
 	cards = json["actions"]
 		
 func load_behaviors():
-	print("Загрузка действий...")
+	print("Loading point behaviors...")
 	var file_path = "res://data/point_behaviors.json"
-	# Загрузим привязку карточек к точкам из JSON
+	
 	if not FileAccess.file_exists(file_path):
-		print("❌ Ошибка: Файл не найден:", file_path)
+		print("❌ Error: File not found:", file_path)
 		return
 		
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	if not file:
-		print("❌ Ошибка: Не удалось открыть файл:", file_path)
+		print("❌ Error: Could not open file:", file_path)
 		return
 
 	var json_text = file.get_as_text()
-	print("Чтение данных JSON:", json_text.substr(0, 100) + "...")
+	print("Reading JSON data:", json_text.substr(0, 100) + "...")
 	
 	var json = JSON.parse_string(json_text)
 	if not json:
-		print("❌ Ошибка: Неверный формат JSON")
+		print("❌ Error: Invalid JSON format")
 		return
 
 	if not json.has("behaviors"):
-		print("❌ Ошибка: Нет ключа 'behaviors' в JSON")
+		print("❌ Error: No 'behaviors' key in JSON")
 		return
 
 	behaviors = json["behaviors"]
+	print("✅ Loaded behaviors for", behaviors.size(), "points")
+	
+	# Debugging - print what was loaded
+	for behavior in behaviors:
+		print("Point:", behavior.get("point_id", "unknown"), "has", behavior.get("behaviors", []).size(), "actions")
 	
 # Создание нод локаций в линейном расположении
 func create_location_nodes_linear():
@@ -469,20 +482,44 @@ func _on_location_selected(location_id: String):
 		if location_nodes.has(first_point_id) and location_nodes[first_point_id].location_type == "point":
 			location_nodes[first_point_id].set_enabled()
 	
-	# Если выбрана точка, добавляем её в посещенные
-	if selected_node.location_type == "point" and not visited_locations.has(location_id):
-		visited_locations.append(location_id)
-		# Разблокируем следующую точку в группе
-		for entry in behaviors:
-			if entry["point_id"] == location_id:
-				var loc_actions = []
-				for beh in entry["behaviors"]:
-					for card in cards:
-						if card["id"] == beh:
-							create_event_card(card)
-							loc_actions.append(card)
-				print(loc_actions)
-		unlock_next_point_in_group(selected_node.parent_id)
+	# Если выбрана точка, добавляем её в посещенные и показываем карточки
+	if selected_node.location_type == "point":
+		# Сначала делаем панель видимой
+		if event_panel:
+			event_panel.visible = true
+			
+			# Очищаем существующие карточки
+			var hbox = event_panel.get_node_or_null("HBoxContainer")
+			if hbox:
+				for child in hbox.get_children():
+					child.queue_free()
+			else:
+				# Если HBoxContainer еще не создан, очищаем все прямые дочерние элементы
+				for child in event_panel.get_children():
+					if child.name != "CardTitle":  # Не удаляем заголовок
+						child.queue_free()
+		
+		# Добавляем точку в посещенные и создаем карточки
+		if not visited_locations.has(location_id):
+			visited_locations.append(location_id)
+			
+			# Находим и показываем карточки для этой точки
+			for entry in behaviors:
+				if entry["point_id"] == location_id:
+					var loc_actions = []
+					for beh in entry["behaviors"]:
+						for card in cards:
+							if card["id"] == beh:
+								create_event_card(card)
+								loc_actions.append(card)
+					print("Карточки действий для точки:", loc_actions)
+			
+			# Разблокируем следующую точку в группе
+			unlock_next_point_in_group(selected_node.parent_id)
+	else:
+		# Скрываем панель, если выбрана не точка
+		if event_panel:
+			event_panel.visible = false
 	
 	# Перемещаем камеру к выбранной локации
 	move_camera_to_location(selected_node.position)
@@ -496,9 +533,12 @@ func _on_location_selected(location_id: String):
 	# Обновляем видимость локаций
 	update_visible_locations()
 	
-	# Загружаем карточки событий
-	load_event_cards(location_id)
+	# Стилизуем карточки при необходимости
+	if selected_node.location_type == "point":
+		style_card_panel()
 	
+	# Стилизуем информационную панель
+	style_expedition_info()	
 	# Перерисовываем соединения
 	draw_connections()
 	
@@ -920,9 +960,7 @@ func move_to_location(location_id: String):
 	if node.location_type == "point" and node.parent_id != "":
 		unlock_next_point(node.parent_id)
 
-	update_visible_locations()
-	load_event_cards(location_id)
-	
+	update_visible_locations()	
 	# Перерисовываем соединения после всех изменений
 	draw_connections()
 
@@ -992,10 +1030,21 @@ func set_active_location(location_id: String):
 # Обновление интерфейса данными о локации
 # Исправленная функция update_ui_with_location_data в map.gd
 func update_ui_with_location_data(location_id: String):
+	if not info_panel_container:
+		info_panel_container = initialize_info_panel()
+		
+	for child in info_panel_container.get_children():
+		child.queue_free()
+		
+	
 	if not location_nodes.has(location_id):
 		return
 		
 	var node = location_nodes[location_id]
+	
+	info_panel_container.visible = (node.location_type == "point")
+	
+	
 	
 	# Обновляем заголовок для всех типов
 	
@@ -1071,21 +1120,12 @@ func update_visible_locations():
 		if location_nodes.has(prev_id) and prev_id != active_location_id:
 			location_nodes[prev_id].set_disabled()
 
-# Загрузка карточек событий
-func load_event_cards(location_id: String):
-	# Удаляем старые карточки
-	for child in event_panel.get_children():
-		child.queue_free()
-
-	# Загружаем карточки событий для данной локации
-	if event_manager:
-		var cards = event_manager.get_location_cards(location_id)
-		if cards.size() > 0:
-			for card in cards:
-				create_event_card(card)
-
 # Создание карточки события
 # Создание карточки события
+# Замените функцию create_event_card в map.gd на эту:
+
+# Обновленная функция create_event_card для улучшенного дизайна
+
 func create_event_card(card: Dictionary):
 	if not event_card_scene:
 		print("Ошибка: Префаб карточки событий не назначен!")
@@ -1093,36 +1133,409 @@ func create_event_card(card: Dictionary):
 
 	var event_card_instance = event_card_scene.instantiate()
 	
+	# Строго фиксированный размер всех карточек
+	event_card_instance.custom_minimum_size = Vector2(250, 300)
+	event_card_instance.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
+	
+	var vbox = event_card_instance.get_node_or_null("VBoxContainer")
+	if vbox:
+		# Фиксированная высота VBoxContainer
+		vbox.custom_minimum_size.y = 280
+		vbox.size_flags_vertical = Control.SIZE_FILL
+		
+		# Отступы внутри карточки
+		vbox.add_theme_constant_override("margin_left", 10)
+		vbox.add_theme_constant_override("margin_right", 10)
+		vbox.add_theme_constant_override("margin_top", 10)
+		vbox.add_theme_constant_override("margin_bottom", 10)
+	
 	var title_node = event_card_instance.get_node_or_null("VBoxContainer/Title")
 	var description_node = event_card_instance.get_node_or_null("VBoxContainer/Description")
-	var apply_button = event_card_instance.get_node_or_null("VBoxContainer/ApplyButton")
-
-	if not title_node or not description_node or not apply_button:
+	
+	if not title_node or not description_node:
 		print("❌ Ошибка: Проблема с нодами внутри карточки!")
 		return
 
+	# Стилизация заголовка
+	title_node.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	title_node.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	title_node.add_theme_font_size_override("font_size", 16)
+	title_node.add_theme_color_override("font_color", Color(0.9, 0.9, 1.0))
+	title_node.custom_minimum_size.y = 40
+	title_node.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
+	
+	# Добавляем разделительную линию
+	var separator = HSeparator.new()
+	separator.add_theme_constant_override("separation", 10)
+	vbox.add_child(separator)
+	vbox.move_child(separator, 1) # После заголовка
+	
+	# Настройка описания с автопереносом и фиксированной высотой
+	description_node.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	description_node.custom_minimum_size.y = 60
+	description_node.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
+	description_node.add_theme_constant_override("line_spacing", 3)
+	
+	# Создаем контейнер для эффектов с фиксированной высотой
+	var effects_container = VBoxContainer.new()
+	effects_container.custom_minimum_size.y = 100
+	effects_container.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
+	vbox.add_child(effects_container)
+	vbox.move_child(effects_container, 2) # После разделителя
+	
+	# Отображение эффектов действия на ресурсы
+	var boost = card.get("boost", {})
+	if not boost.is_empty():
+		var effects_title = Label.new()
+		effects_title.text = "Effects:"
+		effects_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		effects_title.add_theme_font_size_override("font_size", 14)
+		effects_container.add_child(effects_title)
+		
+		var grid = GridContainer.new()
+		grid.columns = 2
+		grid.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		grid.add_theme_constant_override("h_separation", 10)
+		effects_container.add_child(grid)
+		
+		for resource_name in boost:
+			var resource_key = resource_name
+			match resource_name.to_lower():
+				"food": resource_key = "Food"
+				"energy": resource_key = "Energy" 
+				"warmth": resource_key = "Temperature"
+				"morale": resource_key = "Morale"
+				
+			var amount = boost[resource_name]
+			
+			var res_label = Label.new()
+			res_label.text = resource_key + ":"
+			res_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+			res_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+			
+			var val_label = Label.new()
+			val_label.text = ("+" if amount > 0 else "") + str(amount)
+			val_label.size_flags_horizontal = Control.SIZE_FILL
+			val_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+			
+			# Цветовая индикация положительных/отрицательных эффектов
+			if amount > 0:
+				val_label.add_theme_color_override("font_color", Color(0.2, 1.0, 0.2))
+			elif amount < 0:
+				val_label.add_theme_color_override("font_color", Color(1.0, 0.3, 0.3))
+			
+			grid.add_child(res_label)
+			grid.add_child(val_label)
+	else:
+		# Если эффектов нет, добавляем пустое пространство для сохранения высоты
+		var empty_label = Label.new()
+		empty_label.text = "No effects"
+		empty_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		effects_container.add_child(empty_label)
+	
+	# Добавляем информацию об очках внизу
+	var footer = VBoxContainer.new()
+	footer.custom_minimum_size.y = 40
+	footer.size_flags_vertical = Control.SIZE_SHRINK_END
+	footer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	vbox.add_child(footer)
+	
+	var points = card.get("points", 0)
+	if points > 0:
+		var points_label = Label.new()
+		points_label.text = "Value: " + str(points) + " points"
+		points_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		points_label.add_theme_font_size_override("font_size", 12)
+		points_label.add_theme_color_override("font_color", Color(1.0, 0.8, 0.2))
+		footer.add_child(points_label)
+	
+	# Создаем новую кнопку
+	var new_apply_button = Button.new()
+	new_apply_button.text = "Apply"
+	new_apply_button.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	footer.add_child(new_apply_button)
+	
+	# Устанавливаем стиль фона для карточки
+	var panel = event_card_instance
+	panel.add_theme_stylebox_override("panel", create_card_style())
+	
 	# Используем правильные поля из card
 	title_node.text = card.get("title_en", card.get("title", "Unknown Event"))
 	description_node.text = card.get("description_en", card.get("description", "No description available."))
 
-	apply_button.pressed.connect(func():
+	# Подключаем сигнал к новой кнопке
+	new_apply_button.pressed.connect(func():
 		# Создаем эффект на ресурсы из boost
-		var boost = card.get("boost", {})
 		for resource_name in boost:
 			update_resource(resource_name, boost[resource_name])
 		
-		# Добавляем очки (если есть)
-		var points = card.get("points", 0)
-		
-		print("Применен эффект карточки:", card.get("title", ""), "очки:", points)
+		print("Применен эффект карточки:", card.get("title_en", ""), "очки:", points)
 		AudioManager.play_sound("card_play")
 		
-		event_card_instance.queue_free()
+		# Удаляем карточку через родительский MarginContainer
+		var parent = event_card_instance.get_parent()
+		if parent:
+			parent.queue_free()
+		else:
+			event_card_instance.queue_free()
 	)
 
-	event_panel.add_child(event_card_instance)
-	event_card_instance.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	event_card_instance.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	# Создаем горизонтальный контейнер, если его еще нет
+	var hbox_container
+	if not event_panel.has_node("HBoxContainer"):
+		hbox_container = HBoxContainer.new()
+		hbox_container.name = "HBoxContainer"
+		hbox_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		hbox_container.alignment = BoxContainer.ALIGNMENT_CENTER
+		event_panel.add_child(hbox_container)
+	else:
+		hbox_container = event_panel.get_node("HBoxContainer")
+	
+	# Добавляем карточку в контейнер с отступами
+	var margin = MarginContainer.new()
+	margin.add_theme_constant_override("margin_left", 10)
+	margin.add_theme_constant_override("margin_right", 10)
+	margin.add_theme_constant_override("margin_top", 10)
+	margin.add_theme_constant_override("margin_bottom", 10)
+	margin.add_child(event_card_instance)
+	hbox_container.add_child(margin)
+
+# Создание стиля для карточек
+func create_card_style() -> StyleBoxFlat:
+	var style = StyleBoxFlat.new()
+	
+	# Фон
+	style.bg_color = Color(0.15, 0.22, 0.22, 0.9)
+	
+	# Скругленные углы
+	style.corner_radius_top_left = 6
+	style.corner_radius_top_right = 6
+	style.corner_radius_bottom_left = 6
+	style.corner_radius_bottom_right = 6
+	
+	# Граница
+	style.border_width_top = 2
+	style.border_width_right = 2
+	style.border_width_bottom = 2
+	style.border_width_left = 2
+	style.border_color = Color(0.3, 0.5, 0.5, 0.7)
+	
+	# Внутренний отступ
+	style.content_margin_left = 10
+	style.content_margin_right = 10
+	style.content_margin_top = 10
+	style.content_margin_bottom = 10
+	
+	# Тень
+	style.shadow_size = 3
+	style.shadow_color = Color(0, 0, 0, 0.3)
+	style.shadow_offset = Vector2(2, 2)
+	
+	return style
+	
+	
+func style_all_ui_elements():	
+	# Стилизуем информацию справа
+	style_expedition_info()
+	
+	# Стилизуем панель с карточками
+	style_card_panel()
+
+
+
+# Стиль для панели ресурсов
+func create_resource_panel_style() -> StyleBoxFlat:
+	var style = StyleBoxFlat.new()
+	
+	# Фон
+	style.bg_color = Color(0.15, 0.22, 0.22, 0.8)
+	
+	# Скругленные углы
+	style.corner_radius_bottom_left = 6
+	style.corner_radius_bottom_right = 6
+	
+	# Граница
+	style.border_width_bottom = 2
+	style.border_width_left = 2
+	style.border_width_right = 2
+	style.border_color = Color(0.3, 0.5, 0.5, 0.7)
+	
+	# Отступы
+	style.content_margin_left = 5
+	style.content_margin_right = 5
+	style.content_margin_bottom = 5
+	
+	return style
+
+# Стилизация информации о точке
+func style_expedition_info():
+	if not title_label or not description_label:
+		return
+		
+	# Создаём стиль для панели с информацией
+	var info_panel = title_label.get_parent()
+	if info_panel:
+		var style = create_card_style()
+		style.bg_color = Color(0.12, 0.18, 0.20, 0.85)
+		
+		# Добавляем стилизованную панель
+		var panel_bg = PanelContainer.new()
+		panel_bg.add_theme_stylebox_override("panel", style)
+		
+		# Перемещаем содержимое
+		var parent = info_panel.get_parent()
+		var idx = info_panel.get_index()
+		
+		parent.remove_child(info_panel)
+		panel_bg.add_child(info_panel)
+		parent.add_child(panel_bg)
+		parent.move_child(panel_bg, idx)
+	
+	# Стилизуем заголовок
+	title_label.add_theme_font_size_override("font_size", 20)
+	title_label.add_theme_color_override("font_color", Color(0.9, 0.95, 1.0))
+	
+	# Добавляем разделитель под заголовком
+	var separator = HSeparator.new()
+	separator.add_theme_constant_override("separation", 10)
+	separator.add_theme_color_override("color", Color(0.6, 0.7, 0.8, 0.5))
+	title_label.get_parent().add_child(separator)
+	title_label.get_parent().move_child(separator, title_label.get_index() + 1)
+	
+	# Стилизуем дату
+	if date_label:
+		date_label.add_theme_font_size_override("font_size", 14)
+		date_label.add_theme_color_override("font_color", Color(0.8, 0.9, 1.0))
+		
+	# Стилизуем описание
+	description_label.add_theme_font_size_override("font_size", 14)
+	description_label.add_theme_constant_override("line_spacing", 5)
+	
+	# Стилизуем дневник
+	# Стилизуем дневник только если он существует и в нем есть текст
+	if diary_label and diary_label.visible:
+		# Проверяем существование текста перед обработкой
+		if diary_label.text != null and diary_label.text.strip_edges() != "":
+			# Ищем существующий контейнер для дневника
+			var existing_container = diary_label.get_parent()
+			if existing_container is PanelContainer and existing_container.name == "DiaryContainer":
+				# Контейнер уже создан, не создаем снова
+				existing_container.visible = true
+			else:
+				# Создаем новый контейнер
+				var diary_container = PanelContainer.new()
+				diary_container.name = "DiaryContainer"
+				var style = StyleBoxFlat.new()
+				style.bg_color = Color(0.1, 0.12, 0.15, 0.7)
+				style.border_width_top = 1
+				style.border_width_right = 1
+				style.border_width_bottom = 1
+				style.border_width_left = 1
+				style.border_color = Color(0.4, 0.5, 0.6, 0.5)
+				style.corner_radius_top_left = 5
+				style.corner_radius_top_right = 5
+				style.corner_radius_bottom_left = 5
+				style.corner_radius_bottom_right = 5
+				style.content_margin_left = 10
+				style.content_margin_right = 10
+				style.content_margin_top = 10
+				style.content_margin_bottom = 10
+				
+				diary_container.add_theme_stylebox_override("panel", style)
+				
+				# Перемещаем дневник в новый контейнер
+				var parent = diary_label.get_parent()
+				var idx = diary_label.get_index()
+				parent.remove_child(diary_label)
+				diary_container.add_child(diary_label)
+				parent.add_child(diary_container)
+				parent.move_child(diary_container, idx)
+				
+				# Добавляем заголовок для дневника
+				var diary_title = Label.new()
+				diary_title.name = "DiaryTitle"
+				diary_title.text = "From the diary:"
+				diary_title.add_theme_font_size_override("font_size", 14)
+				diary_title.add_theme_color_override("font_color", Color(0.7, 0.8, 0.9))
+				diary_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+				diary_container.add_child(diary_title)
+				diary_container.move_child(diary_title, 0)
+				
+				# Стилизуем текст дневника
+				diary_label.add_theme_font_size_override("font_size", 13)
+				diary_label.add_theme_constant_override("line_spacing", 4)
+				diary_label.add_theme_color_override("font_color", Color(0.85, 0.85, 0.85))
+				
+				# Пробуем загрузить шрифт
+				var font = load("res://fonts/Kalam-Regular.ttf")
+				if font:
+					diary_label.add_theme_font_override("font", font)
+		else:
+			# Если дневник пуст, скрываем существующий контейнер
+			var diary_container = diary_label.get_parent()
+			if diary_container is PanelContainer and diary_container.name == "DiaryContainer":
+				diary_container.visible = false
+
+# Стилизация панели карточек
+# 3. "Available Actions" должен показываться только при клике на Point
+# В методе style_card_panel добавим проверку:
+
+func style_card_panel():
+	if not event_panel:
+		return
+		
+	# Добавляем фон для панели карточек
+	var style = StyleBoxFlat.new()
+	style.bg_color = Color(0.12, 0.15, 0.18, 0.7)
+	style.corner_radius_top_left = 8
+	style.corner_radius_top_right = 8
+	style.border_width_top = 2
+	style.border_width_left = 2
+	style.border_width_right = 2
+	
+	# Убираем зеленую рамку, используем более нейтральный цвет
+	style.border_color = Color(0.3, 0.4, 0.5, 0.5)
+	
+	event_panel.add_theme_stylebox_override("panel", style)
+	
+	# Добавляем заголовок для карточек, но ТОЛЬКО если активная точка - тип Point
+	var card_title = event_panel.get_node_or_null("CardTitle")
+	
+	# Удаляем существующий заголовок, если есть
+	if card_title:
+		card_title.queue_free()
+	
+	# Проверяем тип активной локации
+	if location_nodes.has(active_location_id) and location_nodes[active_location_id].location_type == "point":
+		var label = Label.new()
+		label.name = "CardTitle"
+		label.text = "Available Actions"
+		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		label.add_theme_font_size_override("font_size", 18)
+		label.add_theme_color_override("font_color", Color(0.85, 0.9, 1.0))
+		
+		event_panel.add_child(label)
+		
+		# Если есть HBoxContainer, добавляем заголовок перед ним
+		var hbox = event_panel.get_node_or_null("HBoxContainer")
+		if hbox:
+			event_panel.move_child(label, hbox.get_index())
+	
+	# Также скрываем панель, если нет активной точки типа point
+	event_panel.visible = location_nodes.has(active_location_id) and location_nodes[active_location_id].location_type == "point"
+	
+	
+# Обновите функцию load_event_cards, чтобы очищать HBoxContainer
+func load_event_cards(location_id: String):
+	# Удаляем старые карточки
+	var hbox = event_panel.get_node_or_null("HBoxContainer")
+	if hbox:
+		for child in hbox.get_children():
+			child.queue_free()
+	else:
+		# Удаляем прямые дочерние элементы, если HBoxContainer еще не создан
+		for child in event_panel.get_children():
+			child.queue_free()
 
 # Применение эффекта события
 func apply_event_effect(card: Dictionary):
@@ -1151,13 +1564,31 @@ func apply_event_effect(card: Dictionary):
 	AudioManager.play_sound("card_play")
 
 # Обновление ресурса
-func update_resource(resource: String, amount: int):
-	if resources.has(resource):
-		resources[resource] += amount
-		print(resource, "изменено на", amount, "текущее значение:", resources[resource])
+func update_resource(resource_name: String, amount: int):
+	# Маппинг имен ресурсов из карточек к именам в системе
+	var resource_key = resource_name
+	match resource_name.to_lower():
+		"food": resource_key = "Food"
+		"energy": resource_key = "Energy" 
+		"warmth": resource_key = "Temperature"
+		"morale": resource_key = "Morale"
+	
+	# Обновляем локальный кэш ресурсов
+	if resources.has(resource_key):
+		resources[resource_key] += amount
 		
-		if game_resources:
-			game_resources.modify_resource(resource, amount)
+		# Обновляем глобальный менеджер ресурсов
+		if game_resources and game_resources.resources.has(resource_key):
+			game_resources.modify_resource(resource_key, amount)
+			
+			# Воспроизводим звук в зависимости от увеличения/уменьшения ресурса
+			if amount > 0:
+				AudioManager.play_sound("resource_gain")
+			elif amount < 0:
+				AudioManager.play_sound("resource_loss")
+				
+			print(resource_key, " изменено на ", amount, ", новое значение: ", 
+				  game_resources.resources[resource_key].amount)
 
 # Установка текущей даты
 func set_current_date(new_date):
@@ -1281,6 +1712,34 @@ func unlock_next_point(group_id: String):
 				if location_nodes.has(next_group_id):
 					location_nodes[next_group_id].set_enabled()
 					unlock_next_point(next_group_id)
+					
+func initialize_info_panel():
+	# Удаляем существующую панель, если она есть
+	if info_panel_container:
+		info_panel_container.queue_free()
+		
+	# Создаем новую панель
+	info_panel_container = PanelContainer.new()
+	info_panel_container.name = "InfoPanel"
+	info_panel_container.visible = false
+	
+	# Настраиваем стиль
+	var style = StyleBoxFlat.new()
+	style.bg_color = Color(0.15, 0.22, 0.22, 0.85)
+	style.corner_radius_top_left = 6
+	style.corner_radius_top_right = 6
+	style.border_width_top = 2
+	style.border_width_left = 2
+	style.border_width_right = 2
+	style.border_color = Color(0.3, 0.5, 0.5, 0.7)
+	info_panel_container.add_theme_stylebox_override("panel", style)
+	
+	# Добавляем в сцену
+	var canvas_layer = $CanvasLayer
+	canvas_layer.add_child(info_panel_container)
+	
+	# Возвращаем контейнер для дальнейшей настройки
+	return info_panel_container
 					
 					
 func print_debug_info():

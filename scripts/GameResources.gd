@@ -1,5 +1,9 @@
+# Добавьте сигнал в GameResources.gd
 extends Node
 class_name GameResources
+
+# Сигнал для оповещения об изменении ресурса
+signal resource_changed(resource_name, amount, new_value)
 
 var resources: Dictionary = {}
 
@@ -34,7 +38,13 @@ func get_resource(name: String) -> ResourceData:
 
 func modify_resource(name: String, value: int):
 	if resources.has(name):
+		var old_amount = resources[name].amount
+		
 		if value > 0:
 			resources[name].add(value)
 		else:
 			resources[name].subtract(abs(value))
+			
+		var new_amount = resources[name].amount
+		# Испускаем сигнал с данными об изменении
+		emit_signal("resource_changed", name, value, new_amount)
