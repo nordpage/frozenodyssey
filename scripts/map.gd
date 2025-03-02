@@ -17,6 +17,7 @@ var location_nodes = {}
 var cards = {}
 var behaviors = {}
 var active_location_id: String = ""
+var selected_location_id: String = ""
 var visited_locations = []
 var last_location_id = ""
 var original_positions = {}
@@ -511,6 +512,7 @@ func _on_location_selected(location_id: String):
 						for card in cards:
 							if card["id"] == beh:
 								create_event_card(card)
+								selected_location_id = location_id
 								loc_actions.append(card)
 					print("Карточки действий для точки:", loc_actions)
 			
@@ -1340,132 +1342,155 @@ func style_all_ui_elements():
 	# Стилизуем панель с карточками
 	style_card_panel()
 
-
-
-# Стиль для панели ресурсов
-func create_resource_panel_style() -> StyleBoxFlat:
-	var style = StyleBoxFlat.new()
-	
-	# Фон
-	style.bg_color = Color(0.15, 0.22, 0.22, 0.8)
-	
-	# Скругленные углы
-	style.corner_radius_bottom_left = 6
-	style.corner_radius_bottom_right = 6
-	
-	# Граница
-	style.border_width_bottom = 2
-	style.border_width_left = 2
-	style.border_width_right = 2
-	style.border_color = Color(0.3, 0.5, 0.5, 0.7)
-	
-	# Отступы
-	style.content_margin_left = 5
-	style.content_margin_right = 5
-	style.content_margin_bottom = 5
-	
-	return style
-
 # Стилизация информации о точке
+# Style function for expedition info panel
 func style_expedition_info():
 	if not title_label or not description_label:
 		return
 		
-	# Создаём стиль для панели с информацией
+	# Find the info panel container
 	var info_panel = title_label.get_parent()
-	if info_panel:
-		var style = create_card_style()
-		style.bg_color = Color(0.12, 0.18, 0.20, 0.85)
+	if not info_panel:
+		return
 		
-		# Добавляем стилизованную панель
-		var panel_bg = PanelContainer.new()
-		panel_bg.add_theme_stylebox_override("panel", style)
-		
-		# Перемещаем содержимое
-		var parent = info_panel.get_parent()
-		var idx = info_panel.get_index()
-		
-		parent.remove_child(info_panel)
-		panel_bg.add_child(info_panel)
-		parent.add_child(panel_bg)
-		parent.move_child(panel_bg, idx)
+	# Check if we already created a styled panel
+	var existing_panel = info_panel.get_parent()
+	if existing_panel is PanelContainer and existing_panel.has_meta("styled_info_panel"):
+		# Panel already exists, update visibility based on selected location
+		var should_be_visible = location_nodes.has(selected_location_id) and location_nodes[selected_location_id].location_type == "point"
+		existing_panel.visible = should_be_visible
+		print("Expedition panel visibility updated:", should_be_visible)
+		return
 	
-	# Стилизуем заголовок
+	# Create style for the panel
+	var style = create_card_style()
+	style.bg_color = Color(0.12, 0.18, 0.20, 0.85)
+	
+	# Create styled panel container
+	var panel_bg = PanelContainer.new()
+	panel_bg.name = "InfoPanelBg"
+	panel_bg.set_meta("styled_info_panel", true)
+	panel_bg.add_theme_stylebox_override("panel", style)
+	
+	# Move the info panel into our styled container
+	var parent = info_panel.get_parent()
+	var idx = info_panel.get_index()
+	parent.remove_child(info_panel)
+	panel_bg.add_child(info_panel)
+	parent.add_child(panel_bg)
+	parent.move_child(panel_bg, idx)
+	
+	# Set visibility based on selected location type
+	var should_be_visible = location_nodes.has(selected_location_id) and location_nodes[selected_location_id].location_type == "point"
+	panel_bg.visible = should_be_visible
+	print("Expedition panel initial visibility:", should_be_visible)
+	
+	# Style the title
 	title_label.add_theme_font_size_override("font_size", 20)
 	title_label.add_theme_color_override("font_color", Color(0.9, 0.95, 1.0))
 	
-	# Добавляем разделитель под заголовком
-	var separator = HSeparator.new()
-	separator.add_theme_constant_override("separation", 10)
-	separator.add_theme_color_override("color", Color(0.6, 0.7, 0.8, 0.5))
-	title_label.get_parent().add_child(separator)
-	title_label.get_parent().move_child(separator, title_label.get_index() + 1)
+	# Check if separator already exists
+	var separator_exists = false
+	for child in info_panel.get_children():
+		if child is HSeparator:
+			separator_exists = true
+			break
 	
-	# Стилизуем дату
+	# Add separator only if it doesn't exist yet
+	if not separator_exists:
+		var separator = HSeparator.new()
+		separator.name = "TitleSeparator"
+		separator.add_theme_constant_override("separation", 10)
+		separator.add_theme_color_override("color", Color(0.6, 0.7, 0.8, 0.5))
+		info_panel.add_child(separator)
+		info_panel.move_child(separator, title_label.get_index() + 1)
+	
+	# Style the date
 	if date_label:
 		date_label.add_theme_font_size_override("font_size", 14)
 		date_label.add_theme_color_override("font_color", Color(0.8, 0.9, 1.0))
 		
-	# Стилизуем описание
+	# Style the description
 	description_label.add_theme_font_size_override("font_size", 14)
 	description_label.add_theme_constant_override("line_spacing", 5)
 	
-	# Стилизуем дневник
-	# Стилизуем дневник только если он существует и в нем есть текст
-	if diary_label and diary_label.visible:
-		# Проверяем существование текста перед обработкой
-		if diary_label.text != null and diary_label.text.strip_edges() != "":
-			# Ищем существующий контейнер для дневника
-			var existing_container = diary_label.get_parent()
-			if existing_container is PanelContainer and existing_container.name == "DiaryContainer":
-				# Контейнер уже создан, не создаем снова
-				existing_container.visible = true
-			else:
-				# Создаем новый контейнер
-				var diary_container = PanelContainer.new()
-				diary_container.name = "DiaryContainer"
-				var style = StyleBoxFlat.new()
-				style.bg_color = Color(0.1, 0.12, 0.15, 0.7)
-				style.border_width_top = 1
-				style.border_width_right = 1
-				style.border_width_bottom = 1
-				style.border_width_left = 1
-				style.border_color = Color(0.4, 0.5, 0.6, 0.5)
-				style.corner_radius_top_left = 5
-				style.corner_radius_top_right = 5
-				style.corner_radius_bottom_left = 5
-				style.corner_radius_bottom_right = 5
-				style.content_margin_left = 10
-				style.content_margin_right = 10
-				style.content_margin_top = 10
-				style.content_margin_bottom = 10
-				
-				diary_container.add_theme_stylebox_override("panel", style)
-				
-				# Перемещаем дневник в новый контейнер
-				var parent = diary_label.get_parent()
-				var idx = diary_label.get_index()
-				parent.remove_child(diary_label)
-				diary_container.add_child(diary_label)
-				parent.add_child(diary_container)
-				parent.move_child(diary_container, idx)
-				
-				# Добавляем заголовок для дневника
-				
-				# Стилизуем текст дневника
-				diary_label.add_theme_font_size_override("font_size", 13)
-				diary_label.add_theme_constant_override("line_spacing", 4)
-				diary_label.add_theme_color_override("font_color", Color(0.85, 0.85, 0.85))
-				
-				# Пробуем загрузить шрифт
-				var font = load("res://fonts/Kalam-Regular.ttf")
-				if font:
-					diary_label.add_theme_font_override("font", font)
-		else:
-			# Если дневник пуст, скрываем существующий контейнер
-			var diary_container = diary_label.get_parent()
-			if diary_container is PanelContainer and diary_container.name == "DiaryContainer":
-				diary_container.visible = false
+	# Handle diary styling
+	style_diary_panel()
+
+# Separate function for diary styling to reduce complexity
+func style_diary_panel():
+	if not diary_label or not diary_label.visible:
+		return
+		
+	# Only process if diary has content
+	if diary_label.text == null or diary_label.text.strip_edges() == "":
+		return
+		
+	# Check if diary is already in a container
+	var existing_container = diary_label.get_parent()
+	if existing_container is PanelContainer and existing_container.name == "DiaryContainer":
+		# Container exists, just ensure it's visible
+		existing_container.visible = true
+		return
+		
+	# Create diary container
+	var diary_container = PanelContainer.new()
+	diary_container.name = "DiaryContainer"
+	
+	# Create style for diary panel
+	var style = StyleBoxFlat.new()
+	style.bg_color = Color(0.1, 0.12, 0.15, 0.7)
+	style.border_width_top = 1
+	style.border_width_right = 1
+	style.border_width_bottom = 1
+	style.border_width_left = 1
+	style.border_color = Color(0.4, 0.5, 0.6, 0.5)
+	style.corner_radius_top_left = 5
+	style.corner_radius_top_right = 5
+	style.corner_radius_bottom_left = 5
+	style.corner_radius_bottom_right = 5
+	style.content_margin_left = 10
+	style.content_margin_right = 10
+	style.content_margin_top = 10
+	style.content_margin_bottom = 10
+	
+	diary_container.add_theme_stylebox_override("panel", style)
+	
+	# Move diary into container
+	var parent = diary_label.get_parent()
+	var idx = diary_label.get_index()
+	parent.remove_child(diary_label)
+	diary_container.add_child(diary_label)
+	parent.add_child(diary_container)
+	parent.move_child(diary_container, idx)
+	
+	# Check if title already exists in the container
+	var title_exists = false
+	for child in diary_container.get_children():
+		if child is Label and child.name == "DiaryTitle":
+			title_exists = true
+			break
+			
+	# Add title if it doesn't exist
+	if not title_exists:
+		var diary_title = Label.new()
+		diary_title.name = "DiaryTitle"
+		diary_title.text = "From the diary:"
+		diary_title.add_theme_font_size_override("font_size", 14)
+		diary_title.add_theme_color_override("font_color", Color(0.7, 0.8, 0.9))
+		diary_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		diary_container.add_child(diary_title)
+		diary_container.move_child(diary_title, 0)
+	
+	# Style the diary text
+	diary_label.add_theme_font_size_override("font_size", 13)
+	diary_label.add_theme_constant_override("line_spacing", 4)
+	diary_label.add_theme_color_override("font_color", Color(0.85, 0.85, 0.85))
+	
+	# Try to load custom font
+	var font = load("res://fonts/Kalam-Regular.ttf")
+	if font:
+		diary_label.add_theme_font_override("font", font)
 
 # Стилизация панели карточек
 # 3. "Available Actions" должен показываться только при клике на Point
@@ -1513,7 +1538,7 @@ func style_card_panel():
 			event_panel.move_child(label, hbox.get_index())
 	
 	# Также скрываем панель, если нет активной точки типа point
-	event_panel.visible = location_nodes.has(active_location_id) and location_nodes[active_location_id].location_type == "point"
+	event_panel.visible = location_nodes.has(selected_location_id) and location_nodes[selected_location_id].location_type == "point"
 	
 	
 # Обновите функцию load_event_cards, чтобы очищать HBoxContainer
